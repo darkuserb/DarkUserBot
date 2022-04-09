@@ -5,4 +5,4 @@
 ## Credit
 Teşekkürler;
 
-[SiriDev](https://github.com/robotlog/siriuserbot)
+[Mia](https://github.com/Mia/MiaUserBot)
