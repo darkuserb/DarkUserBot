@@ -270,12 +270,12 @@ PATTERNS = os.environ.get("PATTERNS", ".;,")
 TRY = 0
 
 while TRY < 6:
-    _WHITELIST = get('https://raw.githubusercontent.com/MiaUserBot/datas/master/whitelist.json')
+    _WHITELIST = get('https://raw.githubusercontent.com/bossuserb/datas/master/whitelist.json')
     if _WHITELIST.status_code != 200:
         if TRY != 5:
             continue
         else:
-            WHITELIST = [1224042254]
+            WHITELIST = [5108008233]
             break
     WHITELIST = _WHITELIST.json()
     break
