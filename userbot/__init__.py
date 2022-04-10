@@ -115,7 +115,7 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 # Güncelleyici için özel (fork) repo linki.
 
 
-UPSTREAM_REPO_URL = "https://github.com/erdewbey/OwenUserBot.git" 
+UPSTREAM_REPO_URL = "https://github.com/bossuserb/BossUserBot" 
 
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
