@@ -134,9 +134,9 @@ def register(**args):
                     link = "[Boss kömək qrupuna](https://t.me/bosssupportaz)"
                     if len(eventtext)<20:
                         text += f"\n**🗒️ Səbəb:** {eventtext}\n"
-                    text += "\n✆ İstəsəniz, bunu bildirə bililərsiniz."
+                    text += "\n✆ İstəsəniz, bunu bildirə bilərsiniz."
                     text += f"- sadəcə bu mesajı {link} göndərin."
-                    text += "**Xəta və tarix xaricində heç bir şey** qeyd edilmez.\n"
+                    text += "**Xəta və tarix xaricində heç bir şey qeyd edilmez**.\n"
 
                     ftext = ""
                     ftext += "========== Xəbərdarlıq =========="
