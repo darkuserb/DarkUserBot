@@ -8,8 +8,8 @@
 
 nowtime=$(date)
 echo "
-MiaUserBot
-(C) @MiaUserBot
+BossUserBot
+(C) @BossUserBot
 Thx @DevsExpo.
 Time : $nowtime
 "
