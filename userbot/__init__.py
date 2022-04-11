@@ -1,4 +1,4 @@
-# Mia UserBot - Ч ⁪⁬⁮⁮
+#bossuserbot
 """ UserBot hazırlanışı. """
 
 import os, sys, time, heroku3
@@ -16,7 +16,7 @@ from telethon.sync import TelegramClient, custom
 from telethon.sessions import StringSession
 from telethon.events import callbackquery, InlineQuery, NewMessage
 from .utils.pip_install import install_pip
-from .helps import timehelper as timemia
+from .helps import timehelper as timeboss
 from math import ceil
 
 load_dotenv("config.env")
@@ -29,18 +29,18 @@ ASYNC_POOL = []
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
         level=DEBUG,
-        format="[%(asctime)s - %(levelname)s] - @MiaUserbot : %(message)s",
+        format="[%(asctime)s - %(levelname)s] - @Bossuserbot : %(message)s",
         datefmt='%d-%b-%y %H:%M:%S')
 else:
     basicConfig(
         level=INFO,
-        format="[%(asctime)s - %(levelname)s] - @MiaUserbot : %(message)s",
+        format="[%(asctime)s - %(levelname)s] - @BossUserbot : %(message)s",
         datefmt='%d-%b-%y %H:%M:%S')
 LOGS = getLogger(__name__)
 
 if version_info[0] < 3 or version_info[1] < 6:
-    LOGS.info("En az python 3.6 sürümüne sahip olmanız gerekir."
-              "Birden fazla özellik buna bağlıdır. Bot kapatılıyor.")
+    LOGS.info("Ən az python 3.6 sürümünə sahib olmanız gərəkdir."
+              "Bir çox funksiya buna bağlıdır. Bot söndürülür.")
     sys.exit(1)
 
 # Yapılandırmanın önceden kullanılan değişkeni kullanarak düzenlenip düzenlenmediğini kontrol edin.
@@ -50,19 +50,19 @@ CONFIG_CHECK = os.environ.get(
 
 if CONFIG_CHECK:
     LOGS.info(
-        "Lütfen ilk hashtag'de belirtilen satırı config.env dosyasından kaldırın"
+        "Zəhmət olmazsa ilk hashtag'də qeyd edilən sətiri config.env dosyasından qaldırın"
     )
     sys.exit(1)
 
 # Bot'un dili
 LANGUAGE = os.environ.get("LANGUAGE", "DEFAULT").upper()
 
-if LANGUAGE not in ["EN", "TR", "AZ", "UZ", "DEFAULT"]:
-    LOGS.info("Bilinmeyen bir dil yazdınız. Bundan dolayı DEFAULT kullanılıyor.")
+if LANGUAGE not in ["AZ", "DEFAULT"]:
+    LOGS.info("Bilinməyən bir dil yazdınız. Bundan ötəri DEFAULT təyin edildi.")
     LANGUAGE = "DEFAULT"
     
-# Mia versiyon
-MIA_VERSION = "v0.2"
+# BOSS versiyon
+BOSS_VERSION = "v1.0"
 
 # Telegram API KEY ve HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -151,7 +151,7 @@ WORKTIME = time.time()
 
 PLUGINID = os.environ.get("PLUGIN_CHANNEL_ID", None)
 
-STORECHANNEL = os.environ.get("STORECHANNEL", '@Miaplugin')
+STORECHANNEL = os.environ.get("STORECHANNEL", '@BOSSplugin')
 
 if not PLUGINID:
     PLUGIN_CHANNEL_ID = "me"
@@ -195,9 +195,9 @@ if SUDO:
         except:
             FIX = ''.join(SUDO)
             if ',' in FIX:
-                print("Sudo ID'lerinden '{}' hatalı lütfen düzeltin...".format(i))
+                print("Sudo ID'ndən '{}' xətalı zəhmət olmazsa düzəldin...".format(i))
             else:
-                print("Sudo Listenizi , (virgül) ile ayırın. Şuanda hatalı....")
+                print("Sudo siyahınızı , (virgül) ilə ayırın. Hal hazırda Xətalıdır...")
         SUDO_ID = None
 else:
     SUDO_ID = None
@@ -206,8 +206,8 @@ else:
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
 # Last.fm Modülü
-BIO_PREFIX = os.environ.get("BIO_PREFIX", "@MiaUserBot | ")
-DEFAULT_BIO = os.environ.get("DEFAULT_BIO", "✨ @MiaUserBot")
+BIO_PREFIX = os.environ.get("BIO_PREFIX", "@BossUserBot | ")
+DEFAULT_BIO = os.environ.get("DEFAULT_BIO", "✨ @BossUserBot")
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
@@ -251,19 +251,18 @@ PM_AUTO_BAN_LIMIT = int(os.environ.get("PM_AUTO_BAN_LIMIT", 4))
 SPOTIFY_DC = os.environ.get("SPOTIFY_DC", None)
 SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
-PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @MiaUserBot Paketi |")
+PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @BOSSuserbot Paketi |")
 
 # Userbotu kapatmak için gruplar
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
 if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
-    BLACKLIST_CHAT = [-1001457702125,-1001168760410]
+    BLACKLIST_CHAT = [-1001695469818]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
 AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
-# AFK_NAME = f"{me.first_name}"
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
@@ -288,7 +287,7 @@ del _WHITELIST
 if os.path.exists("force-surum.check"):
     os.remove("force-surum.check")
 else:
-    LOGS.info("Force Sürüm Kontrol dosyası yok, getiriliyor...")
+    LOGS.info("Force Sürüm idarə faylı yoxdur, gətirilir...")
 
 URL = 'https://gitlab.com/must4f/VaveylaData/-/raw/main/force-surum.check' 
 with open('force-surum.check', 'wb') as load:
@@ -333,7 +332,7 @@ ASISTAN = 5161984781 # Bot yardımcısı
 if os.path.exists("learning-data-root.check"):
     os.remove("learning-data-root.check")
 else:
-    LOGS.info("Braincheck dosyası yok, getiriliyor...")
+    LOGS.info("Braincheck faylı yoxdur, gətirilir...")
 
 DangerousSubstance = ['STRING_SESSION','API_KEY','API_HASH','HEROKU_APPNAME','HEROKU_APIKEY','LASTFM_SECRET']
 
@@ -345,12 +344,12 @@ with open('learning-data-root.check', 'wb') as load:
 async def check_botlog_chatid():
     if not BOTLOG_CHATID and LOGSPAMMER:
         LOGS.info(
-            "Özel hata günlüğünün çalışması için yapılandırmadan BOTLOG_CHATID değişkenini ayarlamanız gerekir.")
+            "Şəxsi xəta günlüyünün işləməsi üçün BOTLOG_CHATID dəyişkənini ayarlamanız gərəkdir.")
         sys.exit(1)
 
     elif not BOTLOG_CHATID and BOTLOG:
         LOGS.info(
-            "Günlüğe kaydetme özelliğinin çalışması için yapılandırmadan BOTLOG_CHATID değişkenini ayarlamanız gerekir.")
+            "Günlüyə qeydetmə funksiyasının işləməsi üçün  BOTLOG_CHATID qeyd etməlisən.")
         sys.exit(1)
 
     elif not BOTLOG or not LOGSPAMMER:
@@ -359,8 +358,8 @@ async def check_botlog_chatid():
     entity = await bot.get_entity(BOTLOG_CHATID)
     if entity.default_banned_rights.send_messages:
         LOGS.info(
-            "Hesabınızın BOTLOG_CHATID grubuna mesaj gönderme yetkisi yoktur. "
-            "Grup ID'sini doğru yazıp yazmadığınızı kontrol edin.")
+            "Hesabınızın BOTLOG_CHATID qrupuna mesaj göndərmə yetkisi yoxdur. "
+            "Qrup ID'sini doğru yazıb yazmadığınızı yoxlayın.")
         sys.exit(1)
         
 if not BOT_TOKEN == None:
@@ -395,9 +394,9 @@ with bot:
 
 
     try:
-        bot(JoinChannelRequest("@miauserbot"))
+        bot(JoinChannelRequest("@bossuserbot"))
         if OTOMATIK_KATILMA:
-            bot(JoinChannelRequest("@miaSupports"))
+            bot(JoinChannelRequest("@BossSupportAz"))
     except:
         pass
 
@@ -446,29 +445,29 @@ with bot:
         @tgbot.on(NewMessage(pattern='/start'))
         async def start_bot_handler(event):
             if not event.message.from_id == uid:
-                await event.reply(f'`Merhaba ben` @MiaUserBot`! Ben sahibime (`@{me.username}`) yardımcı olmak için varım, yaani sana yardımcı olamam :/ Ama sen de bir Mia açabilirsin; Kanala bak` @MiaUserBot')
+                await event.reply(f'`Salam mən` @Bossuserbot`! Mən sahibimə (`@{me.username}`) kömək olmaq üçün varam, yəni sənə kömək edə bilmərəm:/ Ama sən də bir Boss aça bilərsən; Kanala bax` @BOSSuserbot')
             else:
-                await event.reply(f'`Tengri save Turks! Mia working... `')
+                await event.reply(f'`Tengri save Azərbaycan! Boss working... `')
 
         @tgbot.on(InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query == "@MiaUserbotT":
+            if event.query.user_id == uid and query == "@BossUserbotT":
                 rev_text = query[::-1]
                 veriler = (butonlastir(0, sorted(CMD_HELP)))
                 result = await builder.article(
-                    f"Lütfen Sadece .yardım Komutu İle Kullanın",
-                    text=f"**En Gelişmiş UserBot!** [Mia](https://t.me/miauserbot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** 1/{veriler[0]}",
+                    f"Lütfen Yalnız .yardım əmribilə istifadə edin",
+                    text=f"**Ən yaxşı UserBot!** [Boss](https://t.me/Bossuserbot) __İşləyir...__\n\n**Yüklənən modul Sayısı:** `{len(CMD_HELP)}`\n**Səhifə:** 1/{veriler[0]}",
                     buttons=veriler[1],
                     link_preview=False
                 )
             elif query.startswith("http"):
                 parca = query.split(" ")
                 result = builder.article(
-                    "Dosya Yüklendi",
-                    text=f"**Dosya başarılı bir şekilde {parca[2]} sitesine yüklendi!**\n\nYükleme zamanı: {parca[1][:3]} saniye\n[‏‏‎ ‎]({parca[0]})",
+                    "Dosya Yükləndi",
+                    text=f"**Dosya uğurla {parca[2]} 'a yükləndi!**\n\nYükləmə zamanı: {parca[1][:3]} saniye\n[‏‏‎ ‎]({parca[0]})",
                     buttons=[
                         [custom.Button.url('URL', parca[0])]
                     ],
@@ -476,14 +475,12 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    "@MiaUserBot",
-                    text="""@MiaUserBot'u kullanmayı deneyin!
-Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın, siz başkasının botunu yönetemezsiniz! Alttaki GitHub adresinden tüm kurulum detayları anlatılmıştır.""",
+                    "@BossUserBot",
+                    text="""@BossUserBot'u istifadə et!
+Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsən.Kömək üçün @bossupportaz gəl .""",
                     buttons=[
-                        [custom.Button.url("Kanala Katıl", "https://t.me/miauserbot"), custom.Button.url(
-                            "Gruba Katıl", "https://t.me/miaSupports")],
-                        [custom.Button.url(
-                            "GitHub", "https://github.com/MiaUserBot/mia")]
+                        [custom.Button.url("Kanala Qatıl", "https://t.me/Bossuserbot"), custom.Button.url(
+                            "qrupa qatıl", "https://t.me/bosssupportaz")],
                     ],
                     link_preview=False
                 )
@@ -492,11 +489,11 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"sayfa\((.+?)\)")))
         async def sayfa(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @MiaUserBot kur.", cache_time=0, alert=True)
+                return await event.answer("❌ Hey! mənim mesajlarımı düzənləməyə qalxma! Özünə bir @BossuserBot qur.", cache_time=0, alert=True)
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             veriler = butonlastir(sayfa, CMD_HELP)
             await event.edit(
-                f"** En Gelişmiş UserBot!** [Mia](https://t.me/MiaUserBot) __Çalışıyor...__\n\n**Yüklenen Modül Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** {sayfa + 1}/{veriler[0]}",
+                f"** Ən yaxşı UserBot!** [Boss](https://t.me/BossUserBot) __işləyir...__\n\n**Yüklənən Modul Sayısı:** `{len(CMD_HELP)}`\n**Sayfa:** {sayfa + 1}/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False
             )
@@ -504,14 +501,14 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"bilgi\[(\d*)\]\((.*)\)")))
         async def bilgi(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌  Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @MiaUserBot kur.", cache_time=0, alert=True)
+                return await event.answer("❌  Hey! mənim mesajlarımı düzənləməyə qalxma! Özünə bir @BossUserBot qur.", cache_time=0, alert=True)
 
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             komut = event.data_match.group(2).decode("UTF-8")
             try:
                 butonlar = [custom.Button.inline("🔹 " + cmd[0], data=f"komut[{komut}[{sayfa}]]({cmd[0]})") for cmd in CMD_HELP_BOT[komut]['commands'].items()]
             except KeyError:
-                return await event.answer("❌ Bu modüle açıklama yazılmamış.", cache_time=0, alert=True)
+                return await event.answer("❌ Bu modula açıxlama yazılmamış.", cache_time=0, alert=True)
 
             butonlar = [butonlar[i:i + 2] for i in range(0, len(butonlar), 2)]
             butonlar.append([custom.Button.inline("◀️ Geri", data=f"sayfa({sayfa})")])
@@ -524,7 +521,7 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"komut\[(.*)\[(\d*)\]\]\((.*)\)")))
         async def komut(event):
             if not event.query.user_id == uid: 
-                return await event.answer("❌ Hey! Benim mesajlarımı düzenlemeye kalkma! Kendine bir @MiaUserBot kur.", cache_time=0, alert=True)
+                return await event.answer("❌ Hey! mənim mesajlarımı düzənləməyə qalxma! Özünə bir @bossUserBot qur.", cache_time=0, alert=True)
 
             cmd = event.data_match.group(1).decode("UTF-8")
             sayfa = int(event.data_match.group(2).decode("UTF-8"))
@@ -550,9 +547,9 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
                 result += f"**🛠 Komut:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] is None:
-                result += f"**💬 Açıklama:** `{command['usage']}`\n\n"
+                result += f"**💬 Açıxlama:** `{command['usage']}`\n\n"
             else:
-                result += f"**💬 Açıklama:** `{command['usage']}`\n"
+                result += f"**💬 Açıxlama:** `{command['usage']}`\n"
                 result += f"**⌨️ Örnek:** `{PATTERNS[:1]}{command['example']}`\n\n"
 
             await event.edit(
@@ -563,17 +560,17 @@ Hesabınızı bot'a çevirebilirsiniz ve bunları kullanabilirsiniz. Unutmayın,
     except Exception as e:
         print(e)
         LOGS.info(
-            "Botunuzda inline desteği devre dışı bırakıldı. "
-            "Etkinleştirmek için bir bot token tanımlayın ve botunuzda inline modunu etkinleştirin. "
-            "Eğer bunun dışında bir sorun olduğunu düşünüyorsanız bize ulaşın t.me/MiaSupports."
+            "Botunuzda inline dəstəyi qeyri-aktiv edildi. "
+            "Aktiv etmək üçün @bosssupportaz gəl. "
+            "Başqa problem olduğunu düşünürsənsə bunu bizə bildir."
         )
 
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
     except:
         LOGS.info(
-            "BOTLOG_CHATID ortam değişkeni geçerli bir varlık değildir. "
-            "Ortam değişkenlerinizi / config.env dosyanızı kontrol edin."
+            "BOTLOG_CHATID ortam dəyişkəni lazımi bir varlıq deyildir. "
+            "Ortam dəyişkənlərinizi / config.env dosyanızdan idarə edin."
         )
         sys.exit(1)
 
