@@ -19,13 +19,13 @@ from youtubesearchpython import SearchVideos
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from userbot import bot, CMD_HELP, SUDO_ID
+from userbot import bot, SUDO_ID
 from userbot.events import register
 import os
 import subprocess
 import glob
 from random import randint
-from userbot.cmdhelp import CmdHelp
+
 
 # ██████ LANGUAGE CONSTANTS ██████ #
 
@@ -223,10 +223,4 @@ async def songpl(event):
     os.system(f"rm -rf {klasor}/*.pl")
     subprocess.check_output(f"rm -rf {klasor}/*.pl",shell=True)
 
-CmdHelp('song').add_command(
-    'deez', (LANG['DEEZ1']), (LANG['DEEZ2'])
-).add_command(
-    'song', (LANG['SONG1']), (LANG['SONG2'])
-).add_command(
-    'songpl', (LANG['SONG3']), (LANG['SONG4'])
-).add()
+
