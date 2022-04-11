@@ -38,7 +38,7 @@ ech_final () {
 =+---------------------------------------------------------+=
 Deployment Sucessfull.
 Docker Images Are Being Pushed, Please Wait.
-Thank You For Installing Mia.
+Thank You For Installing Boss.
 =+---------------------------------------------------------+=
     "
 }
