@@ -100,7 +100,7 @@ async def bot_ver(event):
                          "`")
     else:
         await event.edit(
-            "Mia Dinlemede!!!"
+            "Boss Dinləmədə!!!"
         )
 
 
@@ -148,21 +148,21 @@ async def pipcheck(pip):
 
 @register(pattern="^.alive$")
 async def amialive(e):
-        sahipp = f"{DEFAULT_NAME}" if DEFAULT_NAME else "Mi"
+        sahipp = f"{DEFAULT_NAME}" if DEFAULT_NAME else "me"
         me = await e.client.get_me()
         if type(PLUGIN_MESAJLAR['alive']) is str:
             await e.edit(PLUGIN_MESAJLAR['alive'].format(
                 telethon=version.__version__,
                 python=python_version(),
-                mia=BOSS_VERSION,
+                Boss=BOSS_VERSION,
                 plugin=len(CMD_HELP),
                 id=me.id,
-                worktime = await timemia.get_readable_time((emit() - WORKTIME)),
+                worktime = await timeboss.get_readable_time((emit() - WORKTIME)),
                 username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
                 first_name=me.first_name,
                 last_name=me.last_name if me.last_name else '',
                 mention=f'[{me.first_name}](tg://user?id={me.id})',
-                miasahip = sahipp
+                bosssahip = sahipp
             ))
         else:
             await e.delete()
@@ -173,12 +173,12 @@ async def amialive(e):
                     siri=BOSS_VERSION,
                     plugin=len(CMD_HELP),
                     id=me.id,
-                    worktime = await timemia.get_readable_time((emit() - WORKTIME)),
+                    worktime = await timeboss.get_readable_time((emit() - WORKTIME)),
                     username='@' + me.username if me.username else f'[{me.first_name}](tg://user?id={me.id})',
                     first_name=me.first_name,
                     last_name=me.last_name if me.last_name else '',
                     mention=f'[{me.first_name}](tg://user?id={me.id})',
-                    miasahip = sahipp
+                    bosssahip = sahipp
                 )
             if e.is_reply:
                 await e.respond(PLUGIN_MESAJLAR['alive'], reply_to=e.message.reply_to_msg_id)
@@ -196,7 +196,7 @@ async def asistanalive(ups):
     else:
         hitap = "Yöneticim"
     SiriVer = str(BOSS_VERSION.replace("v","")) 
-    await ups.reply(f"__{hitap} seni seviyorum❤! Mia çalışıyor!__")
+    await ups.reply(f"__{hitap} səni sevirəm❤! Boss işləyir!__")
 
 
 CmdHelp('system_stats').add_command(
