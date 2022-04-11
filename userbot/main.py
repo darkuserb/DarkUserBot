@@ -24,17 +24,17 @@ import re
 import userbot.cmdhelp
 
 ALIVE_MSG = [
-    "`Userbotunuz çalışıyor. Sana bişey demek istiyorum.. Seni seviyorum` **{miasahip}** ❤️",
-    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{miasahip}**, `MiaUserbot çalışıyor.`",
+    "`Userbotunuz çalışıyor. Sana bişey demek istiyorum.. Seni seviyorum` **{mention}** ❤️",
+    "🎆 `Endişelenme! Seni yanlız bırakmam.` **{mention}**, `MiaUserbot çalışıyor.`",
     "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{miasahip}**",
     "✨ `MiaUserBot sahibinin emirlerine hazır...`",
-    "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{miasahip}**.",
+    "`Şuan en gelişmiş userbotun düzenlediği mesajı okuyor olmalısın` **{mention}**.",
     "`Benimi Aramıştın ❓ Ben Buradayım Merak Etme`"
     "`Userbotunuz çalışalı şu kadar oluyor:` **{worktime}** ❤️",
-    "🎆 `Endişelenme! Seninleyim.` **{miasahip}**, `userbot çalışıyor.`",
-    "`⛈️ Yeni gibi görünüyor!`, **{miasahip}:3**",
+    "🎆 `Endişelenme! Seninleyim.` **{mention}**, `userbot çalışıyor.`",
+    "`⛈️ Yeni gibi görünüyor!`, **{mention}:3**",
     "✨ `Userbot sahibinin emirlerine hazır...`",
-    "`Huh!` **{miasahip}** `beni çağırıyor 🍰 < bu senin için 🥺..`",
+    "`Huh!` **{mention}** `beni çağırıyor 🍰 < bu senin için 🥺..`",
     "{mention} **Mia Senin İçin Çalışıyor✨**",
     "{username}, `MiaUserBot {worktime} zamandır çalışıyor...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{mia}`\n**Python sürümü    :** `{python}`\n**Plugin sayısı :** `{plugin}`\n——————————————\n**Emrine amadeyim dostum... 😇**"
 ]
