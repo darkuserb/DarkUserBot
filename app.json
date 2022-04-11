@@ -1,106 +1,106 @@
 {
-  "name": "Mia UserBot",
-  "description": "Mia UserBot",
-  "logo": "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg",
+  "name": "BossUserBot",
+  "description": "Boss UserBot",
+  "logo": "kddkdkdhwjsljznsjdn",
   "keywords": [
     "telegram",
     "userbot",
-	"Mia",
+	"BossUserBot",
     "plugin",
     "modular",
     "productivity"
   ],
   "repository": "https://github.com/bossuserb/BossUserBot",
-  "website":   "https://t.me/wiperowner",
-  "success_url": "https://t.me/MiaSohbet",
+  "website":   "qurucu sehfe",
+  "success_url": "https://t.me/chatqruiu",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Bu dəyəri my.telegram.org adresindən alın.",
       "required": true
     },
     "API_HASH": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Bu dəyəri my.telegram.org adresindən alın.",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır",
+      "description": "İstəyə bağlıdır",
       "required": false
     },
     "SPOTIFY_DC": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Spotify bio üçün lazım olan açar",
       "required": false
     },
     "BLACKLIST_CHAT": {
-      "description": "Userbotun kapatılacağı gruplar, boşlukla ayırın! -0000 -1111 tarzı bilmiyorsanız veya userbot heryerde çalışsın istiyorsanız ELLEMEYİN!",
+      "description": "Userbotun söndürüləcəyi qruplar, boşluqla ayırın! -0000 -1111 tərzi bilmirsinizsə vəya userbot hər yerdə işləsin istəyirsənsə toxunma!",
       "value": "False",
       "required": false
     },
     "SPOTIFY_KEY": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Spotify bio üçün lazımi açar",
       "required": false
     },
     "STRING_SESSION": {
-      "description": "python3 GenerateStringSession.py dosyasını yerel olarak çalıştırarak bu değeri alın.",
+      "description": "python3 GenerateStringSession.py faylını yerel olaraq işlədərək bu dəyəri alın",
       "required": true
     },
     "HEROKU_MEMEZ": {
-      "description": "UserBot bir Heroku Dyno üzerinde çalışıyorsa, bu değer True olmalıdır.",
+      "description": "UserBot bir Heroku Dyno üzərində işləyirsə, bu dəyər True olmalıdır.",
       "value": "True",
       "required": true
     },
     "HEROKU_APIKEY": {
-      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresinden alın.",
+      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresindən alın.",
       "value": ""
     },
     "HEROKU_APPNAME": {
-      "description": "Heroku uygulama adını buraya ekleyin. UserBot güncellemelerine yardımcı olur.",
+      "description": "Heroku app adını buraya qeyd edin. Vacibdir!!!!.",
       "required": true
     },
     "UPSTREAM_REPO_URL": {
-      "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/MiaUserBot/mia",
+      "description": "Buraya toxunmayın. Əksi təqdirdə bot dayanacaq.",
+      "value": "https://github.com/bossuserb/BossUserBot",
       "required": true
     },
     "COUNTRY": {
-      "description": "Ülkenizi .time ve .date komutlarında kullanılacak şekilde ayarlayın. Varsayılan olarak Türkiye ayarlanmıştır.",
-      "value": "Turkey",
+      "description": "Ölkənizi .time və .date əmrində istifadə etmək istədiyiniz kimi qeyd edin. Varsayılan olaraq Azərbaycan qeyd edilib.",
+      "value": "Azerbaijan",
       "required": false
     },
     "TZ_NUMBER": {
-      "description": "Ülkenizde birden fazla Saat Dilimi olması durumunda bu değeri değiştirin.",
+      "description": "Azərbaycanda bu sabitdir. Eğer türksense support grupumuza gel @bosssup.",
       "value": "1",
       "required": false
     },
     "TZ": {
-      "description": "Bunun ne işe yaradığı hakkında fikrin yoksa kurcalama :)",
-      "value": "Europe/Istanbul",
+      "description": "Bunun nə olduğu barədə məlumatın yoxdursa dəymə.Eğer türksense support grupumuza gel @bosssup :)",
+      "value": "Asia/Baku",
       "required": true  
     },
     "CHROME_DRIVER": {
-      "description": "Selenium tabanlı modüller için ChromeDriver konumu.",
+      "description": "Selenium tabanlı modullar üçün ChromeDriver məkanı.",
       "value": "/usr/bin/chromedriver",
       "required": false
     },
     "GOOGLE_CHROME_BIN": {
-      "description": "Selenium tabanlı modüller için Google Chrome (veya) Chromium binary konumu.",
+      "description": "Selenium tabanlı modullar üçün Google Chrome (vəya) Chromium binary məkanı.",
       "value": "/usr/bin/chromium-browser",
       "required": false
     },
     "OPEN_WEATHER_MAP_APPID": {
-      "description": "https://api.openweathermap.org/data/2.5/weather adresinden kendi APPID'inizi (API key) edinin.",
+      "description": "https://api.openweathermap.org/data/2.5/weather adresindən öz APPID'inizi (API key) əldə edin.",
       "required": false
     },
     "BOTLOG": {
-      "description": "Botla yaptığınız işlemi kaydetmek için bir grup ve bazı pluginleri çalışması için gerekli",
+      "description": "Qrup açıb roseni əlavə et. Qrupa /id yaz və əldə etdiyin id'ni bura yaz",
       "value": "True"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @SiriBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özəlliyinin işləməsi üçün vacibdir. Buraya botunuzun kullanıcı adınız yazmanız lazımdır (Nümunə: @EliteGameBot). Botunuz yoxdusa  @BotFather köməyi ilə bot yarada bilərsiniz.",
       "required": false  
     },
     "BOT_TOKEN": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun tokenini yazmanız lazım. Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özəlliyinin işləməsi üçün vacibdir. Buraya botunuzun tokenini yazmanız lazımdır. Botunuz yoxdusa @BotFather köməyi ilə bot yarada bilərsiniz.",
       "required": false    
     },
     "GENIUS": {
@@ -108,19 +108,19 @@
       "required": false
     },
     "AUTO_PP": {
-      "description": "Autopp modülünün çalışması için gerekli olan değişkendir. Çalışması için kullanacağınız resmin direk adresini girmeniz gerekiyor.",
+      "description": "Autopp modulunun işləməsi üçün vacib olan dəyişkəndir. İşləməsi üçün işlədəcəyiniz rəsmin  adresini girməniz lazımdır.",
       "required": false      
     },
     "BOTLOG_CHATID": {
-      "description": "Günlük grubunun ChatID'si. BOTLOG= False ve / veya LOGSPAMMER= False ise '0' olarak ayarlayın.",
+      "description": "Günlük qrupunun ChatID'si. BOTLOG= False ve / vəya LOGSPAMMER= False isə '0' olaraq ayarlayın.",
       "value": "0"
     },
     "CONSOLE_LOGGER_VERBOSE": {
-      "description": "Konsol günlüğünde ayrıntıya ihtiyacınız varsa, bunu True olarak ayarlayın.",
+      "description": "Konsol günlüyündə fikirə Ehtiyacınız varsa, bunu True olaraq ayarlayın.",
       "value": "False"
     },
     "PM_AUTO_BAN": {
-      "description": "PM Otomatik Yasaklama Özelliği. 'Hey! Bu bir bot.' modülüdür.",
+      "description": "PM Otomatik Qadağan eləmək Özəlliyi. 'Hey! Bu bir bot.' moduludur.",
       "value": "False"
     },
     "PM_AUTO_BAN_LIMIT": {
@@ -181,62 +181,58 @@
       "required": false
     }, 
     "DEFAULT_NAME": {
-      "description": "Klon plugininden sonra hesabınızın eski haline dönmesi için Telegram isminiz",
+      "description": "Klon pluginindən sonra hesabınızın köhnə halına dönməsi üçün Telegram adınız",
       "required": false
     }, 
     "DEFAULT_BIO": {
-      "description": "Varsayılan profil biyografisi.",
+      "description": "Varsayılan profil biosu.",
       "value": "@MiaUserBot",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
-      "description": "Google Drive için client secret girin.",
+      "description": "Google Drive üçün client secret girin.",
       "required": false
     },
     "G_DRIVE_AUTH_TOKEN_DATA": {
-      "description": "Google Drive kimlik doğrulama verilerini JSON yapısı olarak girin.",
-      "required": false
-    },
-    "LYDIA_API_KEY": {
-      "description": "Bu modülün çalışması için CoffeeHouse API'sine ihtiyacı var. 'https://coffeehouse.intellivoid.info/dashboard' Buradan alabilirsiniz.",
+      "description": "Google Drive kimlik doğrulama məlumatlarını JSON yapısı olaraq girin.",
       "required": false
     },
     "WEATHER_DEFCITY": {
-      "description": "UserBot'un hava durumu modülü için varsayılan şehri ayarlayın.",
+      "description": "UserBot'un hava vəziyyəti modulu üçün varsayılan şəhəri qeyd edin.",
       "required": false
     },
     "LOGSPAMMER": {
-      "description": "Hata günlüklerinin, geçerli sohbette dosyayı göndermesi yerine UserBot günlük grubunda saklanmasını istemeniz durumunda bu değeri True olarak ayarlayın. Geçerli bir BOTLOG_CHATID değerinin ayarlanmasını gerektirir.",
+      "description": "Botda xətanın hazırkı söhbətə deyil də, botlog qrupuna göndərilməsini istəyirsənsə True et. Yuxarıda Botlog chat id xanasını doldurmaq mütləqdir.",
       "value": "False"
     },
     "WARN_LIMIT": {
-      "description": "Kişiyi gmutelemek/gbanlamak için gerekli uyarı sayısı. Genellikle 3 kullanılır.",
+      "description": "İstifadəçini gmuteləmək/gbanlamaq üçün lazımi xəbərdarlıq sayı.",
       "value": "3",
       "required": false
     },
     "WARN_MODE": {
-      "description": "3 uyarıdan sonra gerçekleşecek olay. Sadece gmute ya da gban yazabilirsiniz. Aksi takdirde bot çalışmayabilir.",
-      "value": "gmute",
+      "description": "3 xəbərdarlıqdan sonra ediləcək əmr. Yalnız .gmute yada .gban yaza bilərsiniz. Əksi təqdirdə bot işləməz.",
+      "value": "gban",
       "required": false
     },
     "GALERI_SURE": {
-      "description": "Galeri plugini içindir. Profil fotoğrafları kaç saniye de bir değişsin?",
+      "description": "Qaleri plugini üçündür. Profil şəkilləri neçə saniyədə bir dəyişsin?",
       "value": "60",
       "required": false
     },
     "PAKET_ISMI": {
-      "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@MiaUserBot Paketi",
+      "description": "toxunmayın ",
+      "value": "@BossUserBot",
       "required": false
     },
     "OTOMATIK_KATILMA": {
-      "description": "Support grubuna ve Kanal'a otomatik katılmak istemiyorsanız False yazın.",
+      "description": "Bu repoya avtomatik girişdir. Dəyişdirsən botun dayanacaq..",
       "value": "True",
       "required": true
     },
     "LANGUAGE": {
-      "description": "Botun dili. EN/TR/AZ yazabilirsiniz.",
-      "value": "TR",
+      "description": "Botun dili. AZ/TR yaza bilərsiniz.",
+      "value": "AZ",
       "required": true
     }
   },
