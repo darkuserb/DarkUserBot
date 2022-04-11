@@ -17,7 +17,7 @@ from platform import uname
 from shutil import which
 from requests import get
 import os
-from userbot import (CMD_HELP, BOSS_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, WORKTIME, timemia, bot) 
+from userbot import (CMD_HELP, BOSS_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, WORKTIME, timeboss, bot) 
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot.helps.asistan import bana_mi_diyo
