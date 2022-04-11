@@ -82,7 +82,7 @@ def register(**args):
         async def wrapper(check):
             BossVer = int(BOSS_VERSION.split(".")[1])
             if ForceVer > BossVer:
-                await check.edit(f"`🌈 Botu acilen güncellemen lazım! Bu sürüm artık kullanılamıyor..`\n\n__🥺 Sorunu çözmek için__ `.update now` __yazmalısın!__")
+                await check.edit(f"`🌈 Botu təcili güncəlləmən lazım! Bu sürüm artıq yararsızdır..`\n\n__🥺 Problemin həlli üçün __ `.update now` __yazmalısan!__")
                 return
 
             if not LOGSPAMMER:
@@ -99,17 +99,17 @@ def register(**args):
             if groups_only and not check.is_group:
                 if not notifyoff:
                     try:
-                        await check.edit("`⛔ Bunun bir grup olduğunu sanmıyorum. Bu plugini bir grupta dene! `")
+                        await check.edit("`⛔ Bunun bir qrup olduğunu düşünmürəm. Bu plugini bir qrupda yoxla! `")
                     except:
-                        await check.respond("`⛔ Bunun bir grup olduğunu sanmıyorum. Bu plugini bir grupta dene! `")
+                        await check.respond("`⛔ Bunun bir qrup olduğunu düşünmürəm. Bu plugini bir qrupda yoxla! `")
                 return
 
             if replyneeded and not check.is_reply:
                 if not notifyoff:
                     try:
-                        await check.edit("`🤰🏻Plugini kullanabilmek için bir mesajı yanıtlamalısın!`")
+                        await check.edit("`🤰🏻Pluginin istifadəsi üçün bir mesajı yanıtlamalısan!`")
                     except:
-                        await check.respond("`🤰🏻 Plugini kullanabilmek için bir mesajı yanıtlamalısın!`")
+                        await check.respond("`🤰🏻 Pluginin istifadəsi üçün bir mesajı yanıtlamalısan!`")
                 return
 
             try:
@@ -122,7 +122,7 @@ def register(**args):
                 pass
             except MessageIdInvalidError:
                 try: 
-                    await check.respond('__🗒️ ( **Hata** ) :: Plugine ait mesaj silinmiş gibi görünüyor..__')
+                    await check.respond('__🗒️ ( **Xəta** ) :: Pluginə aid mesaj silinmiş kimi görünür..__')
                 except:
                     pass
             except BaseException:
@@ -130,38 +130,38 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     eventtext = str(check.text)
-                    text = "**≛『 USERBOT HATA RAPORU 』≛**\n"
-                    link = "[Mia Destek Grubuna](https://t.me/miaSupports)"
+                    text = "**≛『 USERBOT Xəta RAPORU 』≛**\n"
+                    link = "[Boss kömək qrupuna](https://t.me/bosssupportaz)"
                     if len(eventtext)<20:
-                        text += f"\n**🗒️ Şu yüzden:** {eventtext}\n"
-                    text += "\n✆ İsterseniz, bunu bildirebilirsiniz."
-                    text += f"- sadece bu mesajı {link} gönderin."
-                    text += "**Hata ve tarih haricinde hiçbir şey** kayıt edilmez.\n"
+                        text += f"\n**🗒️ Səbəb:** {eventtext}\n"
+                    text += "\n✆ İstəsəniz, bunu bildirə bililərsiniz."
+                    text += f"- sadəcə bu mesajı {link} göndərin."
+                    text += "**Xəta və tarix xaricində heç bir şey** qeyd edilmez.\n"
 
                     ftext = ""
-                    ftext += "========== UYARI =========="
-                    ftext += "\nBu dosya sadece burada yüklendi,"
-                    ftext += "\nSadece hata ve tarih kısmını kaydettik,"
-                    ftext += "\nGizliliğinize saygı duyuyoruz,"
-                    ftext += "\nBurada herhangi bir gizli veri varsa"
-                    ftext += "\nBu hata raporu olmayabilir, kimse verilerinize ulaşamaz.\n"
-                    ftext += "--------USERBOT HATA GUNLUGU--------\n"
-                    ftext += "\n➢ Tarih: " + date
+                    ftext += "========== Xəbərdarlıq =========="
+                    ftext += "\nBu fayl sadəcə burada yükləndi,"
+                    ftext += "\nSadəcə xəta ve tarix hissəsini qeyd etdik,"
+                    ftext += "\nGizliliyinizə hörmət edirik,"
+                    ftext += "\nBurada hansısa bir gizli məlumat varsa"
+                    ftext += "\nBu xəta raporu olmaya bilər, kimsə verilərinizə ulaşamaz.\n"
+                    ftext += "--------USERBOT Xəta günlüyü--------\n"
+                    ftext += "\n➢ Tarix: " + date
                     ftext += "\n➢ Grup ID: " + str(check.chat_id)
-                    ftext += "\n➢ Gönderen kişinin ID: " + str(check.sender_id)
-                    ftext += "\n\n➢ Olay Tetikleyici:\n"
+                    ftext += "\n➢ Göndərən kişinin ID: " + str(check.sender_id)
+                    ftext += "\n\n➢ xəta tetikləyici:\n"
                     ftext += str(check.text)
-                    ftext += "\n\n➢ Hata metni:\n"
+                    ftext += "\n\n➢ Xəta mətni:\n"
                     ftext += str(sys.exc_info()[1])
                     ftext += "\n\n➢ Bot versiyonu:\n"
                     ftext += "{}".format(str(BOSS_VERSION))
-                    ftext += "\n\n\n➢ Geri izleme bilgisi: \n"
+                    ftext += "\n\n\n➢ Geri izləmə bilgisi: \n"
                     ftext += str(format_exc())
-                    ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
+                    ftext += "\n\n--------USERBOT xəta GÜNLÜYÜ BITIŞ--------"
 
                     command = "git log --pretty=format:\"%an: %s\" -7"
 
-                    ftext += "\n\n\nSon 7 Güncelleme:\n"
+                    ftext += "\n\n\nSon 7 Güncəlləmə:\n"
 
                     process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
@@ -178,7 +178,7 @@ def register(**args):
 
                     if LOGSPAMMER:
                         try:
-                            await check.edit("__🥺 Üzgünüm, UserBot bir hatayla karşılaştı.\n🐙 Hata raporu Botlog grubuna gönderildi.__")
+                            await check.edit("__🥺 Üzgünəm, UserBot bir xətayla qarşılaşdı.\n🐙 Xəta raporu Botlog qrupuna göndərildi.__")
                         except:
                             pass
                     await check.client.send_file(send_to,
