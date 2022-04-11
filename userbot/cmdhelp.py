@@ -63,24 +63,24 @@ class CmdHelp:
             
             if self.INFO == '':
                 if self.WARNING != '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n\n"
+                    result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n\n"
             else:
                 if self.WARNING != '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n"
+                    result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n"
                 result += f"**ℹ️ Info:** {self.INFO}\n\n"
                      
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"**🔧 Komut:** `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"**🔧 Əmr:** `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"**🔧 Komut:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"**🔧 Əmr:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"**🌀 Açıklama:** `{command['usage']}`\n\n"
+                result += f"**🌀 Nümunə:** `{command['usage']}`\n\n"
             else:
-                result += f"**🌀 Açıklama:** `{command['usage']}`\n"
-                result += f"**💌 Örnek:** `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"**🌀 Açıxlama:** `{command['usage']}`\n"
+                result += f"**💌 Nümunə:** `{PATTERNS[:1]}{command['example']}`\n\n"
         return result
 
     def add(self):
