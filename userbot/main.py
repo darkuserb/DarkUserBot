@@ -101,9 +101,9 @@ CURSOR.execute("""SELECT * FROM BRAIN1""")
 ALL_ROWS = CURSOR.fetchall()
 
 
-INVALID_PH = '\nHATA: Girilen telefon numarası geçersiz' \
-             '\n  Ipucu: Ülke kodunu kullanarak numaranı gir' \
-             '\n   Telefon numaranızı tekrar kontrol edin'
+INVALID_PH = '\nXəta: Girilən telefon nömrəsi geçərsiz' \
+             '\n  Ipucu: Ölkə kodunu yazmağı unutma ' \
+             '\n   Telefon nömrəni yenidən yoxla'
 
 for i in ALL_ROWS:
     BRAIN_CHECKER.append(i[0])
@@ -148,10 +148,10 @@ def extractCommands(file):
                         Komutlar.append(KomutStr)
 
             # MIAPY
-            Miapy = re.search('\"\"\"MIAPY(.*)\"\"\"', FileRead, re.DOTALL)
-            if not Miapy == None:
-                Miapy = Siripy.group(0)
-                for Satir in Miapy.splitlines():
+            Bosspy = re.search('\"\"\"BOSSPY(.*)\"\"\"', FileRead, re.DOTALL)
+            if not Bosspy == None:
+                Bosspy = Siripy.group(0)
+                for Satir in Bosspy.splitlines():
                     if (not '"""' in Satir) and (':' in Satir):
                         Satir = Satir.split(':')
                         Isim = Satir[0]
@@ -166,7 +166,7 @@ def extractCommands(file):
             for Komut in Komutlar:
                 # if re.search('\[(\w*)\]', Komut):
                     # Komut = re.sub('(?<=\[.)[A-Za-z0-9_]*\]', '', Komut).replace('[', '')
-                CmdHelp.add_command(Komut, None, 'Bu plugin dışarıdan yüklenmiştir. Herhangi bir açıklama tanımlanmamıştır.')
+                CmdHelp.add_command(Komut, None, 'Bu plugin kənardan yükləmib. Hansısa bir açıqlama qeyd etməyiblər .')
             CmdHelp.add()
 
 forceVer = []
@@ -188,9 +188,9 @@ except:
 try:
     bot.start()
     idim = bot.get_me().id
-    miabl = requests.get('https://raw.githubusercontent.com/bossuserb/datas/master/blacklist.json').json()
-    if idim in miabl:
-        bot.send_message("me", f"`❌ Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
+    bossbl = requests.get('https://raw.githubusercontent.com/bossuserb/datas/master/blacklist.json').json()
+    if idim in bossbl:
+        bot.send_message("me", f"`❌ Boss inzibatçıları səni botdan qadağan etdi! Bot söndürülür...`")
         LOGS.error("Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
         bot.disconnect()
         sys.exit(1)
@@ -205,7 +205,7 @@ try:
 
     # PLUGIN MESAJLARI AYARLIYORUZ
     PLUGIN_MESAJLAR = {}
-    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_MSG))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"`{str(choice(KICKME_MSG))}`", "pm": str(UNAPPROVED_MSG), "dızcı": str(choice(DIZCILIK_STR)), "ban": "🌀 {mention}`, Banlandı!!`", "mute": "🌀 {mention}`, sessize alındı!`", "approve": "`Merhaba` {mention}`, artık bana mesaj gönderebilirsin!`", "disapprove": "{mention}`, artık bana mesaj gönderemezsin!`", "block": "{mention}`, bunu bana mecbur bıraktın! Seni engelledim!`"}
+    ORJ_PLUGIN_MESAJLAR = {"alive": f"{str(choice(ALIVE_MSG))}", "afk": f"`{str(choice(AFKSTR))}`", "kickme": f"`{str(choice(KICKME_MSG))}`", "pm": str(UNAPPROVED_MSG), "dızcı": str(choice(DIZCILIK_STR)), "ban": "🌀 {mention}`, Banlandı!!`", "mute": "🌀 {mention}`, səssizə alındı!`", "approve": "`Salam` {mention}`, daha mənə mesaj göndərə bilərsən!`", "disapprove": "{mention}`, artıq mənə mesaj göndərə bilmərsən!`", "block": "{mention}`, buna məni məcbur etdin! Səni əngəllədim!`"}
 
 
     PLUGIN_MESAJLAR_TURLER = ["alive", "afk", "kickme", "pm", "dızcı", "ban", "mute", "approve", "disapprove", "block"]
@@ -222,7 +222,7 @@ try:
             else:
                 PLUGIN_MESAJLAR[mesaj] = dmsj
     if not PLUGIN_CHANNEL_ID == None:
-        LOGS.info("🔄 Pluginler Yükleniyor..")
+        LOGS.info("🔄 Pluginlər Yüklənir..")
         try:
             KanalId = bot.get_entity(PLUGIN_CHANNEL_ID)
         except:
@@ -247,7 +247,7 @@ try:
 
                     spec.loader.exec_module(mod)
                 except Exception as e:
-                    LOGS.info(f"`[×] Yükleme Başarısız! Plugin Hatalı!!\n\nHata: {e}`")
+                    LOGS.info(f"`[×] Yükləmək uğursuz! Plugin xətalıı!!\n\nXəta: {e}`")
 
                     try:
                         plugin.delete()
@@ -259,7 +259,7 @@ try:
                     continue
                 extractCommands('./userbot/modules/' + plugin.file.name)
     else:
-        bot.send_message("me", f"`Lütfen pluginlerin kalıcı olması için PLUGIN_CHANNEL_ID'i ayarlayın.`")
+        bot.send_message("me", f"`Pluginlərin heç vaxt silinməməsi üçün zəhmət olmazsa  PLUGIN_CHANNEL_ID qeyd edin.`")
 except PhoneNumberInvalidError:
     print(INVALID_PH)
     sys.exit(1)
@@ -285,11 +285,11 @@ for module_name in ALL_MODULES:
 os.system("clear")
 
 LOGS.info("+===========================================================+")
-LOGS.info("|                     ✨Mia Userbot✨                       |")
+LOGS.info("|                     ✨Boss Userbot✨                       |")
 LOGS.info("+==============+==============+==============+==============+")
 LOGS.info("|                                                            |")
-LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
-          " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/MiaSupport")
+LOGS.info("Botunuz işləyir! Hansısa bir söhbətə .alive yazaraq Test edin."
+          " Köməyə ehtiyacınız varsa, Dəstəkk qrupumuza gəlin t.me/bosssupportaz")
 LOGS.info(f"Bot versiyonunuz: Boss {BOSS_VERSION}")
 
 """
