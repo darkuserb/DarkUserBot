@@ -13,7 +13,7 @@
             "UNIBORG2": "`2. Tip UniBorg aşkar edildi...`",
             "UNIBORG3": "`3. Tip UniBorg aşkar edildi...`",
             "UNIBORG_NOT_FOUND": "`UniBorg plugini aşkar edilə bilmədi.`",
-            "PLIST_CHECKING": "`Pluginler çağırılır...`",
+            "PLIST_CHECKING": "`Plugin siyahısı əldə edilir...`",
             "PLIST": "**Hazırda Yüklənən Pluginlər:**",
             "TEMP_PLUGIN": "`Pluginleriniz Həmişəlik olaraq yüklənmir, buna görə bir siyahı gətirə bilmirəm.`",
             "REPLY_TO_FILE": "`Yüklənəcək modul faylına cavab yazın.`",
@@ -30,12 +30,12 @@
             "ALREADY_DELETED": "`Plugin faylı artıq silinib.`",
             "NOT_FOUND_PLUGIN": "`Belə bir plugin bəlkə var idi, bəlkədə yox. Ancaq hazırda olmadığı dəqiqdir.`",
             "PLUG_DELETED": "`Plugin uğurla silindi!` **Restarting..**",
-            "MIA_PLUGIN_CAPTION": "Bu [Mia](https://t.me/Miauserbots) pluginidir."
+            "BOSS_PLUGIN_CAPTION": "Bu [BOSS](https://t.me/BOSSuserbot) pluginidir."
         },
         
-        "__mia": {
-            "NEED_PLUGIN": "✨ Zəhmət olmasa bir 𝙼𝚒𝚊 modulu adı yazın.",
-            "NEED_MODULE": "✨ 𝙼𝚒𝚊 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝙷𝚎𝚕𝚙𝚎𝚛✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Zəhmət olmasa hansı 𝙼𝚒𝚊 modulu üçün kömək istədiyinizi qeyd edin !!\nİstifadəsi: .mia <modul adı>"
+        "__boss": {
+            "NEED_PLUGIN": "✨ Zəhmət olmasa bir𝙱𝚘𝚜𝚜 modulu adı yazın.",
+            "NEED_MODULE": "✨  𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝙷𝚎𝚕𝚙𝚎𝚛✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Zəhmət olmasa hansı 𝙱𝙾𝚂𝚂 modulu üçün kömək istədiyinizi qeyd edin !!\nİstifadəsi: .boss <modul adı>"
         },
 
         "__helpme": {
@@ -100,14 +100,14 @@
             "UNWARNED": "`Bu şəxsə onsuzda heç vaxt xəbərdarlıq edilməyib!`",
             "UNWARN": "Xəbərdarlığınız silindi, amma yenə də diqqətli olun! Yeni vəziyyət:",
             "WARNING": "`Xəbərdarlıq göndərilir...`",
-            "WARN": "dəfə xəbərdar edildi; xaiş edirik diqqətli olun!"
+            "WARN": "dəfə xəbərdar edildi; xaiş edirik diqqətli ol!"
         },
 
         "afk": {
             "REASON": "Səbəb",
-            "AFK": "Sahibim hazırda Xətdə deyil.",
-            "IM_AFK": "`Hazırda AFK-yam.💤 `",
-            "IM_NOT_AFK": "`🙋🏻‍♂️ Artıq AFK deyiləm.`"
+            "AFK": "{miasahip} hazırda Xətdə deyil.",
+            "IM_AFK": "`{miasahip} Hazırda AFK-dır.💤 `",
+            "IM_NOT_AFK": "`🙋🏻‍♂️ {miasahip} Artıq AFK deyil.`"
         },
 
         "auto": {
@@ -115,7 +115,7 @@
             "ALREADY": "`Hazırda %s onsuzda avtomatik olaraq dəyişir.`",
             "SETTING": "`%s nizamlanır...`",
             "BIO": "📆 Tarix: {tarih} | ⏰ Saat: {saat} | ",
-            "NICK": "@MiaUserBot",
+            "NICK": "@BossUserBot",
             "SETTED": "`%s nizamlandı :)`",
             "NAME": "⌚%s"
         },
@@ -146,7 +146,7 @@
         },
 
         "botfather": {
-            "ERROR": "`Mianın bot yaratması üçün əksik bilgi vermə qadan alım!`"
+            "ERROR": "`Boss'un bot yaratması üçün əksik bilgi vermə qadan alım!`"
         },
 
 
@@ -175,8 +175,8 @@
             "EFECTING": "`Effekt hazırlanır...`",
             "NOT_FOUND_EFECT": "**Qeyd etdiyiniz effekt tapılmadı! **`İstifadə edə biləcəyiniz effektlər: ``çocuk/robot/earrape/hızlı/parazit/yankı`",
             "NEED_VIDEO": "`Zəhmət olmasa bir videoya cavab verin!`",
-            "WITH_MIA":"@MiaUserBot `ilə effekt hazırlandı.`",
-            "WITH_MIA_GIF": "@MiaUserBot `ilə Gif'ə çevrildi.`",
+            "WITH_BOSS":"@BossUserBot `ilə effekt hazırlandı.`",
+            "WITH_BOSS_GIF": "@BossUserBot `ilə Gif'ə çevrildi.`",
             "CONVERTING_TO_GIF": "Gif'ə çevrilir...",
             "UPLOADING_GIF": "`Gif yüklənir...`",
             "ERROR": "Gif'ə çevirə bilmədim :/"
@@ -192,10 +192,10 @@
         },
 
         "degistir": {
-            "SETTED_MEDIA": "üçün medianız qeydə alındı.",
-            "SETTED_REPLY": "üçün mesajınız qeydə alındı.",
-            "SUCCESS_DELETED": "`Plugin mesajı uğurla silindi.`",
-            "ERROR_DELETED": "Plugin mesajı silinə bilmədi.** Xəta",
+            "SETTED_MEDIA": "üçün medianızı təyin elədim.",
+            "SETTED_REPLY": "üçün mesajınızı təyin elədim.",
+            "SUCCESS_DELETED": "`Modul mesajı uğurla silindi.`",
+            "ERROR_DELETED": "Modul mesajı silinə bilmədi.** Xəta",
             "NOT_FOUND": "**Bilinməyən plugin.** Mesajını silə biləcəyiniz pluginlər",
             "USAGE": "**Dəyişdir, botdaki plugin-mesajlarını dəyişdirə bilməyiniz üçündür.**\nNümunə İstifadəsi: `.değiştir afk \"Hazırda burda deyiləm... Bəlkədə heç gəlmədim\"`\nPlugin-mesajını silmək: `.değiştir afk`\nDəyişdirə biləcəyiniz plugin-mesajları (indiki): `afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block`",
             "CANNOT_EMPTY": "Plugin mesajı boş ola bilməz.",
@@ -233,7 +233,7 @@
             "ORG_URL": "Original (qısaldılmamış) URL",
             "DOGBIN_URL": "Dogbin URL",
             "URL_BUT_ENG": "Uğurla yapışdırıldı!",
-            "DOGBIN_NOT_RESPOND": "Dogbine çata bilmədik",
+            "DOGBIN_NOT_RESPOND": "Dogbinə çata bilmədik",
             "BOTLOG_SENDING": "Dogbine mətn yapışdırması uğurla icra edildi",
             "DATA_CHECKING": "`Dogbin məzmunu alınır...`",
             "UNSUPPORTED_URL": "`Bu bir dogbin adressidirmi?`",
@@ -259,7 +259,7 @@
             "BIG_FILE": "`Çıxış çox böyük, fayl kimi göndərilir`",
             "QUERY": "Sorğu",
             "RESULT": "Nəticə",
-            "EMPTY_RESULT": "Nəticə qaytarıla bilmədi / Səhfdir",
+            "EMPTY_RESULT": "Nəticə qaytarıla bilmədi / Səhvdir",
             "ERROR": "İstisna"
         },
 
@@ -293,15 +293,15 @@
 
         "galeri": {
             "ADDED_LIST": "`Şəkil növbəyə əlavə edildi.`",
-            "INVALID_URL": "`Səhf bir şəkil URL'i yazdınız. İstifadəsi haqqında bir fikriniz yoxdursa, ` `.mia galeri` `yazın.`",
-            "EXAMPLE": "`Zəhmət olmasa bir şəkil adressi yazın. Nümunə olaraq: ` `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`",
+            "INVALID_URL": "`Səhf bir şəkil URL'i yazdınız. İstifadəsi haqqında bir fikriniz yoxdursa, ` `.boss galeri` `yazın.`",
+            "EXAMPLE": "`Zəhmət olmasa bir şəkil adresi yazın. Nümunə olaraq: ` `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`",
             "LIST": "Növbəyə əlavə etdiyiniz şəkillər",
             "REMOVED": "**Növbədəki şəkil uğurla silindi**",
             "REMOVE_ERROR": "**Növbədəki şəkil silinmədi** Xəta",
             "NEED_NUMBER": "Zəhmət olmasa şəklin sırasını qeyd edin. Nümunə:",
             "WORKING": "`Hal-hazırda Qalareya işləyir.`",
             "STARTED": "`Qalareya işləməyə başladı.`",
-            "NEED_PHOTO": "Qalereya işi üçün fotoşəkillər əlavə etməlisiniz. Əlavə etməyi bilmirsinizsə, .mia galeri ilə istifadəsini öyrənə bilərsiniz.",
+            "NEED_PHOTO": "Qalereya işi üçün fotoşəkillər əlavə etməlisiniz. Əlavə etməyi bilmirsinizsə, .boss galeri ilə istifadəsini öyrənə bilərsiniz.",
             "STOPPED": "`Qalereya dayandı!`",
             "ALREADY_STOP": "`Qalareya onsuzda işləmir.`",
             "INVALID": "**Bilinməyən komanda** İstifadəsi:\n\nQalareyaya şəkil əlavə etmək: `.galeri ekle https://i.resimyukle.xyz/7Qbbc9.jpeg`\nQalareya siyahısını görmək: `.galeri liste`\nSıradan bir şəkil silmək: `.galeri sil <sıra sayı>`"
@@ -318,7 +318,7 @@
 
         "kyolla": {
             "REPLY_MESSAGE": "`Zəhmət olmasa bir mesaja cavab verin.`",
-            "SUCCESSFUL": "`Mia mesajı Qeyd olunan mesajlar bölümünə yolladı!`"
+            "SUCCESSFUL": "`Boss, mesajı Qeyd olunan mesajlar bölümünə yolladı!`"
         },
 
 
@@ -361,8 +361,8 @@
         },
 
         "locks":{
-		    "EVERYTHING_LOCK": "`Dostum olmayan birşeyi qıfıllaya bilmirəm!`",
-			"INVALID_MEDIA_TYPE": "`Səhf media növü: %s`",
+		    "EVERYTHING_LOCK": "`Dostum, olmayan birşeyi qıfıllaya bilmirəm!`",
+			"INVALID_MEDIA_TYPE": "`Səhv media növü: %s`",
 			"LOCK": "`%s bu çat üçün qıfıllandı`",
 			"INVALID_AUTHORITY": "`Bunu etmək hüququna sahib olduğunuzdan əminsiniz?`\n**Xəta:**",
 			"EVERYTHING_UNLOCK": "`Olmayan birşeyin qıfılını aça bilmirəm!`",
@@ -373,16 +373,16 @@
             "REPLY_TO_FILE": "`Bir fayla cavab verin.`",
             "QUERY": "Sorğu",
             "RESULT": "Nəticə",
-            "NEED_MUCH_DATA_FOR_RANDOM": "`2 və ya daha çox məhsul tələb olunur. Daha çox məlumat üçün .mia təsadüfi əmrini daxil edin.`",
+            "NEED_MUCH_DATA_FOR_RANDOM": "`2 və ya daha çox məhsul tələb olunur. Daha çox məlumat üçün .boss təsadüfi əmrini daxil edin.`",
             "SLEEP_DESC": "İstifadə qaydası: `.sleep [saniyə]`",
             "SLEEPING": "`Xoruldayaraq yatıram...`",
             "GOODMORNIN_YALL": "`Sabahınız xeyir!`",
             "GOODBYE_MFRS": "`Görüşənədək... *Windows XP söndürlmə səsi*`",
-            "RESTARTING": "`Bot yenidən qoşulur..`",
-            "SUPPORT_GROUP": "[Buradan](http://t.me/Miasupport) Dəstək qrupumuza çata bilərsiniz.",
-            "CREATOR": "Bu bot @bberc tərəfindən hazırlanmışdır. \n",
-            "README": "[Mia README](https://github.com/MiaUserBot/Mia/blob/master/README.md)",
-            "REPO": "[Mia Repo](https://github.com/MiaUserBot/Mia)",
+            "RESTARTING": "`Bot xotdanır gözlə..`",
+            "SUPPORT_GROUP": "[Buradan](http://t.me/BOSSsupportAz) Dəstək qrupumuza çata bilərsiniz.",
+            "CREATOR": "Bu bot [𝙷𝚄̈𝚂𝙽𝚄̈](t.me/TheHusnuMustafayev) və [𝔸𝕣𝕒𝕫](t.me/ghrmnIj) tərəfindən hazırlanmışdır. \n",
+            "README": "[BOSS](https://raw.githubusercontent.com/husnumustafayevdi/brenduserbot/main/oxu)",
+            "REPO": "[BOSS](https://raw.githubusercontent.com/husnumustafayevdi/brenduserbot/main/oxu)",
             "CHECK_LOGS": "`Tapılmış Mesaj üçün istifadəçi qeydlərini yoxlayın!`"
         },
 
@@ -405,7 +405,7 @@
 
 
         "playstore": {
-            "SEARCH": "`🔎 Mia verdiyiniz proqramı axtarır...`",
+            "SEARCH": "`🔎 BOSS verdiyiniz proqramı axtarır...`",
             "EKS": "`⛔ Zəhmət olmasa proqram adı yazın. Örnək`",
             "NOT_FOUND": "`⛔ Axtardığınız proqramı tapa bilmədim..`",
             "PUAN": "Xal :",
@@ -416,13 +416,13 @@
 
 
         "pmpermit": {
-            "BLOCKED": "`Sən mənim Sahibimin PM-sını spamlayırsan, bu mənim heç xoşuma gəlmir.`\n`Hazırda BLOKLANDIN və SPAM olaraq bildirildin, gələcəkdə dəyişiklik olmadığı ərəfəyədək..`",
+            "BLOCKED": "`Sən mənim Sahibimin PM-sını spamlayırsan, bu mənim heç xoşuma gəlmir.`\n`Hazırda BLOKLANDIN və SPAM olaraq bildirildin, gələcəkdə dəyişiklik olması ərəfəyədək..`",
             "ERROR": "PM sayğacı başını itirmiş kimidir, botu zəhmət olmasa yenidən başladın.",
             "BOTLOG_BLOCKED": " adamı sadəcə bir xəyal qırıqlığı idi. PM-nı məşğul etdiyi üçün bloklandı.",
             "NOTIFOFF": "`PM icazəsi olmayan istifadəçilərin bildirişləri səssizə alındı!`",
             "NOTIFON": "`PM icazəsi olmayan istifadəçilərin bildiriş göndərməsinə icazə verildi!`",
             "ALREADY": "`İstifadəçi hal-hazırda PM göndərə bilməlidir.`",
-            "DISAPPROVE": "istifadəmisinin PM göndərə bilmə icazəsi ləğv edildi.",
+            "DISAPPROVE": "istifadəçinin PM göndərə bilmə icazəsi ləğv edildi.",
             "UNBLOCKED": "Qadağan qaldırıldı."
         },
 
@@ -457,7 +457,7 @@
         },
 
         "remove_bg": {
-            "NEED_API_KEY": "`Xəta: Remove.BG API key yoxdur! Zəhmət olmasa, gözləyin.`",
+            "NEED_API_KEY": "`Xəta: Remove.BG API keyi yoxdur! Zəhmət olmasa, gözləyin.`",
             "TRYING": "`Hazırlanır...`",
             "RBG": "`Arxa fon bu şəkildən silinir...`",
             "CANT_RBG": "`Bunun arxa fonunu necə silə bilərəm?`",
@@ -471,7 +471,7 @@
             "NEED_REPLY": "`Zəhmət olmasa bir fotoya və ya stikerə cavab verin.`",
             "TRYING": "Hazırlanır...",
             "INVALID_TYPE": "Dəstəklənməyən tip",
-            "UPLOADED_TO_GOOGLE": "`Şəkil uğurla Google-a yükləndi.\nİndi resurs təhlil olunur.`",
+            "UPLOADED_TO_GOOGLE": "`Şəkil uğurla Google-a yükləndi.\nİndi nəticə təhlil olunur.`",
             "FUCKOFF": "Google mənə onun olduğu yerdən çıxıb getməyimi dedi",
             "SEARCHING_PHOTO": "Şəkil axtarıram",
             "NOT_FOUND": "`Heçnə tapa bilmədim`",
@@ -488,32 +488,32 @@
             "REPLY_MSG": "Mesaja cavab verin",
             "REPLY_BOT_ERROR": "Botlara cavab verə bilmərsiniz",
             "WORKING_ON": "Hazırlanır...",
-            "BLOCKED_ERROR": "Zəhmət olmasa {chat}-ı blokdan çıxarın və yenidən cəhd edin",
-            "NOT_RESPONSE": "Botdan cavab ala bilmedim!",
+            "BLOCKED_ERROR": "Zəhmət olmasa {chat}-ı blokdan çıxarın yəni start verin və yenidən cəhd edin",
+            "NOT_RESPONSE": "Botdan cavab ala bilmədim!",
             "USER_PRIVACY": "Məxfilik ayarlarına görə cavab ala bilmədim",
             "REPLY_TO_MEME": "İstifadəsi: Zəhmət olmasa bir mesaja cavab olaraq yazın. Nümunə: .meme üst; alt",
             "REPLY_TO_PHOTO": "Bir fotoya / stikerə / gifə cavab verin.",
             "REPLY_TO_BOT": "Həqiqi bir istifadəçinin mesajına cavab verin.",
-            "MEMING": "Memeleniyor! (」ﾟﾛﾟ)｣",
-            "MEMEBOT_BLOCKED": "Xahiş edirəm @MemeAutobot-un blokundan çıxarın və yenidən cəhd edin.",
+            "MEMING": "Memelənir! (」ﾟﾛﾟ)｣",
+            "MEMEBOT_BLOCKED": "Xahiş edirəm @MemeAutobot-a start verin və yenidən cəhd edin.",
             "NOT_A_PHOTO": "Bu şəkil deyil! Gözlə, mən onu şəkilə çevirəcəm.",
             "FILE_NOT_FOUND": "Fayl tapılmadı",
-            "MEMIFY_CAPTION": "Memified using @MemeAutoBot",
+            "MEMIFY_CAPTION": " @BossUserBot",
             "NOT_VALID_FORMAT": "Naməlum mesaj növü!",
             "REPLY_TO_MESSAGE": "Zəhmət olmasa bir mesaja cavab verin.",
             "REPLY_TO_FILE": "Zəhmət olmasa bir fayla cavab verin.",
             "REPLY_USER_ERR": "Xahiş edirəm bir istifadəçinin mesajına cavab verin.",
             "MIZAH_EXE": "Musallet.exe var mı yoxdurmu baxıram...",
-            "BLOCKED_CHAT": "Pfff deyəsən` %s `bloklanmısan. Zəhmət olmasa bloku aç.",
+            "BLOCKED_CHAT": "Pfff deyəsən` %s `bloklamısan. Zəhmət olmasa bloku aç.",
             "PRIVACY_ERROR": "Məxfilik ayarlarına görə cavab ala bilmədim",
             "WAIT_EDIT": "Zəhmət olmasa gözləyin...",
             "SCAN_RESULT": "Virus axtarışı bitdi. Nəticələr bunlardır",
             "SCANNING": "Fayl taranır...",
             "CLEAN": "Virus axtarışı bitdi. Bu fayl təmizdir. Keç!",
-            "VIRUS_DETECTED": "Virus axtarışı bitdi. Whopsie! Bu fayl təhlükəlidir. Yükləməyin!",
+            "VIRUS_DETECTED": "Virus axtarışı bitdi. DİNQ DONQ! Bu fayl təhlükəlidir. Yükləməyin!",
             "CALCULATING_TIME": "Tarix hesablanır....",
             "PRIVACY_ERR": "Məxfilik ayarlarına görə cavab ala bilmədim",
-            "CREATION_REPORT": "Raport hazırdır",
+            "CREATION_REPORT": "Report hazırdır",
             "READING": "Oxuyuram... A B C...",
             "OCR_ERROR": "Şübhəsiz ki, bir şey oldu. Oxuya bilmədim.",
             "SEE_SOMETHING": "Bir şeylər oxudum",
@@ -523,13 +523,13 @@
             "HEAR_SOMETHING": "Bir şey eşitdim",
             "CANT_REPLY_BOTS": "`Siz botlara cavab verə bilməzsiniz.`",
             "QUOTING": "`Sitat gətirir ...`",
-            "UNBLOCK_QUOTLY": "`Xahiş edirəm @QuotLyBot'u blokdan çıxarın və yenidən cəhd edin '",
+            "UNBLOCK_QUOTLY": "`Xahiş edirəm @QuotLyBot'a start verin və yenidən cəhd edin '",
             "QUOTLY_VALUE_ERR": "`Yalnız rəqəmlər daxil edə bilərsiniz! Nümunə: ``.q 2`"
         },
 
         "screencapture": {
             "TRYING": "`Hazırlanır...`",
-            "TAKING": "`Səhifənin ekran görüntüsünün yaradılır...`",
+            "TAKING": "`Səhifənin ekran görüntüsü yaradılır...`",
             "INVALID_URL": "`Ekran şəkli çəkməyimdən əvvəl etibarlı bir keçid verməlisiniz.`",
             "PIXEL": "piksel",
             "HEIGHT": "Səhifənin hündürlüyü",
@@ -540,7 +540,7 @@
 
         "snips": {
             "NO_SQL": "`SQL olmayan rejimdə işləyir!`",
-            "NEED_BOTLOG": "`Snipləri mediada saxlamaq üçün BOTLOG_CHATID ayarlanmalıdır.`",
+            "NEED_BOTLOG": "`Snipləri mediada saxlamaq üçün BOTLOG_CHATID ayarlanmalıdır.@BossSupportAz kömək ala bikərsiniz`",
             "USAGE": "İstifadəsi",
             "UPDATED": "yeniləndi",
             "SAVED": "yaddaşa verildi",
@@ -553,34 +553,34 @@
         "song": {
             "GIVE_ME_SONG": "** Mənə bir mahnı ver!** `İstifadəsi: .deez mahnı adı/youtube/spotify/soundcloud`",
             "SEARCHING": "`Musiqi axtarılır...`",
-            "BLOCKED_DEEZER": "`Hmm deyəsən` @DeezerMusicBot `bloklamısan zəhmət olmasa bloku aç",
+            "BLOCKED_DEEZER": "`Hmm ` @DeezerMusicBot'a start ver.",
             "NOT_FOUND": "`Axtardığınız mahnı tapılmadı! Bağışlayın.`",
-            "UPLOADED_WITH": "@MiaUserBot ilə yükləndi",
-            "USAGE": "`İstifadəsi:` `.song mahnı ad/youtube url/spotify url`",
-            "SEARCHING_SPOT": "`Mahnıların axtarışı və yüklənməsini gözləyin!",
+            "UPLOADED_WITH": "@BossUserBot ilə yükləndi",
+            "USAGE": "`İstifadəsi:` `.song mahnı adı/youtube url/spotify url`",
+            "SEARCHING_SPOT": "`Mahnıların axtarışını və yüklənməsini gözləyin!",
             "DOWNLOADED": "`Yükləmə uğurlu oldu, xahiş edirəm gözləyin.`",
             "UPLOADING": "Mahnı yüklənir!",
             "USAGE_PL": "`İstifadəsi: .songpl spotify playlist url`",
-            "SEARCHING_PL": "`Playlist axtarılır və yüklənir zəhmət olmasa gözləyin`",
+            "SEARCHING_PL": "`Playlist axtarılır və yüklənir zəhmət olmazsa gözləyin`",
             "SENDING_SONGS": "Mahnı göndərilir Mahnı:",
-            "NOT_FOUND_PL": "`Axtardığınız playlist tapılmadı.Bağışayın.`"
+            "NOT_FOUND_PL": "`Axtardığınız playlist tapılmadı.Bağışlayın.`"
         },
 
         "spotify": {
-            "BIO_ENABLED": "`Spotify plagini aktivdir. Spotify-da dinlədiyiniz mahnılar tərcümeyi-halınıza yazılacaq.`",
-            "BIO_DISABLED": "`Spotify plagini deaktivdir. Bioqrafiya əvvəlki halına qayıtdı.`",
-            "BIO_RUNNING": "`Spotify plagini artıq işləyir.`",
-            "ERROR": "`Spotify plagini dayandı. Xəta alındı.`",
-            "ERROR_NP": "`Hata! Spotify'da çalan şarkı getirilemedi!`",
-            "ERROR_TOKEN": "`Bot Spotify ayarları yapılmamış!`",
-            "NP_NONE": "`Şu anda Spotify'da bir şey dinlemiyorum!`",
-            "NP_GET": "`Spotify'da dinlediğim şarkı getiriliyor...`"			
+            "BIO_ENABLED": "`Spotify modulu aktivdir. Spotify-da dinlədiyiniz mahnılar tərcümeyi-halınıza yazılacaq.`",
+            "BIO_DISABLED": "`Spotify modulu deaktivdir. Bioqrafiya əvvəlki halına qayıtdı.`",
+            "BIO_RUNNING": "`Spotify modulu artıq işləyir.`",
+            "ERROR": "`Spotify modulu dayandı. Xəta alındı.`",
+            "ERROR_NP": "`Xəta! Spotify'da çalan mahnı gətirilə bilmədi!`",
+            "ERROR_TOKEN": "`Botun Spotify ayarları edilməyib!`",
+            "NP_NONE": "`Hal-hazırda Spotify'da bir şey dinləmirəm!`",
+            "NP_GET": "`Spotify'da dinlədiyim mahnı gətirilir...`"			
         },
 
         "stickers": {
-            "GIVE_STICKER": "`Dızlaya bilməyim üçün bir Sticker və ya şəkil verməlisən`",
-            "FAIL_DOWNLOAD": "`Sticker yüklənə bilmədi! Bir şəkil və ya Sticker göndərdiyinizə əmin olun.`",
-            "NEW_PACK": "`Sticker paket yaradılmadı! Yeni bir paket yaradılır ...`",
+            "GIVE_STICKER": "`Əkməyim üçün bir Stiker və ya şəkil verməlisən`",
+            "FAIL_DOWNLOAD": "`Stiker yüklənə bilmədi! Bir şəkil və ya Stiker göndərdiyinizə əmin olun.`",
+            "NEW_PACK": "`Stiker paketi yaradılmadı! Yeni bir paket yaradılır ...`",
             "TOO_STICKERS": "`Paket sahəsi yetərli olmadığı üçün nömrələnmiş paketə {} keçid edilir ...`"
         },
 
@@ -593,13 +593,13 @@
             "QUERY": "Sorğu",
             "RESULT": "Nəticə",
             "NOT_FOUND": "Heçnə tapılmadı",
-            "EXAMPLE": "`Bir nümunə görmək üçün .mia pip əmrindən istifadə edin.`"
+            "EXAMPLE": "`Bir nümunə görmək üçün .boss pip əmrindən istifadə edin.`"
 
         },
 
         "time": {
             "CLOCK": "Burada saat",
-            "INVALID_COUNTRY": "`Səhf ölkə.`",
+            "INVALID_COUNTRY": "`Səhv ölkə.`",
             "TOO_TIMEZONE": "ölkənin birdən çox saat qurşağı var",
             "CHOICE_TIMEZONE": "Rəqəm göstərərək birini seçin",
             "EXAMPLE": "Nümunə",
@@ -615,18 +615,18 @@
             "NOT_FOUND": "qovluğu tapa bilmədi",
             "GIT_ERROR": "Git xətası!",
             "NOT_GIT": "qovluğlu bir git reposu kimi görünmür. \nAncaq botu .update now əmri ilə zorla yeniləməklə bu problemi həll edə bilərsiniz.",
-            "INVALID_BRANCH": "**[UPDATER]:**` Düşünürəm ki, Mia botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan Mia Botunu istifadə edin.`",
+            "INVALID_BRANCH": "**[UPDATER]:**` Düşünürəm ki, 𝙱𝙾𝚂𝚂 botunuzu dəyişdirdiniz və öz reponuzdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nƏsəb etmədən rəsmi repodan 𝙱𝙾𝚂𝚂 Botunu istifadə edin.`",
             "UPDATE": "\n`✨ Botun` **Ən güncəl versiyadadır!**\n\n🔧 `Branch:` **{}**\n",
             "WAS_UPDATE": "**{} üçün yeni güncəlləmə mövcuddur!\n\nDəyişikliklər:**\n`{}`",
             "BIG": "`Dəyişikliklərin siyahısı çox böyükdür, ona bir fayl kimi baxmalısınız.`",
             "DO_UPDATE": "`😄 Güncəllənməni etmək üçün \".update now\" komandasını istifadə edin.`",
-            "FORCE_UPDATE": "`Cari sabit istifadəçi bot kodu zorla sinxronizasiya olunur...`",
+            "FORCE_UPDATE": "`Bot məcburən update olunmalıdır...`",
             "UPDATING": "`🔄 Bot yenilənir...`",
-            "INVALID_APPNAME": "✨ 𝙼𝚒𝚊 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
-            "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilmişdir.`",
-            "HEROKU_UPDATING": "✨ 𝙼𝚒𝚊 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 UserBot-unuzun daha yaxşı olacağına əmin ola bilərsiniz :) Bu müddət maksimum 10 dəqiqə çəkir.__",
-            "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
-            "SUCCESSFULLY": "✨ 𝙼𝚒𝚊 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
+            "INVALID_APPNAME": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
+            "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilməmişdir.`",
+            "HEROKU_UPDATING": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 𝙱𝙾𝚂𝚂 UserBot-unun daha yaxşı olacağına əmin ola bilərsən :) Bu müddət maksimum 7-8 dəqiqə çəkir.Səbrli ol__",
+            "ERRORS": "Qarşılaşdığımız səhvlər bunlardır",
+            "SUCCESSFULLY": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
         },
 
         "upload_download": {
@@ -655,38 +655,38 @@
 
         "weather": {
             "NEED_API_KEY": "`Əvvəlcə` https://openweathermap.org/ `adresindən Bir API açarı almalısınız.`",
-            "NO_CITY": "`WEATHER_DEFCITY Dəyişən adı ilə varsayılan olaraq bir şəhər təyin edirsiniz və ya əmri yazdığınız zaman hansı şəhərin havasını istədiyinizi göstərirsiz!`",
-            "INVALID_COUNTRY": "`Səhf ölkə.`",
+            "NO_CITY": "`WEATHER_DEFCITY Dəyişən adı ilə varsayılan olaraq bir şəhər təyin edirsiniz və ya əmri yazdığınız zaman hansı şəhərin havasını istədiyinizi göstərirsiniz!`",
+            "INVALID_COUNTRY": "`Səhv ölkə.`",
             "TEMP": "İstilik",
             "MIN_TEMP": "Ən Aşağı İstilik",
             "MAX_TEMP": "Ən Yüksək İstilik",
-            "HUMIDITY": "Nəm",
-            "WIND_SPEED": "Külək sürrəti",
+            "HUMIDITY": "Nəmlik",
+            "WIND_SPEED": "Külək sürəti",
             "SUNRISE": "Gündoğumu",
             "SUNSET": "Günbatımı"
         },
 
         "klon": {
-            "WLKLON": "`Mia yöneticileri klonlanmayı sevmiyor.`"
+            "WLKLON": "`Boss yöneticileri klonlanmayı sevmiyor.`"
         },
 
         "whois": {
             "GETTING_DATA": "`Məlumatı oğurlayıram  ... Xahiş edirəm gözləyin...`",
             "FAILED_GETTING_DATA": "`Bu istifadəçinin məlumatlarını ala bilmədim.`",
-            "NO_PROFILE_PHOTO": "Şəxsin profil şəklini yükləyəməy üçün köməyə ehtiyac var.",
+            "NO_PROFILE_PHOTO": "Şəxsin profil şəklini yükləmək üçün köməyə ehtiyac var.",
             "NO_DC_ID": "DC ID gətirə bilmədim",
             "NO_FIRST_NAME": "Bu istifadəçinin adı yoxdur",
             "NO_LAST_NAME": "Bu istifadəçinin soyadı yoxdur",
             "NO_USERNAME": "Bu istifadəçinin istifadəçi adı yoxdur",
             "NO_BIO": "Bu istifadəçinin biosu boşdur",
-            "USER_INFO": "İSTİFADƏÇİ BİLGİLƏRİ",
+            "USER_INFO": "İstifadəçi məlumatları",
             "NAME": "Ad",
             "LASTNAME": "Soyad",
             "NICKNAME": "İstifadəçi Adı",
             "DC_ID": "Məlumat mərkəzi ID",
             "PROFILE_PHOTO_COUNT": "Profil şəkillərinin sayı",
-            "IS_BOT": "Bot-durmu",
-            "IS_RESTRICTED": "Məhduddurmu",
+            "IS_BOT": "Bot-vəziyyəti",
+            "IS_RESTRICTED": "Məhdudluq",
             "IS_VERIFIED": "Telegram tərəfindən təsdiqləndimi",
             "BIO": "Biosu",
             "COMMON_CHAT": "Bu istifadəçi ilə ortaq söhbətlər",
@@ -696,8 +696,8 @@
 	"www": {
             "SPEED": "`Sürət testi hesablanır...`",
             "STARTED_TIME": "Başlama Tarixi: ",
-            "DOWNLOAD_SPEED": "Yükləmə Sürrəti: ",
-            "UPLOAD_SPEED": "Upload Sürrəti: ",
+            "DOWNLOAD_SPEED": "Yükləmə Sürəti: ",
+            "UPLOAD_SPEED": "Upload Sürəti: ",
             "ISP": "İnternet xidməti təminatçısı: "
 	}
     }
