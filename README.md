@@ -1,8 +1,8 @@
-### Elle Kurulum / Manual Setup
+### Əllə qurulum / Elle Kurulum / Manual Setup
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/miauserbot/mia)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bossuserb/BossUserBot)
 
 ## Credit
-Teşekkürler;
+Təşəkkürlər/ Teşekkürler / thanks
 
 [Mia](https://github.com/Mia/MiaUserBot)
