@@ -1,7 +1,7 @@
 {
   "name": "BossUserBot",
   "description": "Boss UserBot",
-  "logo": "kddkdkdhwjsljznsjdn",
+  "logo": "https://telegra.ph/file/b18298963aaeddb4c825a.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -11,8 +11,8 @@
     "productivity"
   ],
   "repository": "https://github.com/bossuserb/BossUserBot",
-  "website":   "qurucu sehfe",
-  "success_url": "https://t.me/chatqruiu",
+  "website":   "t.me/bossuserbot",
+  "success_url": "https://t.me/bosssupportaz",
   "stack": "container",
   "env": {
     "API_KEY": {
