@@ -63,7 +63,7 @@ async def worktime(u):
     bana = await bana_mi_diyo(u)
     if not bana:
         return
-    worktime = await timemia.get_readable_time((emit() - WORKTIME))
+    worktime = await timeboss.get_readable_time((emit() - WORKTIME))
     await u.reply(f'✨ {worktime}')
 
 @register(pattern="^.botver$")
