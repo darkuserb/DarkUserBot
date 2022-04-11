@@ -80,8 +80,8 @@ def register(**args):
 
     def decorator(func):
         async def wrapper(check):
-            MiaVer = int(BOSS_VERSION.split(".")[1])
-            if ForceVer > MiaVer:
+            BossVer = int(BOSS_VERSION.split(".")[1])
+            if ForceVer > BossVer:
                 await check.edit(f"`🌈 Botu acilen güncellemen lazım! Bu sürüm artık kullanılamıyor..`\n\n__🥺 Sorunu çözmek için__ `.update now` __yazmalısın!__")
                 return
 
