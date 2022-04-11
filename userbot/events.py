@@ -11,7 +11,7 @@ from time import gmtime, strftime
 from traceback import format_exc
 from telethon.events import NewMessage as NW, MessageEdited as ME, StopPropagation as SP
 from telethon.errors.rpcerrorlist import MessageIdInvalidError
-from userbot import bot, SUDO_ID, ASISTAN, SEVGILI, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, MIA_VERSION, ForceVer
+from userbot import bot, SUDO_ID, ASISTAN, SEVGILI, BOTLOG_CHATID, LOGSPAMMER, PATTERNS, BOSS_VERSION, ForceVer
 
 
 def register(**args):
@@ -80,7 +80,7 @@ def register(**args):
 
     def decorator(func):
         async def wrapper(check):
-            MiaVer = int(MIA_VERSION.split(".")[1])
+            MiaVer = int(BOSS_VERSION.split(".")[1])
             if ForceVer > MiaVer:
                 await check.edit(f"`🌈 Botu acilen güncellemen lazım! Bu sürüm artık kullanılamıyor..`\n\n__🥺 Sorunu çözmek için__ `.update now` __yazmalısın!__")
                 return
@@ -154,7 +154,7 @@ def register(**args):
                     ftext += "\n\n➢ Hata metni:\n"
                     ftext += str(sys.exc_info()[1])
                     ftext += "\n\n➢ Bot versiyonu:\n"
-                    ftext += "{}".format(str(MIA_VERSION))
+                    ftext += "{}".format(str(BOSS_VERSION))
                     ftext += "\n\n\n➢ Geri izleme bilgisi: \n"
                     ftext += str(format_exc())
                     ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
