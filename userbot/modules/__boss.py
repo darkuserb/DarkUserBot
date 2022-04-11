@@ -8,13 +8,13 @@ from userbot.events import register
 # ██████ LANGUAGE CONSTANTS ██████ #
 
 from userbot.language import get_value
-LANG = get_value("__mia")
+LANG = get_value("__boss")
 
 # ████████████████████████████████ #
 
-@register(outgoing=True, pattern="^.[Mm]ia(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Bb]oss(?: |$)(.*)")
 async def siri(event):
-    """ .mia komutun """
+    """ .boss əmrin """
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
