@@ -4,7 +4,7 @@ from os import path, remove
 from telethon.tl.types import InputMessagesFilterDocument
 
 pchannel = bot.get_entity(PLUGIN_CHANNEL_ID)
-LOGS.info("Dil dosyası yükleniyor...")
+LOGS.info("Dil dosyası yüklənir...")
 LANGUAGE_JSON = None
 
 for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
@@ -17,7 +17,7 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
                 remove(f"./userbot/language/{dil.file.name}")
 
                 if path.isfile("./userbot/language/DEFAULT.bossjson"):
-                    LOGS.warn("Varsayılan dil dosyası kullanılıyor...")
+                    LOGS.warn("Varsayılan dil dosyası istifadə edilir...")
                     LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.bossjson", "r").read())
                 else:
                     raise Exception("Your language file is invalid")
@@ -28,7 +28,7 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
             except JSONDecodeError:
                 dil.delete()
                 if path.isfile("./userbot/language/DEFAULT.bossjson"):
-                    LOGS.warn("Varsayılan dil dosyası kullanılıyor...")
+                    LOGS.warn("Varsayılan dil dosyası istifadə edilir...")
                     LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.bossjson", "r").read())
                 else:
                     raise Exception("Your language file is invalid")
@@ -42,7 +42,7 @@ if LANGUAGE_JSON == None:
             raise Exception("Invalid json file")
     else:
         if path.isfile("./userbot/language/DEFAULT.bossjson"):
-            LOGS.warn("Varsayılan dil dosyası kullanılıyor...")
+            LOGS.warn("Varsayılan dil dosyası istifadə edilir...")
             LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.bossjson", "r").read())
         else:
             raise Exception(f"Didn't find {LANGUAGE} file")
