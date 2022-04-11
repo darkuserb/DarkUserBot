@@ -17,7 +17,7 @@ from platform import uname
 from shutil import which
 from requests import get
 import os
-from userbot import (CMD_HELP, MIA_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, WORKTIME, timemia, bot) 
+from userbot import (CMD_HELP, BOSS_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, WORKTIME, timemia, bot) 
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot.helps.asistan import bana_mi_diyo
@@ -90,7 +90,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) \
             + str(stderr.decode().strip())
 
-        await event.edit(f"=== {MIA_VERSION} === "
+        await event.edit(f"=== {BOSS_VERSION} === "
                          f"`{LANG['VERSION']}: "
                          "` \n"
                          f"{verout}"
@@ -154,7 +154,7 @@ async def amialive(e):
             await e.edit(PLUGIN_MESAJLAR['alive'].format(
                 telethon=version.__version__,
                 python=python_version(),
-                mia=MIA_VERSION,
+                mia=BOSS_VERSION,
                 plugin=len(CMD_HELP),
                 id=me.id,
                 worktime = await timemia.get_readable_time((emit() - WORKTIME)),
@@ -170,7 +170,7 @@ async def amialive(e):
                 PLUGIN_MESAJLAR['alive'].text = PLUGIN_MESAJLAR['alive'].text.format(
                     telethon=version.__version__,
                     python=python_version(),
-                    siri=MIA_VERSION,
+                    siri=BOSS_VERSION,
                     plugin=len(CMD_HELP),
                     id=me.id,
                     worktime = await timemia.get_readable_time((emit() - WORKTIME)),
@@ -195,7 +195,7 @@ async def asistanalive(ups):
         hitap = "💝 ʕっ•ᴥ•ʔっ Asistan"
     else:
         hitap = "Yöneticim"
-    SiriVer = str(MIA_VERSION.replace("v","")) 
+    SiriVer = str(BOSS_VERSION.replace("v","")) 
     await ups.reply(f"__{hitap} seni seviyorum❤! Mia çalışıyor!__")
 
 
