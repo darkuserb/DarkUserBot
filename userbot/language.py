@@ -35,13 +35,13 @@ for dil in bot.iter_messages(pchannel, filter=InputMessagesFilterDocument):
         break
 
 if LANGUAGE_JSON == None:
-    if path.isfile(f"./userbot/language/{LANGUAGE}.miajson"):
+    if path.isfile(f"./userbot/language/{LANGUAGE}.bossjson"):
         try:
             LANGUAGE_JSON = loads(open(f"./userbot/language/{LANGUAGE}.bossjson", "r").read())
         except JSONDecodeError:
             raise Exception("Invalid json file")
     else:
-        if path.isfile("./userbot/language/DEFAULT.miajson"):
+        if path.isfile("./userbot/language/DEFAULT.bossjson"):
             LOGS.warn("Varsayılan dil dosyası kullanılıyor...")
             LANGUAGE_JSON = loads(open(f"./userbot/language/DEFAULT.bossjson", "r").read())
         else:
