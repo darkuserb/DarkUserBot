@@ -148,7 +148,7 @@ async def pipcheck(pip):
 
 @register(pattern="^.alive$")
 async def amialive(e):
-        sahipp = f"{DEFAULT_NAME}" if DEFAULT_NAME else "me"
+        sahipp = f"{DEFAULT_NAME}" if DEFAULT_NAME else "Mi"
         me = await e.client.get_me()
         if type(PLUGIN_MESAJLAR['alive']) is str:
             await e.edit(PLUGIN_MESAJLAR['alive'].format(
