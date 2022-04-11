@@ -1,4 +1,3 @@
-from userbot import AFK_NAME
 {
     "__BOSSJSON__": true,
     "LANGUAGE": "Azərbaycanca",
@@ -106,9 +105,9 @@ from userbot import AFK_NAME
 
         "afk": {
             "REASON": "Səbəb",
-            "AFK": "{mention} hazırda Xətdə deyil.",
-            "IM_AFK": "{AFK_NAME} `Hazırda AFK-dır.💤 `",
-            "IM_NOT_AFK": "🙋🏻‍♂️ {AFK_NAME} `Artıq AFK deyil.`"
+            "AFK": "Sahibim hal-hazırda ətdə deyil.",
+            "IM_AFK": "`Sahibim Hazırda AFK-dır.💤 `",
+            "IM_NOT_AFK": "🙋🏻‍♂️`Sahibim Artıq AFK deyil.`"
         },
 
         "auto": {
