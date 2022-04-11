@@ -105,9 +105,9 @@
 
         "afk": {
             "REASON": "Səbəb",
-            "AFK": "{miasahip} hazırda Xətdə deyil.",
-            "IM_AFK": "{miasahip} `Hazırda AFK-dır.💤 `",
-            "IM_NOT_AFK": "🙋🏻‍♂️ {miasahip} `Artıq AFK deyil.`"
+            "AFK": "Sahibim hal-hazırda ətdə deyil.",
+            "IM_AFK": "`Sahibim Hazırda AFK-dır.💤 `",
+            "IM_NOT_AFK": "🙋🏻‍♂️`Sahibim Artıq AFK deyil.`"
         },
 
         "auto": {
