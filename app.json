@@ -124,60 +124,60 @@
       "value": "False"
     },
     "PM_AUTO_BAN_LIMIT": {
-      "description": "PM Auto Ban limiti. Size kullanıcı x mesaj atarsa engellencek.",
+      "description": "PM Auto Ban limiti. Icazə vermədiyiniz müddətdə istifadəçi bu qədər mesaj atarsa blok ediləcək..",
       "value": "4",
       "required": false
     },
     "YOUTUBE_API_KEY": {
-      "description": ".yt komutu için YouTube Veri API'sı keyidir. https://console.cloud.google.com adresinden alın.",
+      "description": ".yt əmri üçün YouTube məlumat API keyidir. https://console.cloud.google.com adresindən alın.",
       "required": false
     },
     "OCR_SİRİ_API_KEY": {
-      "description": ".ocr komutu için OCR API Key. https://ocr.siri/ocrapi adresinden alın.",
+      "description": ".ocr əmri üçün OCR API Key. https://ocr.siri/ocrapi adresindən alın.",
       "required": false
     },
     "REM_BG_API_KEY": {
-      "description": ".rbg komutu için API Key. https://www.remove.bg/api adresinden alın.",
+      "description": ".rbg əmri üçün API Key. https://www.remove.bg/api adresindən alın.",
       "required": false
     },
     "ANTI_SPAMBOT": {
-      "description": "Katıldıktan sonra gruplardan spambotları tekmeliyor. [Tekmelemek için yönetici yetkileri gerektirir]",
+      "description": "Qatıldıqdan sonra spam istifadəçilərini qovur hansı ki fake hesabla gəlib reklam edənləri.. [Qovmaq üçün yetki lazımdır ]",
       "value": "False"
     },
     "ANTI_SPAMBOT_SHOUT": {
-      "description": "Tekme atmak için yönetici yetkileriniz yoksa spambotları gruba katıldıktan sonra yöneticilere rapor edin.",
+      "description": "Yetkiniz olmadığı müddətdə spam istifadəçiləri qrupa qatıldığında botunuz report edər.",
       "value": "False"
     },
     "TMP_DOWNLOAD_DIRECTORY": {
-      "description": "Birçok modül için indirme konumu (GDrive, .download vb..)",
+      "description": "Bir çox əmr üçün endirmə məkanı  (GDrive, .download vs..)",
       "value": "./downloads/"
     },
     "CLEAN_WELCOME": {
-      "description": "Yeni bir kişi katıldığında, eski karşılama mesajı silinir.",
+      "description": "Yeni bir user qatıldığında, köhnə xoş gəldin mesajı silinir.",
       "value": "True"
     },
     "G_DRIVE_CLIENT_ID": {
-      "description": "Google Drive için client id girin.",
+      "description": "Google Drive üçün client id girin.",
       "required": false
     },
     "LASTFM_API": {
-      "description": "Last.FM modülü için API Key. [Şuradan bir tane alın - https://www.last.fm/api/account/create]",
+      "description": "Last.FM modulu üçün API Key. [Buradan bir dənə alın - https://www.last.fm/api/account/create]",
       "required": false
     },
     "LASTFM_SECRET": {
-      "description": "Last.FM modülü için SECRET Key. [Şuradan bir tane alın - https://www.last.fm/api/account/create]",
+      "description": "Last.FM modulu üçün SECRET Key. [Buradan bir dənə alın - https://www.last.fm/api/account/create]",
       "required": false
     },
     "LASTFM_USERNAME": {
-      "description": "Last.FM Kullanıcı adı",
+      "description": "Last.FM istifadəçi adı",
       "required": false
     },
     "LASTFM_PASSWORD": {
-      "description": "Last.FM Şifre",
+      "description": "Last.FM Şifrə",
       "required": false
     },
     "BIO_PREFIX": {
-      "description": "Last.FM Modülü Biyografi için önek.",
+      "description": "Last.FM Modulu Biyoqrafiya üçün nümunə.",
       "required": false
     }, 
     "DEFAULT_NAME": {
