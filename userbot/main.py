@@ -290,7 +290,7 @@ LOGS.info("+==============+==============+==============+==============+")
 LOGS.info("|                                                            |")
 LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
           " Yardıma İhtiyacınız varsa, Destek grubumuza gelin t.me/MiaSupport")
-LOGS.info(f"Bot versiyonunuz: Mia {BOSS_VERSION}")
+LOGS.info(f"Bot versiyonunuz: Boss {BOSS_VERSION}")
 
 """
 if len(argv) not in (1, 3, 4):
