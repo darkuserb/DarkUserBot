@@ -16,7 +16,7 @@ from telethon.sync import TelegramClient, custom
 from telethon.sessions import StringSession
 from telethon.events import callbackquery, InlineQuery, NewMessage
 from .utils.pip_install import install_pip
-from .helps import timehelper as timeboss
+from .helps import timehelper as timemia
 from math import ceil
 
 load_dotenv("config.env")
