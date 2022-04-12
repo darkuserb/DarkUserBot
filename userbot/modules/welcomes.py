@@ -90,7 +90,7 @@ async def save_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import add_welcome_setting
     except:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyir!`")
         return
     msg = await event.get_reply_message()
     string = event.pattern_match.group(1)
@@ -110,10 +110,10 @@ async def save_welcome(event):
             msg_id = msg_o.id
         else:
             await event.edit(
-                "`Karşılama notunu kaydetmek için BOTLOG_CHATID ayarlanması gerekir.`"
+                "`Qarşılama notunu kaydetmek üçün BOTLOG_CHATID ayarlanması lazımdır.`"
             )
             return
-    elif event.reply_to_msg_id and not string:
+    elif event.reply_to_msg_id and not string:ır
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
     success = "`Karşılama mesajı bu sohbet için {} `"
@@ -128,21 +128,21 @@ async def show_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import get_current_welcome_settings
     except:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyir!`")
         return
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        await event.edit("`Burada kayıtlı karşılama mesajı yok.`")
+        await event.edit("`Burada kayıtlı qarşılama mesajı yox.`")
         return
     elif cws and cws.f_mesg_id:
         msg_o = await event.client.get_messages(entity=BOTLOG_CHATID,
                                                 ids=int(cws.f_mesg_id))
         await event.edit(
-            "`Şu anda bu karşılama notu ile yeni kullanıcıları ağırlıyorum.`")
+            "`Bu anda bu qarşılama notu ilə yeni userləri ağırlıyıram.`")
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
         await event.edit(
-            "`Şu anda bu karşılama notu ile yeni kullanıcıları ağırlıyorum.`")
+            "`Bu anda bu qarşılama notu ilə yeni kullanıcıları ağırlıyıram.`")
         await event.reply(cws.reply)
 
 
@@ -151,34 +151,34 @@ async def del_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import rm_welcome_setting
     except:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyir!`")
         return
     if rm_welcome_setting(event.chat_id) is True:
-        await event.edit("`Karşılama mesajı bu sohbet için silindi.`")
+        await event.edit("`Qarşılama mesajı bu söhbət üçün silindi.`")
     else:
-        await event.edit("`Burada karşılama notu var mı ?`")
+        await event.edit("`Burada qarşılama notu var mı ?`")
 
 
 CMD_HELP.update({
     "welcome":
     "\
-.setwelcome <karışlama mesajı> veya .setwelcome ile bir mesaja cevap verin\
-\nKullanım: Mesajı sohbete karşılama notu olarak kaydeder.\
-\n\nKarşılama mesajlarını biçimlendirmek için kullanılabilir değişkenler :\
+.setwelcome <qarşılama mesajı> vəya .setwelcome ilə bir mesaja cavab verin\
+\nKullanım: Mesajı söhbətə qarşılama notu olaraq kaydedər.\
+\n\nQarşılama mesajlarını biçimləndirmək üçün işlədilə bilir dəyişkənlər :\
 \n`{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`\
 \n\n.checkwelcome\
-\nKullanım: Sohbette karşılama notu olup olmadığını kontrol edin.\
+\nKullanım: Söhbəttdə qarşılama notu olub olmadığını cəhd edin.\
 \n\n.rmwelcome\
-\nKullanım: Geçerli sohbet için karşılama notunu siler.\
+\nKullanım: Keçərli söhbət üçün qarşılama notunu silər.\
 "
 })
 
 CmdHelp('welcome').add_command(
-    'setwelcome', '<karışlama mesajı>', 'Mesajı sohbete karşılama notu olarak kaydeder.'
+    'setwelcome', '<qarşılama mesajı>', 'Mesajı söhbətə qarşılama notu olaraq kaydedər.'
 ).add_command(
-    'checkwelcome', None, 'Sohbette karşılama notu olup olmadığını kontrol edin.'
+    'checkwelcome', None, 'Söhbəttə qarşılama notu olub olmadığını cəhd edin.'
 ).add_command(
-    'rmwelcome', None, 'Geçerli sohbet için karşılama notunu siler.'
+    'rmwelcome', None, 'Keçərli söhbət üçün qarşılama notunu silər.'
 ).add_info(
-    'Değişkenler: `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`'
+    'Dəyişkənlər: `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`'
 ).add()
