@@ -98,9 +98,9 @@ async def remove_chatbot(event):
         except Exception as e:
             await event.edit(f"**Error:**\n`{str(e)}`")
         else:
-            await event.edit("`ChatBot kullanıcı için durduruldu!`")
+            await event.edit("`ChatBot user için durduruldu!`")
     else:
-        await event.edit("`Kullanıcıda zaten ChatBot etkinleştirilmedi!`")
+        await event.edit("`Userdə onsuz ChatBot etkinləştirilmədi!`")
 
 
 #@register(incoming=True, disable_edited=True,disable_errors=True)
