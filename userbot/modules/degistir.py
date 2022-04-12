@@ -21,8 +21,8 @@ LANG = get_value("degistir")
 # ████████████████████████████████ #
 
 @register(outgoing=True, pattern="^.change ?(.*)")
-@register(outgoing=True, pattern="^.de[gğ]i[sş]tir ?(.*)")
-async def degistir(event):
+@register(outgoing=True, pattern="^.deyisdir ?(.*)")
+async def deyisdir(event):
     plugin = event.pattern_match.group(1)
     mesaj = re.search(r"\"(.*)\"", plugin)
 
@@ -71,7 +71,7 @@ async def degistir(event):
             await event.edit(LANG['NOT_FOUND'] + ":`afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block`")
 
 CmdHelp('degistir').add_command(
-    'değiştir', '<modul> <mesaj/yanıt>', 'Değiştir, bottaki plugin-mesajlarını değiştirmenize yarar. Eğer mesaj yazmazsanız Plugin mesajını orijinal haline döndürür.', '.değiştir afk \"Şu an burda değilim... Belki hiç gelmem\"'
+    'değiştir', '<modul> <mesaj/yanıt>', 'Deyişdir, bottaki plugin-mesajlarını dəyiştirmənizə yarar. Əgər mesaj yazmazsanız Plugin mesajını original halına döndərər.', '.deyisdir afk \"İndi burada deyiləm... Bəlkə heç gəlmərəm\"'
 ).add_info(
     '**Desteklenen Pluginler:** `afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block`\n**Alive Değişkenleri:** `{plugin}, {telethon}, {siri}, {python}, {sirisahip}`\n\
 **Ban/Mute Değişkenleri:** `{id}, {username}, {first_name}, {last_name}, {mention}, {date}, {count}`\n\
