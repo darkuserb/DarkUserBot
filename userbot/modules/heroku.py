@@ -70,7 +70,7 @@ async def variable(var):
                         continue
                     msg += f"`{item}` = `{configvars[item]}`\n"
                 await var.client.send_message(
-                    BOTLOG_CHATID, "#CONFIGVARS\n\n
+                    BOTLOG_CHATID, "#CONFIGVARS\n\n"
                     "**ConfigVars**:\n"
                     f"{msg}"
                 
