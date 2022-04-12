@@ -50,8 +50,7 @@ async def update_requirements():
         await process.communicate()
         return process.returncode
     except Exception as e:
-        return repr(e)
-
+        return repr(e
 
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
 async def upstream(ups):
@@ -62,7 +61,7 @@ async def upstream(ups):
     force_update = False
 
     try:
-        txt = "`Güncelleme başarısız oldu! Bazı sorunlarla karşılaştık.`\n\n**LOG:**\n"
+        txt = "`Güncəlləmə uğursuz oldu! Bəzi  problemlərlə qarşılaşdıq.`\n\n**LOG:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await ups.edit(f'{txt}\n`{error} {LANG["NOT_FOUND"]}.`')
@@ -87,7 +86,7 @@ async def upstream(ups):
         repo.heads.seden.checkout(True)
 
     ac_br = repo.active_branch.name
-    if ac_br != 'master':
+    if ac_br != 'master':ı
         await ups.edit(LANG['INVALID_BRANCH'])
         repo.__del__()
         return
@@ -194,7 +193,7 @@ async def asistan_update(ups):
             force_update = False
 
             try:
-                txt = "`Güncelleme başarısız oldu! Bazı sorunlarla karşılaştık.`\n\n**LOG:**\n"
+                txt = "`Güncəlləmə uğursuz oldu! Bəzi problemlərlə qarşılaştıq.`\n\n**LOG:**\n"
                 repo = Repo()
             except NoSuchPathError as error:
                 await usp.edit(f'{txt}\n`{error} {LANG["NOT_FOUND"]}.`')
@@ -301,7 +300,7 @@ async def asistan_update(ups):
             force_update = False
 
             try:
-                txt = "`Güncelleme başarısız oldu! Bazı sorunlarla karşılaştık.`\n\n**LOG:**\n"
+                txt = "`Güncəlləmə uğursuz oldu! Bəzi problemlərlə qarşılaştıq.`\n\n**LOG:**\n"
                 repo = Repo()
             except NoSuchPathError as error:
                 await usp.edit(f'{txt}\n`{error} {LANG["NOT_FOUND"]}.`')
@@ -404,7 +403,7 @@ async def asistan_update(ups):
     
 
 CmdHelp('update').add_command(
-    'update', None, 'Botunuza siz kurduktan sonra herhangi bir güncelleme gelip gelmediğini kontrol eder.'
+    'update', None, 'Botunuza siz qurduqdan sonra hərhansı bir güncəlləmə gəlib gəlmədiyini yoxlayar.'
 ).add_command(
-    'update now', None, 'Botunuzu günceller.'
+    'update now', None, 'Botunuzu güncəlləyər.'
 ).add()
