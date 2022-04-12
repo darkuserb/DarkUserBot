@@ -149,5 +149,5 @@ async def get_weather(weather):
         f"`{cityname}, {fullc_n}`\n" + f"`{time}`")
 
 CmdHelp('weather').add_command(
-    'weather', '<şehir>', 'Bir bölgenin hava durumunu verir.'
+    'weather', '<şəhər>', 'Bir bölgənin hava durumunu verir.'
 ).add()
