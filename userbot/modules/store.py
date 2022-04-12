@@ -38,8 +38,8 @@ async def magaza(event):
         plugins = await event.client.get_messages(STORECHANNEL, limit=None, filter=InputMessagesFilterDocument)
         plugins = sample(plugins, int(split[1]) if len(split) == 2 else 5)
     else:
-        plugins = await event.client.get_messages('@siriaddon', limit=None, search=plugin, filter=InputMessagesFilterDocument)
-        random = await event.client.get_messages('@siriaddon', limit=None, filter=InputMessagesFilterDocument)
+        plugins = await event.client.get_messages('@bossplugin', limit=None, search=plugin, filter=InputMessagesFilterDocument)
+        random = await event.client.get_messages('@bossplugin', limit=None, filter=InputMessagesFilterDocument)
         random = choice(random)
         random_file = random.file.name
 
@@ -119,7 +119,7 @@ async def sinstall(event):
 userbot.cmdhelp.CmdHelp('store').add_command(
     'store', '<kelime>', 'Plugin kanalına son atılan Pluginleri getirir. Eğer kelime yazarsanız onu kanalda arar.'
 ).add_command(
-    'store random', '<say>', 'Plugin kanalından random plugin getirir.', 'store random 10'
+    'store random', '<say>', 'Plugin akanalından random plugin getirir.', 'store random 10'
 ).add_command(
     'sinstall', '<say>', 'Plugin kanalından direkt olarak Plugini yükler.'
 ).add()
