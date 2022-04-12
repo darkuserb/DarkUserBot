@@ -157,7 +157,7 @@ def extractCommands(file):
             for Komut in Komutlar:
                 # if re.search('\[(\w*)\]', Komut):
                     # Komut = re.sub('(?<=\[.)[A-Za-z0-9_]*\]', '', Komut).replace('[', '')
-                CmdHelp.add_command(Komut, None, 'Bu plugin kənardan yükləmib. Hansısa bir açıqlama qeyd etməyiblər .')
+                CmdHelp.add_command(Komut, None, 'Bu plugin kənardan yüklənib. Hansısa bir açıqlama qeyd etməyiblər .')
             CmdHelp.add()
 
 forceVer = []
@@ -182,7 +182,7 @@ try:
     bossbl = requests.get('https://raw.githubusercontent.com/bossuserb/datas/master/blacklist.json').json()
     if idim in bossbl:
         bot.send_message("me", f"`❌ Boss inzibatçıları səni botdan qadağan etdi! Bot söndürülür...`")
-        LOGS.error("Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
+        LOGS.error("Boss inzibatçıları səni botdan qadağan etdi! Bot söndürülür...")
         bot.disconnect()
         sys.exit(1)
     # ChromeDriver'ı Ayarlayalım #
