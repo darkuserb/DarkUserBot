@@ -171,7 +171,7 @@ async def pins(event):
         return
 
     dosyaAdi = reply_message.file.name
-#    plugins = await event.client.get_messages('@miaplugin', limit=None, search=dosyaAdi, filter=InputMessagesFilterDocument)
+#    plugins = await event.client.get_messages('@bossplugin', limit=None, search=dosyaAdi, filter=InputMessagesFilterDocument)
 
 #    if len(plugins) == 0:
 #        await event.edit('🍕 `Bu bir Mia Plugini değil!`')
