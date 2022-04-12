@@ -35,14 +35,14 @@ async def galeri(event):
     try:
         import userbot.modules.sql_helper.galeri_sql as sql
     except:
-        await event.edit("`SQL dışı mod'ta galeri çalışmaz!`")
+        await event.edit("`SQL qırağı mod'ta Qaleriya işləməs!`")
     secenek = event.pattern_match.group(1)
     secen = secenek.split(" ")
-    if secen[0] == "ekle":
+    if secen[0] == "sal":
         if len(secen) > 1:
             URL = re.search(URL_REGEX, secen[1])
             if URL != None:
-                sql.ekle_foto(secen[1])
+                sql.sal_foto(secen[1])
                 sql.getir_foto()
                 await event.edit(LANG['ADDED_LIST'])
             else:
@@ -98,9 +98,9 @@ async def galeri(event):
         await event.edit(LANG['INVALID'])
 
 CmdHelp('galeri').add_command(
-    'galeri ekle', '<url>', 'Galeri sırasına fotoğraf ekler', 'galeri ekle https://i.hizliresim.com/wFSVKd.jpg'
+    'galeri ekle', '<url>', 'Qaleriya sırasına şəkil salar', 'galeri ekle https://i.hizliresim.com/wFSVKd.jpg'
 ).add_command(
-    'galeri liste', None, 'Galeri sırasını gösterir.'
+    'galeri liste', None, 'Qaleriya sırasını göstərir.'
 ).add_command(
-    'galeri sil', '<sayı>', 'Galeri sırasından bir resmi siler.', 'galeri sil 4'
+    'galeri sil', '<sayı>', 'Qaleriya sırasından bir rəsmi silər.', 'galeri sil 4'
 ).add()
