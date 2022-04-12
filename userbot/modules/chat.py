@@ -179,22 +179,22 @@ async def sedNinjaToggle(event):
 
 
 CMD_HELP.update({
-    "chat":
+    "chazzt":
     ".chatid\
-\nKullanım: Belirlenen grubun ID numarasını verir\
+\nKullanım: Deyilən grubun ID nömrəsini verir\
 \n\n.id\
-\nKullanım: Belirlenen kullanıcının ID numarasını verir.\
+\nKullanım: Deyilən userin ID nömrəsini verir.\
 \n\n.log\
-\nKullanım: Yanıtlanan mesajı günlük grubuna gönderir.\
+\nKullanım: Yanıtlanan mesajı günlük grubuna göndərir.\
 \n\n.kickme\
-\nKullanım: Belirlenen gruptan ayrılmanızı sağlar.\
+\nKullanım: Deyilən gruptan ayrılmanızı edər.\
 \n\n.unmutechat\
-\nKullanım: Susturulmuş bir sohbetin sesini açar.\
+\nKullanım: Susturulmuş bir sohbətin səsini açar.\
 \n\n.mutechat\
-\nKullanım: Belirlenen grubu susturur.\
-\n\n.link <kullanıcı adı/kullanıcı id> : <isteğe bağlı metin> (veya) herhangi birinin mesajına .link ile yanıt vererek <isteğe bağlı metin>\
-\nKullanım: İsteğe bağlı özel metin ile kullanıcının profiline kalıcı bir bağlantı oluşturun.\
+\nKullanım: Deyilən qrupu susturur.\
+\n\n.link <kullanıcı adı/kullanıcı id> : <istəyə bağlı mətin> (vəya) hərhansı birinin mesajına .link ilə yanıt verərək <istəyə bağlı mətin>\
+\nKullanım: İstəyə bağlı özəl mətin ilə kullanıcının profilinə qalıcı bir bağlantı oluşturun.\
 \n\n.regexninja on/off\
-\nKullanım: Küresel olarak regex ninja modülünü etkinleştirir / devre dışı bırakır.\
-\nRegex ninja modülü regex bot tarfından tetiklenen mesajları silmek için yardımcı olur."
+\nKullanım: Kürəsəl olaraq regex ninja modulunu açar / geri buraxır.\
+\nRegex ninja modulu regex bot tərəfindan tetiklənəj mesajları silmək üçün yardımcı olur."
 })
