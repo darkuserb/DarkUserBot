@@ -89,6 +89,6 @@ async def autovideo(event):
 
 CmdHelp('autovideo').add_command(
     'autopp', None, 
-    'Bu komut yanıt verdiğiniz videoyu profil video yapar ve bir saat veya tarih veya istediğiniz bir yazı ekler. Bu saat her dakika değişir. nEğer botun kendi yazısını kullanmak istiyorsanız ekstradan bir şey yazmayın. Kendi yazınızı eklemek istiyorsanız .autovideo yazı şeklinde kullanın. ',
+    'Bu əmr yanıt verdiyiniz videoyu profil video edər və bir saat vəya tarix vəya istədiyiniz bir yazı salar. Bu saat hər dəqiqə dəyişir. Əgər botun öz yazısını işlətmək istiyirsəniz əlavədən bir şey yazmayın. Öz yazınızı əlavə etmək istiyirsəniz .autovideo yazı şəklində işlədin. ',
     '.autovideo ahan saat $saat bu da tarih $tarih'
 ).add()
