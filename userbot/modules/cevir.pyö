@@ -113,31 +113,31 @@ async def cevir(event):
         if not rep_msg.video:
             await event.edit(LANG['NEED_VIDEO'])
             return
-        await event.edit('`Sese çevriliyor...`')
+        await event.edit('`Səsə çevrilir...`')
         video = io.BytesIO()
         video = await event.client.download_media(rep_msg.video)
         gif = await asyncio.create_subprocess_shell(
             f"ffmpeg -y -i '{video}' -vn -b:a 128k -c:a libmp3lame out.mp3")
         await gif.communicate()
-        await event.edit('`Ses yükleniyor...`')
+        await event.edit('`Səs yüklənir...`')
         
         try:
             await event.client.send_file(event.chat_id, "out.mp3",reply_to=rep_msg, caption='**@SiriOT ile sese çevrildi.**')
         except:
             os.remove(video)
-            return await event.edit('`Sese çevirilemedi!`')
+            return await event.edit('`Səsə çevirə bilmədim!`')
 
         await event.delete()
         os.remove("out.mp3")
         os.remove(video)
     elif islem == "voice":  #credit:miri
-        caption = "@SiriOT ile sesli mesaja dönüştürüldü."
+        caption = "@BossUserBot ilə səsli mesaja çevirildi."
         rep_msg = await event.get_reply_message()
         sarki = rep_msg.text
         if rep_msg.audio:
-            await event.edit(f"__Ses indiriliyor...__")
+            await event.edit(f"__Səs Endirilir...__")
             indir = await rep_msg.download_media()
-            await event.edit(f"__Sesi indirdim, sesli mesaj olarak gönderiyorum...__")
+            await event.edit(f"__Səsi Endirdim, səsli mesaj olaraq göndərirəm...__")
             voice = await asyncio.create_subprocess_shell(f"ffmpeg -i '{indir}' -y -c:a libopus 'unvoice.ogg'")
             await voice.communicate()
             if path.isfile("unvoice.ogg"):
@@ -145,7 +145,7 @@ async def cevir(event):
                 await event.delete()
                 remove("unvoice.ogg")
             else:
-                await event.edit("`Ses, sesli nota dönüştürülemedi!`")
+                await event.edit("`Səs, səsli nota çevirilə bilmədi!`")
             remove(indir)
             return
     else:
@@ -153,13 +153,13 @@ async def cevir(event):
         return
 
 CmdHelp('cevir').add_command(
-    'çevir photo', '<yanıt>', 'Stickeri fotoğrafa çevirir.'
+    'çevir photo', '<yanıt>', 'Stickeri şəkilə çevirir.'
 ).add_command(
-    'çevir gif', '<yanıt>', 'Videoyu gife çevirir.'
+    'çevir gif', '<yanıt>', 'Videoyu gifə çevirir.'
 ).add_command(
-    'çevir audio', '<çocuk/robot/earrape/hızlı/parazit/yankı>', 'Sese efekt uygular.'
+    'çevir audio', '<uşaq/robot/earrape/sürətli/parazit/yankı>', 'Səsə effekt edər.'
 ).add_command(
-    'çevir mp3', '<yanıt>', 'yanıtladığınız videoyu mp3\'e çevirir.'
+    'çevir mp3', '<yanıt>', 'yanıtladığınız videoyu mp3\'ə çevirir.'
 ).add_command(
-    'çevir voice', '<yanıt>', 'yanıtladığınız mp3\'ü ses atmış gibi gösterir.'
+    'çevir voice', '<yanıt>', 'yanıtladığınız mp3\'ü səs atmış kimi göstərir.'
 ).add()
