@@ -91,7 +91,7 @@ async def save_goodbye(event):
     try:
         from userbot.modules.sql_helper.goodbye_sql import add_goodbye_setting
     except:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyirr!`")
         return
     msg = await event.get_reply_message()
     string = event.pattern_match.group(1)
@@ -101,7 +101,7 @@ async def save_goodbye(event):
             await event.client.send_message(
                 BOTLOG_CHATID, f"#GORUSURUZ_NOTU\
             \nGRUP ID: {event.chat_id}\
-            \nAşağıdaki mesaj sohbet için yeni Karşılama notu olarak kaydedildi, lütfen silmeyin !!"
+            \nAşağıdaki mesaj söhbət üçün yeni Qarşılama notu olaraq kaydedildi, Xahiş silməyin !!"
             )
             msg_o = await event.client.forward_messages(
                 entity=BOTLOG_CHATID,
@@ -111,17 +111,17 @@ async def save_goodbye(event):
             msg_id = msg_o.id
         else:
             await event.edit(
-                "`Karşılama notunu kaydetmek için BOTLOG_CHATID ayarlanması gerekir.`"
+                "`Qarşılama notunu kaydetmek için BOTLOG_CHATID ayarlanması lazımdır.`"
             )
             return
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
         string = rep_msg.text
-    success = "`Görüşürüz mesajı bu sohbet için {} `"
+    success = "`Görüşürüz mesajı bu söhbət üçün {} `"
     if add_goodbye_setting(event.chat_id, 0, string, msg_id) is True:
         await event.edit(success.format('kaydedildi'))
     else:
-        await event.edit(success.format('güncellendi'))
+        await event.edit(success.format('güncəlləndi'))
 
 
 @register(outgoing=True, pattern="^.checkgoodbye$")
@@ -129,11 +129,11 @@ async def show_goodbye(event):
     try:
         from userbot.modules.sql_helper.goodbye_sql import get_current_goodbye_settings
     except:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyir!`")
         return
     cws = get_current_goodbye_settings(event.chat_id)
     if not cws:
-        await event.edit("`Burada kayıtlı karşılama mesajı yok.`")
+        await event.edit("`Burada kayıtlı qarşılama mesajı yox.`")
         return
     elif cws and cws.f_mesg_id:
         msg_o = await event.client.get_messages(entity=BOTLOG_CHATID,
@@ -143,7 +143,7 @@ async def show_goodbye(event):
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
         await event.edit(
-            "`Şu anda bu not ile çıkanları/ban yiyenlere yanıtlıyorum.`")
+            "`Şu anda bu not ilə çıxanları/ban yiyənlərə yanıtlıyıram.`")
         await event.reply(cws.reply)
 
 
@@ -152,17 +152,17 @@ async def del_goodbye(event):
     try:
         from userbot.modules.sql_helper.goodbye_sql import rm_goodbye_setting
     except:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyir!`")
         return
     if rm_goodbye_setting(event.chat_id) is True:
-        await event.edit("`Karşılama mesajı bu sohbet için silindi.`")
+        await event.edit("`Qarşılama mesajı bu söhbət üçün silindi.`")
     else:
-        await event.edit("`Burada karşılama notu var mı ?`")
+        await event.edit("`Burada Qarşılama notu var mı ?`")
 
 CmdHelp('goodbye').add_command(
-    'setgoodbye', '<yanıt mesajı> veya .setgoodbye ile bir mesaja cevap verin', 'Mesajı sohbete görüşürüz notu olarak kaydeder.'
+    'setgoodbye', '<yanıt mesajı> vəya .setgoodbye ilə bir mesaja cavab verin', 'Mesajı söhbətə görüşürüz notu olarak kaydeder.'
 ).add_command(
-    'checkgoodbye', None, 'Sohbette görüşürz notu olup olmadığını kontrol edin.'
+    'checkgoodbye', None, 'Söhbəttə görüşürüz notu olub olmadığını cəhd edin.'
 ).add_command(
-    'rmgoodbye', None, 'Geçerli sohbet için görüşürüz notunu siler.'
+    'rmgoodbye', None, 'Keçərli söhbət üçün görüşürüz notunu silər.'
 ).add()
