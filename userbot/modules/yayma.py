@@ -8,11 +8,11 @@ from userbot.events import register
 async def yay(event):
     mesaj = event.pattern_match.group(1)
     if len(mesaj) < 1:
-        await event.edit("`Birşeyleri Yaymak için bir mesaj vermeniz gerek. Örnek: ``.yay merhaba dünya`")
+        await event.edit("`Birşeyləri Yaymak üçün bir mesaj verməniz lazımdır. Nümunə: ``.yay Salam dünya`")
         return
 
     if event.is_private:
-        await event.edit("`Bu komut sadece gruplarda çalışmaktadır.`")
+        await event.edit("`Bu əmr sadəcə gruplarda işləməkdədir.`")
         return
 
     chat = await event.get_chat()
@@ -20,7 +20,7 @@ async def yay(event):
     creator = chat.creator
 
     if not admin and not creator:
-        await event.edit("`Ciddi misin? Admin olmadığın bir grupta duyuru göndermene izin vermiyeceğim!`")
+        await event.edit("`Ciddisən? Admin olmadığın bir grupta duyuru göndərmənə icazə vermiyəcəyəm!`")
         return
 
     await event.edit("`Tüm üyelerinize duyurunuz gönderiliyor...`")
@@ -36,11 +36,11 @@ async def yay(event):
             link = "[" + user.first_name + "](" + str(user.id) + ")"
         try:
             await event.client.send_message(uid, mesaj + "\n\n@SiriUserBot ile gönderildi.")
-            son = f"**Son duyuru gönderilen kullanıcı:** {link}"
+            son = f"**Son duyuru göndərilən kullanıcı:** {link}"
         except:
-            son = f"**Son duyuru gönderilen kullanıcı:** **Gönderilemedi!**"
+            son = f"**Son duyuru gönderilen kullanıcı:** **Göndəriləmədi!**"
     
-        await event.edit(f"`Tüm üyelerinize duyurunuz gönderiliyor...`\n{son}\n\n**Durum:** `{a}/{len(all_participants)}`")
+        await event.edit(f"`Bütün üzvlərinizə duyurunuz göndərilir...`\n{son}\n\n**Durum:** `{a}/{len(all_participants)}`")
         await asyncio.sleep(0.5)
 
-    await event.edit("`Tüm üyelerinize duyurunuz gönderildi!`\n\nby @MiaUserBot 😙")
+    await event.edit("`Bütün üzvlərinizə duyurunuz göndərildi!`\n\nby @BossUserBot 😙")
