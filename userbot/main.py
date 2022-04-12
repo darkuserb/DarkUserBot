@@ -40,18 +40,10 @@ ALIVE_MSG = [
 ]
 
 DIZCILIK_STR = [
-    "Çıkartmayı dızlıyorum...",
-    "Çaldım Gitti Geçmiş Olsun 🤭",
-    "Yaşasın dızcılık...",
-    "Bu çıkartmayı kendi paketime davet ediyorum...",
-    "Bunu dızlamam lazım...",
-    "Hey bu güzel bir çıkartma!\nHemen dızlıyorum..",
-    "Çıkartmanı dızlıyorum\nhahaha.",
-    "Hey şuraya bak. (☉｡☉)!→\nBen bunu dızlarken...",
-    "Güller kırmızı menekşeler mavi, bu çıkartmayı paketime dızlayarak havalı olacağım...",
-    "Çıkartma hapsediliyor...",
-    "Bay dızcı bu çıkartmayı dızlıyor... ",
-    "Bu güzel çıkartma neden benim paketimde de olmasın🤭",
+    "Stikeri əkirəm, palet eləməyin...",
+    "Bunu oğurladım , geçmiş olsun 🤭",
+    "Yaşasın əkmək...",
+    "Bu stikeri öz paketimə dəvət edirəm ...",
 ]
 
 AFKSTR = [
@@ -82,18 +74,17 @@ AFKSTR = [
 ]
 
 KICKME_MSG = [
-    "Güle güle ben gidiyorum 👋🏻",
-    "Sessizce çıkıyorum 🥴",
-    "Haberin olmadan çıkarsam bir gün benim grupta olmadığı farkedeceksin.. O yüzden bu mesajı bırakıyorum🚪",
-    "Hemen burayı terk etmeliyim🤭",
-    "7 deniz ve 7 ülke,\n7 su ve 7 kıta,\n7 dağ ve 7 tepe,\n7 ovala ve 7 höyük,\n7 havuz ve 7 göl,\n7 bahar ve 7 çayır,\n7 şehir ve 7 mahalle,\n7 blok ve 7 ev...\n\nKısaca bu gruptan uzak bi yere..!",
-    "Hadi ben kaçtım!"
+    "Gülə-gülə mən gedirəm  👋🏻",
+    "Yaxşı, tərk edirəm. 🥴",
+    "Xəbərin olmadan çıxarsam , burada olmadığımın fərqinə vararsan.. Buna görə də bu mesajı buraxıram🚪",
+    "cəld buradan çıxmalıyam.🤭",
+    "7 dəniz və 7 ölkə,\n7 su və 7 qitə,\n7 dağ və 7 təpə,\n7 ovala və 7 höyük,\n7 hovuz ve 7 göl,\n7 bahar və 7 çayır,\n7 şəhər və 7 məhəllə,\n7 blok və 7 ev...\n\nQısaca bu qrupdan uzaq bir yerə.!",
+    "Davay mən getdim!"
 ]
 
 
-UNAPPROVED_MSG = ("`{mention} Sahibim onay verene kadar bu mesajı alacaksın👩🏻‍💻!\n\n`"
-                  "`✔️ Onaylı olmadığın sürece her yazdığın mesaja yanıt olarak sahibimin yerine ben mesaj  `"
-                  "`atacağım.....\n\n`")
+UNAPPROVED_MSG = ("`{mention} Sahibim təsdiq edənə qədər bu mesajı alacaqsan👩🏻‍💻!\n\n`"
+                  "`✔️ Təsdiq olunmadığın müddətdə sahibim əvəzinə mən yazacağam  `")
 
 DB = connect("learning-data-root.check")
 CURSOR = DB.cursor()
