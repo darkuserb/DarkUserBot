@@ -159,7 +159,7 @@ else:
     try:
         PLUGIN_CHANNEL_ID = int(PLUGINID)
     except:
-        print('Invalid Plugin Channel - Hatalı Plugin Kanalı')
+        print('Invalid Plugin Channel - Xətalı Plugin Kanalı')
         sys.exit(1)
 
 # OpenWeatherMap API Key
@@ -508,12 +508,12 @@ Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsən.
             try:
                 butonlar = [custom.Button.inline("🔹 " + cmd[0], data=f"komut[{komut}[{sayfa}]]({cmd[0]})") for cmd in CMD_HELP_BOT[komut]['commands'].items()]
             except KeyError:
-                return await event.answer("❌ Bu modula açıxlama yazılmamış.", cache_time=0, alert=True)
+                return await event.answer("❌ Bu modula açıqlama yazılmamış.", cache_time=0, alert=True)
 
             butonlar = [butonlar[i:i + 2] for i in range(0, len(butonlar), 2)]
             butonlar.append([custom.Button.inline("◀️ Geri", data=f"sayfa({sayfa})")])
             await event.edit(
-                f"**📗 Dosya:** `{komut}`\n**🔢 Komut Sayısı:** `{len(CMD_HELP_BOT[komut]['commands'])}`",
+                f"**📗 Dosya:** `{komut}`\n**🔢 Əmr Sayı:** `{len(CMD_HELP_BOT[komut]['commands'])}`",
                 buttons=butonlar,
                 link_preview=False
             )
