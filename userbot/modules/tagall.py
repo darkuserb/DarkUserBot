@@ -45,7 +45,7 @@ async def _(event):
     await event.delete()
 
 CmdHelp('tagall').add_command(
-    'tagall', None, 'Bu komutu kullandığınızda sohbet içerisinde ki herkesi etiketler.'
+    'tagall', None, 'Bu əmri işlətdiyinizdə söhbət içərisində ki hərkəsi etiketləyər.'
 ).add_command(
-    'admin', None, 'Bu komutu kullandığınızda sohbet içerisinde ki yöneticileri etiketler.'
+    'admin', None, 'Bu əmri kullandığınızda söhbət içərisində ki adminləri etiketləyər.'
 ).add()
