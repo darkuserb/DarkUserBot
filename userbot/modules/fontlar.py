@@ -405,7 +405,7 @@ async def fonta(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -423,7 +423,7 @@ async def fontb(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -441,7 +441,7 @@ async def fontc(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -459,7 +459,7 @@ async def fontd(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -477,7 +477,7 @@ async def fonte(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -495,7 +495,7 @@ async def fontf(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -513,7 +513,7 @@ async def fontg(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -530,7 +530,7 @@ async def fonth(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -548,7 +548,7 @@ async def fonti(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -566,7 +566,7 @@ async def fontj(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -584,7 +584,7 @@ async def fontl(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
@@ -602,7 +602,7 @@ async def fontq(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
+        await event.edit("`Hey, mətni çevirə bilmirəm. Bir mesaja yanıt olaraq işlədin`")
         return
     string = "  ".join(args).lower()
     for normiecharacter in string:
