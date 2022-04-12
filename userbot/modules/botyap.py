@@ -16,8 +16,8 @@ LANG = get_value("botfather")
 # ████████████████████████████████ #
 
 
-@register(pattern="^.newbot ?(.*)")
-async def newbot(event):
+@register(pattern="^.yenibot ?(.*)")
+async def yenibot(event):
     if event.pattern_match.group(1):
         text, username= event.pattern_match.group(1).split()
         
@@ -56,5 +56,5 @@ async def newbot(event):
 
 
 
-add_ = CmdHelp('botyap')
-add_.add_command("newbot", "<bot_name> <bot_username>", "Yeni Bot Oluşturun").add()
+add_ = CmdHelp('yenibot')
+add_.add_command("yenibot", "<bot_name> <bot_username>", "Yeni Bot Qurun").add()
