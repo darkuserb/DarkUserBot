@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 
-# ASiriUserBot - ErdemBey - Midy
+# BossUserBot
 
 
 """ Dogbin ile etkileşim için komutlar içeren UserBot modülü(https://del.dog)"""
@@ -78,7 +78,7 @@ async def paste(pstl):
     if BOTLOG:
         await pstl.client.send_message(
             BOTLOG_CHATID,
-            f"Dogbine metin yapıştırma başarıyla yürütüldü",
+            f"Dogbinə mətin yapışdırma Uğurla yürüdüldü",
         )
 
 
@@ -132,7 +132,7 @@ async def get_dogbin_content(dog_url):
         )
 
 CmdHelp('dogbin').add_command(
-    'paste', '<metin/yanıtlama>', 'Dogbin kullanarak yapıştırılmış veya kısaltılmış url oluşturma (https://del.dog/)'
+    'paste', '<mətin/yanıtlama>', 'Dogbin işlədərək yapışdırılmış vəya qısaltılmış url yaratmaq (https://del.dog/)'
 ).add_command(
-    'getpaste', None, 'Dogbin url içeriğini metne aktarır (https://del.dog/)'
+    'getpaste', None, 'Dogbin url içini mətnə axtarır (https://del.dog/)'
 ).add()
