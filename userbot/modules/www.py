@@ -66,9 +66,9 @@ def speed_convert(size):
 async def neardc(event):
     """ .dc komutu en yakın datacenter bilgisini verir. """
     result = await event.client(functions.help.GetNearestDcRequest())
-    await event.edit(f"Şehir : `{result.country}`\n"
-                     f"En yakın datacenter : `{result.nearest_dc}`\n"
-                     f"Şu anki datacenter : `{result.this_dc}`")
+    await event.edit(f"Şəhər : `{result.country}`\n"
+                     f"Ən yaxın datacenter : `{result.nearest_dc}`\n"
+                     f"Bu anki datacenter : `{result.this_dc}`")
 
 
 @register(pattern="^.ping$")
@@ -99,9 +99,9 @@ async def asistanping(ups):
          return
 
 CmdHelp('www').add_command(
-    'speed', None, 'Bir speedtest uygular ve sonucu gösterir.'
+    'speed', None, 'Bir speedtest qurar və sonucu göstərir.'
 ).add_command(
-    'dc', None, 'Sunucunuza en yakın datacenter\'ı gösterir.'
+    'dc', None, 'Sunucunuza ən yaxın datacenter\'ı göstərir.'
 ).add_command(
-    'ping', None, 'Botun ping değerini gösterir.'
+    'ping', None, 'Botun ping dəyərini göstərir.'
 ).add()
