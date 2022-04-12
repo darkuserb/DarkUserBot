@@ -25,7 +25,7 @@ import asyncio
 
 
 if 1 == 1:
-    name = "Profil Fotoğrafları"
+    name = "Profil Şəkilləri"
     client = "userbot"
 
 @register(outgoing=True, pattern="^.foto(?: |$)(.*)", disable_errors=True)
@@ -44,7 +44,7 @@ async def potocmd(event):
     if id.strip() == "":
         if len(photos) > 0:
             await event.client.send_file(event.chat_id, photos)
-            await event.edit(f"Fotoğraflar rahatlıkla indirildi ! @MiaPlugin")
+            await event.edit(f"Şəkillər asanlıqla Endirildi ! @BossPlugin")
         else:
             try:
                 if u is True:
@@ -52,7 +52,7 @@ async def potocmd(event):
                 else:
                     photo = await event.client.download_profile_photo(event.input_chat)
                 await event.client.send_file(event.chat_id, photo)
-                await event.edit(f"Fotoğraflar Rahatlıkla yükləndi ! @MiaUserBot")
+                await event.edit(f"Fotoğraflar Asanlıqla yükləndi ! @BossUserBot")
             except a:
                 await event.edit("**Bu userin hiç bir fotoğrafı yok !**")
                 return
@@ -60,24 +60,24 @@ async def potocmd(event):
         try:
             id = int(id)
             if id <= 0:
-                await event.edit("Zahmet olmasa kiminse mesajını yanıtlayın !")
+                await event.edit("Zəhmət olmasa kiminsə mesajını yanıtlayın !")
                 return
         except:
-            await event.edit(f"Zahmet değilse kiminse mesajını yanıtlayın !")
+            await event.edit(f"Zəhmət deyilsə kiminsə mesajını yanıtlayın !")
             return
         if int(id) <= (len(photos)):
             send_photos = await event.client.download_media(photos[id - 1])
             await event.client.send_file(event.chat_id, send_photos)
         else:
-            await event.edit(f"Bu sohbette medya göndermeye hakkım yok !")
+            await event.edit(f"Bu söhbəttə medya göndərməyə haqqım yoxdur !")
             await asyncio.sleep(8)
             return
 
 
 CMD_HELP.update({
     "foto":
-    ".foto <Kiminse mesajını yanıtla>\
-\nİşlədilişi: Yanıtladığınız userin fotoğrafların atar!\
+    ".foto <Kiminsə mesajını yanıtla>\
+\nİşlədilişi: Yanıtladığınız userin Şəkillərini atar!\
 \n.foto <say>\
 \nİşlədilişi: Yanıtladığıvız user <Say> fotoğraf atar."
 })
