@@ -39,21 +39,21 @@ try:
 ) 
 except:
     logging.log(level=logging.WARNING,
-                msg="ChatBot veritabanı bağlantısı başarısız oldu")
+                msg="ChatBot data bağlantısı uğursuz oldu")
 
 
 @register(outgoing=True, pattern="^.addai$")
 async def add_chatbot(event):
-    "Yanıtlanan kişi için yapay zekayı etkinleştirme"
+    "Yanıtlanan kişi üçün zəkayı etkin edir"
     if not RANDOM_STUFF_API_KEY:
         return await event.edit(
-            "`ChatBot'u etkinleştirmek için bir API key ayarlayın! `"
+            "`ChatBot'u etkinləştirmek üçün bir API key ayarlayın! `"
         )
     if event.reply_to_msg_id is None:
         return await event.edit(
-            "`ChatBot'u etkinleştirmek için bir kullanıcının mesajını yanıtlayın! `"
+            "`ChatBot'u etkinləştirmək üçün bir userin mesajını yanıtlayın! `"
         )
-    catevent = await event.edit("`Kullanıcıyı ChatBot'a ekliyorum...`")
+    catevent = await event.edit("`Useri ChatBot'a salıram...`")
     previous_message = await event.get_reply_message()
     user = await event.client.get_entity(previous_message.from_id)
     if not user:
@@ -70,20 +70,20 @@ async def add_chatbot(event):
     user_name = user.first_name
     user_username = user.username
     if is_added(chat_id, user_id):
-        return await event.edit("`Kullanıcı da zaten ChatBot etkinleştirildi.`")
+        return await event.edit("`User də  ChatBot etkinləştirildi.`")
     try:
         addai(chat_id, user_id, chat_name, user_name, user_username, chat_type)
     except Exception as e:
         await event.edit(f"**Error:**\n`{str(e)}`")
     else:
-        await event.reply("`🐟 Başarılı!`")
+        await event.reply("`🐟 Uğurlu!`")
 
 @register(outgoing=True, pattern="^.remai$")
 async def remove_chatbot(event):
     "Kullanıcı için ChatBot'u durdurmak"
     if not RANDOM_STUFF_API_KEY:
         return await event.edit(
-            "`ChatBot'u etkinleştirmek için bir API key ayarlayın! `"
+            "`ChatBot'u etkinləştirmek üçün2 bir API key ayarlayın! `"
         )
     if event.reply_to_msg_id is None:
         return await event.edit(
@@ -120,7 +120,7 @@ async def ai_reply(event):
         await event.reply(response.message)
 
 CmdHelp('chatbot').add_command(
-    'addai', '<yanıtlayarak>', 'ChatBot\'un otomatik sohbetini etkinleştirir.'
+    'addai', '<yanıtlayaraq>', 'ChatBot\'un avto söhbətini etkinləştirir.'
 ).add_command(
-    'remai', '<yanıtlayarak>', 'ChatBot\'un otomatik sohbetini devre dışı bırakır.'
+    'remai', '<yanıtlayaraq>', 'ChatBot\'un avto söhbətini geri buraxır.'
 ).add()
