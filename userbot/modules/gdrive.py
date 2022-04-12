@@ -108,11 +108,11 @@ async def gdrive_upload_function(dryb):
         if os.path.exists(input_str):
             required_file_name = input_str
             await dryb.edit(
-                "`{}` dosyası sunucuda bulundu. Google Drive'a yükleme başlatılıyor.."
+                "`{}` faylı serverdə tapıldı. Google Drive'a yükləmə başlatılır.."
                 .format(input_str))
         else:
             await dryb.edit(
-                "Sunucuda dosya bulunamadı. Lütfen doğru dosya konumunu belirtin.")
+                "Serverdə fayl tapılammadı. Xahiş doğru fayl  yerini bəlirtin.")
             return False
     elif dryb.reply_to_msg_id:
         try:
@@ -127,7 +127,7 @@ async def gdrive_upload_function(dryb):
         else:
             required_file_name = downloaded_file_name
             await dryb.edit(
-                "`{}` dizinine indirme başarrılı. \nGoogle Drive'a yükleme başlatılıyor.."
+                "`{}` dizinine indirme başarrılı. \nGoogle Drive'a yükləmə başlatılır.."
                 .format(downloaded_file_name))
     if required_file_name:
         if G_DRIVE_AUTH_TOKEN_DATA is not None:
@@ -147,11 +147,11 @@ async def gdrive_upload_function(dryb):
                                              file_name, mime_type, dryb,
                                              parent_id)
             await dryb.edit(
-                f"Dosya :`{required_file_name}`\nUpload başarılı! \nİndirme linki: [Google Drive]({g_drive_link})!"
+                f"Dosya :`{required_file_name}`\nUpload Uğurlu! \nEndirme linki: [Google Drive]({g_drive_link})!"
             )
         except Exception as e:
             await dryb.edit(
-                f"Google Drive'a yükleme başarısız.\nHata kodu:\n`{e}`")
+                f"Google Drive'a yükləmə uğursuz.\nXəta kodu:\n`{e}`")
 
 
 @register(pattern=r"^.ggd(?: |$)(.*)", outgoing=True)
@@ -178,7 +178,7 @@ async def upload_dir_to_gdrive(event):
         dir_link = "https://drive.google.com/folderview?id={}".format(dir_id)
         await event.edit(f"Google Drive bağlantın [burada]({dir_link})")
     else:
-        await event.edit(f"{input_str} dizini bulunamadı.")
+        await event.edit(f"{input_str} dizini tapılammadı.")
 
 
 @register(pattern=r"^.list(?: |$)(.*)", outgoing=True)
@@ -208,26 +208,26 @@ async def gdrive_search_list(event):
     outgoing=True)
 async def download(set):
     """ .gsetf komutu dizini belirtmenizi sağlar. """
-    await set.edit("İşleniyor ...")
+    await set.edit("İşlənir ...")
     input_str = set.pattern_match.group(1)
     if input_str:
         parent_id = input_str
         await set.edit(
-            "Özel Klasör ID'si başarıyla ayarlandı. Sonraki uploadlar şuraya uploadlanacak: {parent_id} (`.gsetclear` komutunu vermediğiniz sürece)"
+            "Özəl Fayl ID'si uğurla ayarlandı. Sonraki uploadlar buraya uploadlanacaq: {parent_id} (`.gsetclear` əmrini vermədiyiniz sürəcə)"
         )
         await set.delete()
     else:
         await set.edit(
-            ".gdrivesp <GDrive Klasörü> komutuyla yeni dosyaların uploadlanacağı klasörü belirtebilirsiniz."
+            ".gdrivesp <GDrive Faylı> əmri yeni dosyaların uploadlanacağı faylı bəlirtəbilərsiniz."
         )
 
 
 @register(pattern="^.gsetclear$", outgoing=True)
 async def download(gclr):
     """ .gsetclear komutu özel dizini kaldırmanıza yarar. """
-    await gclr.reply("İşleniyor ...")
+    await gclr.reply("İşlənir ...")
     parent_id = GDRIVE_FOLDER_ID
-    await gclr.edit("Özel Klasör ID'si başarıyla temizlendi.")
+    await gclr.edit("Özəl Fayl ID'si uğurla təmizləndi.")
 
 
 @register(pattern="^.gfolder$", outgoing=True)
@@ -235,11 +235,11 @@ async def show_current_gdrove_folder(event):
     if parent_id:
         folder_link = f"https://drive.google.com/drive/folders/" + parent_id
         await event.edit(
-            f"UserBot'um dosyaları [şuraya]({folder_link}) uploadlıyor.")
+            f"UserBot'um faylları [buraya]({folder_link}) uploadlıyır.")
     else:
         await event.edit(
-            f"UserBot'um dosyaları Google Drive'ın kök dizinine uploadlıyor.\
-            \nUploadlanan dosyalar [burada](https://drive.google.com/drive/my-drive)"
+            f"UserBot'um faylları Google Drive'ın kök dizininə uploadlıyır.\
+            \nUploadlanan fayllar [burada](https://drive.google.com/drive/my-drive)"
         )
 
 
@@ -260,7 +260,7 @@ async def create_token_file(token_file, event):
     authorize_url = flow.step1_get_authorize_url()
     async with event.client.conversation(BOTLOG_CHATID) as conv:
         await conv.send_message(
-            f"Bu linke git ve kodu kopyalayıp yanıtla: {authorize_url}"
+            f"Bu linkə get ve kodu kopyalayıb yanıtla: {authorize_url}"
         )
         response = conv.wait_event(
             events.NewMessage(outgoing=True, chats=BOTLOG_CHATID))
@@ -436,17 +436,17 @@ async def gdrive_search(http, search_query):
         except Exception as e:
             res += str(e)
             break
-    msg = f"**Google Drive Araması**:\n`{search_query}`\n\n**Sonuçlar**\n\n{res}"
+    msg = f"**Google Drive Axtarışı**:\n`{search_query}`\n\n**Nəticələr**\n\n{res}"
     return msg
 
 CmdHelp('gdrive').add_command(
-    'gdrive', '<dosya yolu / yanıtlayarak / URL|dosya-adı>', 'Belirtilen dosyayı Google Drive\'a uploadlar.'
+    'gdrive', '<fayl yolu / yanıtlayaraq / URL|dosya-adı>', 'Bəlirtilən faylı Google Drive\'a uploadlayar.'
 ).add_command(
-    'gsetf', '<GDrive Klasör URL\'si>', 'Yeni dosyaların upladlanacağı klasörü belirler.'
+    'gsetf', '<GDrive Fayl URL\'si>', 'Yeni faylların uploadlanacağı faylı deyər.'
 ).add_command(
-    'gsetclear', None, 'Halihazırda kullanılan upload dizinini gösterir.'
+    'gsetclear', None, 'Halhazırda işlədilən upload dizinini göstərir.'
 ).add_command(
-    'list', '<sorgu>', 'Google Drive\'da bulunan dosyalar ve dizinlerde arama yapar.'
+    'list', '<sorgu>', 'Google Drive\'da tapılan fayllar və dizinlərdə axtarış edər.'
 ).add_command(
-    'ggd', '<sunucudaki-klasör-yolu>', 'Belirtilen dizindeki tüm dosyaları Google Drive\'a uploadlar.'
+    'ggd', '<serverdəki-fayl-yolu>', 'Bəlirtilən dizindəki Bütün faylları Google Drive\'a uploadlayar.'
 ).add()
