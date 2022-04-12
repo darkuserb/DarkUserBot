@@ -10,7 +10,7 @@ from userbot.events import register
 
 async def telegraphs(grup):
 
-    """ .yap command,Sipariş Alındı Siri Yapmaya Başladı... :)  """
+    """ .yap command,Sipariş Alındı Boss Yapmaya Başladı... :)  """
 
     if not grup.text[0].isalpha() and grup.text[0] not in ("/", "#", "@", "!"):
 
@@ -90,11 +90,11 @@ CMD_HELP.update({
 
     "yap": "\
 Yap\
-\nKullanımı: Süper/gizli Grup, kanal Hazırlar.\
+\nKullanımı: Süper/gizli Grup, kanal Hazırlayar.\
 \n\n`.yap 1 <ad>`\
-\nKullanımı: Gizli Grup Hazırlar.\
+\nKullanımı: Gizli Grup Hazırlayar.\
 \n\n`.yap 2 <ad>`\
-\nKullanımı: Herkese açık Grup Hazırlar.\
+\nKullanımı: Hərkəsə açık Grup Hazırlayar.\
 \n\n`.yap 3 <ad>`\
-\nKullanımı: Kanal Hazırlar.\
+\nKullanımı: Kanal Hazırlayar.\
 "})
