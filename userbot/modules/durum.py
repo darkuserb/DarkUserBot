@@ -35,7 +35,6 @@ async def durums(event):
 **Python {LANG['VERSION']}:** `{python_version()}`
 **TeleThon {LANG['VERSION']}:** `{version.__version__}` 
 **Siri {LANG['VERSION']}:** `{BOSS_VERSION}`
-
 **{LANG['PLUGIN_COUNT']}:** `{len(CMD_HELP)}`
 
 **Inline Bot:** `{durum(tgbot)}`
@@ -90,5 +89,5 @@ async def asistandurum(ups):
 
 
 CmdHelp('durum').add_command(
-    'durum', None, 'Eklenen Apiler ve sürümleri gösterir.'
+    'durum', None, 'Salınan Apilər və sürümləri göstərir.'
 ).add()
