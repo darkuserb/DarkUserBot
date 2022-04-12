@@ -567,26 +567,26 @@ async def uploadas(uas_event):
                     ],
                     progress_callback=lambda d, t: asyncio.get_event_loop(
                     ).create_task(
-                        progress(d, t, uas_event, c_time, "Uploadlanıyor...",
+                        progress(d, t, uas_event, c_time, "Uploadlanır...",
                                  file_name)))
             elif spam_big_messages:
-                await uas_event.edit("TBD: Halihazırda uygulanamadı.")
+                await uas_event.edit("TBD: Halhazırda ola bilmədi.")
                 return
             os.remove(thumb)
-            await uas_event.edit("Upload başarılı !!")
+            await uas_event.edit("Upload Uğurlu !!")
         except FileNotFoundError as err:
             await uas_event.edit(str(err))
     else:
-        await uas_event.edit("404: Dosya bulunamadı.")
+        await uas_event.edit("404: fayl tapılmadı.")
 
 CmdHelp('updown').add_command(
-    'download', '<bağlantı-dosya adı> (ya da bir şeye cevap vererek)', 'Sunucuya dosyayı indirir.'
+    'download', '<bağlantı-dosya adı> (ya da bir şeyə cavab ve.rərək)', 'Serverə faylı endirir.'
 ).add_command(
-    'upload', '<sunucudaki dosya yolu>', 'Sunucunuzdaki bir dosyayı sohbete upload eder.'
+    'upload', '<serverdəki dosya yolu>', 'Serverinizdəki bir faylı söhbətə upload edər.'
 ).add_command(
-    'wupload', ' <dosyaya yanıt verin> anonfiles|transfer|filebin|tmpninja|anonymousfiles|megaupload|bayfiles|letsupload|vshare', 'Seçtiğiniz websiteye yükler.'
+    'wupload', ' <fayla yanıt verin> anonfiles|transfer|filebin|tmpninja|anonymousfiles|megaupload|bayfiles|letsupload|vshare', 'Seçtiyiniz websayta yüklüyərr.'
 ).add_command(
-    'unzip', '<yanıt>', 'Yanıt verdiğiniz Zip dosyasını çıkarır.'
+    'unzip', '<yanıt>', 'Yanıt verdiğiniz Zip dosyasını çıxarır.'
 ).add_command(
-    'uploadir', '<klasör>', 'Tüm klasöru yükler.'
+    'uploadir', '<fayl>', 'Tüm faylı yüklüyər.'
 ).add()
