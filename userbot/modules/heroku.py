@@ -43,7 +43,7 @@ async def variable(var):
                        "\n**HEROKU_APPNAME** Yükleyin.")
         return False
     if exe == "get":
-        await var.edit("`🔄 Heroku Bilgileri Getiriliyor..`")
+        await var.edit("`🔄 Heroku Məlumaları Gətirilir..`")
         variable = var.pattern_match.group(2)
         if variable != '':
             if variable in heroku_var:
@@ -59,7 +59,7 @@ async def variable(var):
                     await var.edit("`Lütfen BOTLOG grubu ayarlayınız...`")
                     return False
             else:
-                await var.edit("`Hata:` **Olmayan Bir değer değiştirilemez.**")
+                await var.edit("`Xəta:` **Olmayan Bir dəyər dəyiştiriləməz.**")
                 return True
         else:
             configvars = heroku_var.to_dict()
@@ -70,20 +70,20 @@ async def variable(var):
                         continue
                     msg += f"`{item}` = `{configvars[item]}`\n"
                 await var.client.send_message(
-                    BOTLOG_CHATID, "#CONFIGVARS\n\n"
+                    BOTLOG_CHATID, "#CONFIGVARS\n\n
                     "**ConfigVars**:\n"
                     f"{msg}"
-                )
+                
                 await var.edit("`BOTLOG_CHATID alındı...`")
                 return True
             else:
-                await var.edit("`Lütfen BOTLOG'u True olarak ayarlayın!`")
+                await var.edit("`Xahiş BOTLOG'u True olaraq ayarlayın!`")
                 return False
     elif exe == "del":
-        await var.edit("`Bilgileri siliyorum...`")
+        await var.edit("`Məlumatları silirəm...`")
         variable = var.pattern_match.group(2)
         if variable == '':
-            await var.edit("`Silmek istediğiniz ConfigVars'ı seçin ve bana bildirin...`")
+            await var.edit("`Silmək istədiyiniz ConfigVars'ı seçin və mənə bildirin...`")
             return False
         if variable in heroku_var:
             if BOTLOG:
@@ -92,16 +92,16 @@ async def variable(var):
                     "**ConfigVar Silindi**:\n"
                     f"`{variable}`"
                 )
-            await var.edit("`Bilgiler silindi!`")
+            await var.edit("`məlumatlar silindi!`")
             del heroku_var[variable]
         else:
-            await var.edit("`Bilgiler Yok!`")
+            await var.edit("`Məlumatlar Yoxdur!`")
             return True
 
 
 @register(pattern=r'^.set var (\w*) ([\s\S]*)')
 async def set_var(var):
-    await var.edit("`🔄 Verilenler Herokuya Yazılıyor...`")
+    await var.edit("`🔄 Verilənlər Herokuya Yazılır...`")
     variable = var.pattern_match.group(1)
     value = var.pattern_match.group(2)
     fix = False
@@ -113,10 +113,10 @@ async def set_var(var):
                     "**ConfigVar Değişikliği**:\n"
                     f"`{variable}` = `{value}`"
                 )
-            await var.edit(f"`✅ {variable} değeri değiştirildi!`")
+            await var.edit(f"`✅ {variable} dəyəri dəyiştirildi!`")
         except:
              fix = True
-             await var.edit("😒 Botlog grubundan çıkmışsın.. Senin için düzeltiyorum..")
+             await var.edit("😒 Botlog grubundan çıxmısan.. Sənin üçün düzəldirəm..")
     else:
         try:
             if BOTLOG:
@@ -125,10 +125,10 @@ async def set_var(var):
                     "**Yeni ConfigVar Eklendi**:\n"
                     f"`{variable}` = `{value}`"
                 )
-            await var.edit(f"`✅ {variable} değeri ayarlandı!`")
+            await var.edit(f"`✅ {variable} dəyəri ayarlandı!`")
         except Exception:
             fix = True
-            await var.edit("😒 Botlog grubundan çıkmışsın.. Senin için düzeltiyorum..")
+            await var.edit("😒 Botlog grubundan çıxmısan.. Sənin üçün düzəldirəm..")
     if fix:
         heroku_var["BOTLOG"] = "False"
         heroku_var["BOTLOG_CHATID"] = "0"
@@ -142,7 +142,7 @@ async def asistansetvar(ups):
     bana = await bana_mi_diyo(u)
     if not bana:
         return
-    usp = await ups.reply("`⚙️ Asistan'dan alınan veriler herokuya yazılıyor...`")
+    usp = await ups.reply("`⚙️ Asistan'dan alınan datalar herokuya yazılır...`")
     dg = ups.text.replace(".setvar ","")
     dgs = dg.split(":")
     variable = dgs[0]
@@ -161,7 +161,7 @@ async def asistansetvar(ups):
                 "**Yeni ConfigVar Eklendi**:\n"
                 f"`{variable}` = `{value}`"
             )
-    await usp.edit("`⚙️ Asistandan alınan veriler herokuya aktarıldı!`")
+    await usp.edit("`⚙️ Asistandan alınan datalar herokuya axtarıldı!`")
     heroku_var[variable] = value
 
 
@@ -171,7 +171,7 @@ async def asistansetvar(ups):
 @register(pattern=r"^.dyno(?: |$)")
 async def dyno_usage(dyno):
     """Bu qisimdə bot istifadə edilmiş dynonu əldə etməyə çalışır"""
-    await dyno.edit("`🔄 Lütfen Bekleyiniz...`")
+    await dyno.edit("`🔄 Xahiş Gözləyin...`")
     useragent = ('Mozilla/5.0 (Linux; Android 10; SM-G975F) '
                  'AppleWebKit/537.36 (KHTML, like Gecko) '
                  'Chrome/80.0.3987.149 Mobile Safari/537.36'
@@ -214,15 +214,15 @@ async def dyno_usage(dyno):
 
     await asyncio.sleep(1.5)
 
-    return await dyno.edit("**✨ Kalan Dyno**:\n\n"
-                           f" 👉🏻 `Kullanılan Dyno Saati`  **({HEROKU_APPNAME})**:\n"
+    return await dyno.edit("**✨ Qalan Dyno**:\n\n"
+                           f" 👉🏻 `İşlədilən Dyno Saati`  **({HEROKU_APPNAME})**:\n"
                            f"     ⌛  `{AppHours}` **saat**  `{AppMinutes}` **dakika**  "
                            f"**|**  [`{AppPercentage}` **%**]"
                            "\n"
-                           " 👉🏻 `Bu ay için kalan dyno saati`:\n"
+                           " 👉🏻 `Bu ay üçün qalan dyno saatı`:\n"
                            f"     ⌛  `{hours}` **saat**  `{minutes}` **dakika**  "
                            f"**|**  [`{percentage}` **%**]\n"
-                           " 👉🏻 `Ne zaman biter`:\n"
+                           " 👉🏻 `Nə zaman bitər`:\n"
                            f"      ⌛  [**{remaining} gün**]"
                            )
 
@@ -233,9 +233,9 @@ async def herokulog(dyno):
         app = Heroku.app(HEROKU_APPNAME)
     except BaseException:
         return await dyno.reply(
-            "`Litfen Bekleyin ,Heroku VARS'da Heroku API Key ve Heroku APP name'in düzgün olduğundan emin olun.`"
+            "`Xahiş Gözləyin ,Heroku VARS'da Heroku API Key və Heroku APP name'in düzgün olduğundan əmin olun.`"
         )
-    await dyno.edit("`🔄 Log getiriliyor....`")
+    await dyno.edit("`🔄 Log gətirilir....`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
@@ -248,15 +248,15 @@ async def herokulog(dyno):
 
 
 CmdHelp('heroku').add_command(
-'dyno', None, 'Dyno saati hakkında bilgi verir..'
+'dyno', None, 'Dyno saatı haqqında məlumat verir..'
     ).add_command(
-        'set var', None, 'set var <Yeni Var adı> <değer> Botunuza yeni ConfigVar eklenir.'
+        'set var', None, 'set var <Yeni Var adı> <dəyər> Botunuza yeni ConfigVar salır.'
     ).add_command(
-        'get var', None, 'Mevcut VARlarınızı elde edin, yalnızca botlog gurubunuzda ulaşabilirsiniz .'
+        'get var', None, 'Mövcud VARlarınızı əldə edin, yalnızca botlog gurubunuzda tapa bilərsiniz .'
     ).add_command(
-        'del var', None, 'del var <Var adı> Seçdiğiniz ConfigVarı siler sildikten sonra botunuza .restart atın.'
+        'del var', None, 'del var <Var adı> Seçdiyiniz ConfigVarı silər sildiktən sonra botunuza .restart atın.'
     ).add_command(
-        'log', None, 'Heroku logunuza bakın'
+        'log', None, 'Heroku logunuza baxın'
     ).add_info(
-        '**Botlog grubundan çıktıysanız sizin yerinize düzeltmesi için** `.set var BOTLOG False` **yazın.. ✨**'
+        '**Botlog grubundan çıxsanız sizin yerinizə düzəltməsi üçün** `.set var BOTLOG False` **yazın.. ✨**'
     ).add()
