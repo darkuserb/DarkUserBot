@@ -21,8 +21,8 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, ANTI_SPAMBOT, ANTI_SPAMBOT_
 @bot.on(ChatAction)
 async def anti_spambot(welcm):
     try:
-        ''' Eğer bir kullanıcı spam algoritmasıyla eşleşiyorsa
-           onu gruptan yasaklar. '''
+        ''' Əgər bir user spam algoritmiylə eşleşərsə
+           onu gruptan qadağan edər. '''
         if not ANTI_SPAMBOT:
             return
         if isinstance(BLACKLIST_CHAT, list):
@@ -102,37 +102,37 @@ async def anti_spambot(welcm):
                         pass
 
                     if data and data['ok']:
-                        reason = f"[Combot Anti Spam tarafından banlandı.](https://cas.chat/query?u={check_user.id})"
+                        reason = f"[Combot Anti Spam tərəfindən banlandı.](https://cas.chat/query?u={check_user.id})"
                         spambot = True
                     elif "t.cn/" in message.text:
-                        reason = "`t.cn` URL'leri tespit edildi."
+                        reason = "`t.cn` URL'ləri tapıldı."
                         spambot = True
                     elif "t.me/joinchat" in message.text:
-                        reason = "Potansiyel reklam mesajı"
+                        reason = "Bacarıq reklam mesajı"
                         spambot = True
                     elif message.fwd_from:
-                        reason = "Başkasından iletilen mesaj"
+                        reason = "Başqasından ilətilən mesaj"
                         spambot = True
                     elif "?start=" in message.text:
                         reason = "Telegram botu `start` linki"
                         spambot = True
                     elif "bit.ly/" in message.text:
-                        reason = "`bit.ly` URL'leri tespit edildi."
+                        reason = "`bit.ly` URL'ləri tapıldı."
                         spambot = True
                     elif "tr.link/" in message.text:
-                        reason = "`tr.link` URL'leri tespit edildi."
+                        reason = "`tr.link` URL'ləri tapıldı."
                         spambot = True
                     elif "ay.live/" in message.text:
-                        reason = "`ay.live` URL'leri tespit edildi."
+                        reason = "`ay.live` URL'ləri tapıldı."
                         spambot = True
                     elif "exe.io/" in message.text:
-                        reason = "`exe.io` URL'leri tespit edildi."
+                        reason = "`exe.io` URL'ləri tapıldı."
                         spambot = True
                     elif "ouo.io/" in message.text:
-                        reason = "`ouo.io` URL'leri tespit edildi."
+                        reason = "`ouo.io` URL'ləri tapıldı."
                         spambot = True
                     else:
-                        ULIST = ["Bitmex", "Bitcoin", "Promotion","Information", "Dex","Announcements", "Info","Duyuru", "Duyurular","Bilgilendirme", "Bilgilendirmeler"]
+                        ULIST = ["Bitmex", "Bitcoin", "Promotion","Information", "Dex","Announcements", "Info","Duyuru", "Duyurular","Bilgiləndirmə", "Bilgiləndirmələr"]
                         for i in ULIST:
                             if i in check_user.first_name:
                                 if check_user.last_name == "Bot":
@@ -140,7 +140,7 @@ async def anti_spambot(welcm):
                                     spambot = True
 
                     if spambot:
-                        print(f"Potansiyel Spam Mesajı: {message.text}")
+                        print(f"Bacarıq Spam Mesajı: {message.text}")
                         await message.delete()
                         break
 
@@ -154,8 +154,8 @@ async def anti_spambot(welcm):
                     if ANTI_SPAMBOT_SHOUT:
                         await welcm.reply(
                             "@admin\n"
-                            "`ANTI SPAMBOT TESPİT EDİLDİ!\n"
-                            "BU KULLANICI BENİM SPAMBOT ALGORİTMALARIMLA EŞLEŞİYOR!`"
+                            "`ANTI SPAMBOT Tapıldı!\n"
+                            "BU User Mənim SpamBot Alqortimalarımıa Eşləşir!`"
                             f"SEBEP: {reason}")
                         kicked = False
                         reported = True
@@ -163,9 +163,9 @@ async def anti_spambot(welcm):
                     try:
 
                         await welcm.reply(
-                            "`Potansiyel Spambot Tespit Edildi !!`\n"
+                            "`Bacarıq Spambot tapıldı !!`\n"
                             f"`SEBEP:` {reason}\n"
-                            "Şu anlık gruptan atılıyor, bu ID ilerideki durumlar için kaydedilecek.\n"
+                            " İndi gruptan atılır, bu ID iləridəki durumlar üçün kaydediləcək.\n"
                             f"`KULLANICI:` [{check_user.first_name}](tg://user?id={check_user.id})"
                         )
 
@@ -178,8 +178,8 @@ async def anti_spambot(welcm):
                         if ANTI_SPAMBOT_SHOUT:
                             await welcm.reply(
                                 "@admin\n"
-                                "`ANTI SPAMBOT TESPİT EDİLDİ!\n"
-                                "BU KULLANICI BENİM SPAMBOT ALGORİTMALARIMLA EŞLEŞİYOR!`"
+                                "`Anti SpamBot Tapıldı!\n"
+                                "Bu User Mənim SpamBot Alqoritmalarımla EşLəşir!`"
                                 f"SEBEP: {reason}")
                             kicked = False
                             reported = True
@@ -200,7 +200,7 @@ async def anti_spambot(welcm):
 
 CMD_HELP.update({
     'anti_spambot':
-    "Kullanım: Bu modül config.env dosyasında ya da env değeri ile etkinleştirilmişse,\
-        \neğer bu spamcılar UserBot'un anti-spam algoritmasıyla eşleşiyorsa, \
-        \nbu modül gruptaki spamcıları gruptan yasaklar (ya da adminlere bilgi verir)."
+    "Kullanım: Bu modul config.env dosyasında ya da env dəyəri ilə etkinləştirilmişsə,\
+        \neğer bu spamcılar UserBot'un anti-spam alqoritmasıyla eşləşirsə, \
+        \nbu modul qruptakı spamcıları gruptan qadağan edər (ya da adminlərə məlumat verir)."
 })
