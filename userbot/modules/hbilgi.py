@@ -73,9 +73,9 @@ async def hesapstat(event: NewMessage.Event) -> None:  # pylint: disable = R0912
     stop_time = time.time() - start_time
 
     full_name = inline_mention(await event.client.get_me())
-    response = f'🔸 **Şu kullanıcının istatistikleri: {full_name}** \n\n'
-    response += f'**Özel Mesajlar:** {private_chats} \n'
-    response += f'   📊 `Kullanıcılar: {private_chats - bots}` \n'
+    response = f'🔸 **Bu userin istatistikleri: {full_name}** \n\n'
+    response += f'**Özəl Mesajlar:** {private_chats} \n'
+    response += f'   📊 `Userlər: {private_chats - bots}` \n'
     response += f'   📊 `Botlar: {bots}` \n'
     response += f'**Gruplar:** {groups} \n\n'
     response += f'**Kanallar:** {broadcast_channels} \n\n'
@@ -83,11 +83,11 @@ async def hesapstat(event: NewMessage.Event) -> None:  # pylint: disable = R0912
     response += f'   📊 `Sahibi olduğun gruplar: {creator_in_groups}` \n'
     response += f'   📊 `Admin olduğun gruplar: {admin_in_groups - creator_in_groups}` \n'
     response += f'**Admin olduğun kanallar:** {admin_in_broadcast_channels} \n'
-    response += f'   📊 `Kurucu olduğun kanallar: {creator_in_channels}` \n'
+    response += f'   📊 `Qurucu olduğun kanallar: {creator_in_channels}` \n'
     response += f'   📊 `Admin olduğun kanallar: {admin_in_broadcast_channels - creator_in_channels}` \n'
     response += f'✉️**Okunmamış Mesajlar:** {unread} \n\n'
-    response += f'📧**Okunmamış Etiketler:** {unread_mentions} \n\n'
-    response += f'__Bunları hesaplamam__ {stop_time:.02f} __saniye sürdü__ \n'
+    response += f'📧**Okunmamış Etikətlər:** {unread_mentions} \n\n'
+    response += f'__Bunları hesablamam__ {stop_time:.02f} __saniyə sürdü__ \n'
 
     await event.edit(response)
 
