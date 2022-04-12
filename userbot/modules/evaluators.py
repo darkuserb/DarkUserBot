@@ -75,7 +75,7 @@ async def evaluate(query):
     if BOTLOG:
         await query.client.send_message(
             BOTLOG_CHATID,
-            f"Eval sorgusu {expression} başarıyla yürütüldü")
+            f"Eval sorgusu {expression} Uğurla yürüdüldü")
 
 
 @register(outgoing=True, pattern=r"^.exec(?: |$)([\s\S]*)")
@@ -139,7 +139,7 @@ async def run(run_q):
     if BOTLOG:
         await run_q.client.send_message(
             BOTLOG_CHATID,
-            "Exec sorgusu " + codepre + " başarıyla yürütüldü")
+            "Exec sorgusu " + codepre + " Uğurla yürüdüldü")
 
 
 @register(outgoing=True, pattern="^.term(?: |$)(.*)")
@@ -198,9 +198,9 @@ async def terminal_runner(term):
         )
 
 CmdHelp('evaluators').add_command(
-    'eval', '<işlem>', 'Mini ifadeleri değerlendirin.', 'eval 2+3'
+    'eval', '<işlem>', 'Mini ifadələri dəyərləndirin.', 'eval 2+3'
 ).add_command(
-    'exec', '<python kodu>', 'Küçük python komutları yürütün.', 'exec print(\"SiriUserbottan Selamlar!\")'
+    'exec', '<python kodu>', 'Balaca python əmrləri yürüdün.', 'exec print(\"BossUserbottan Aqromnu Salamlar!\")'
 ).add_command(
-    'term', '<işlem>', 'Sunucunuzda bash komutlarını ve komut dosyalarını çalıştırın.', 'term ls'
+    'term', '<işləm>', 'Serverinizdə bash əmrlərini və əmr fayllarını işlədin.', 'term ls'
 ).add()
