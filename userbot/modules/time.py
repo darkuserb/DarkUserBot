@@ -54,9 +54,9 @@ async def get_tz(con):
 @register(outgoing=True, pattern="^.time(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def time_func(tdata):
     """ .time komutu şu şekilde kullanılabilir
-        1- Bölge belirtilerek.
-        2. Varsayılan userbot bölgesi (.settime komutuyla ayarlanabilir)
-        3. UserBot'un barındığı sunucunun tarihi.
+        1- Bölgə bəlirtilərək.
+        2. Varsayılan userbot bölgəsi (.settime əmriylə ayarlanabilir)
+        3. UserBot'un barındığı sunucunun tarixi.
     """
     con = tdata.pattern_match.group(1).title()
     tz_num = tdata.pattern_match.group(2)
@@ -116,9 +116,9 @@ async def time_func(tdata):
 @register(outgoing=True, pattern="^.date(?: |$)(.*)(?<![0-9])(?: |$)([0-9]+)?")
 async def date_func(dat):
     """ .date komutu şu şekilde kullanılabilir
-        1- Bölge belirtilerek.
-        2. Varsayılan userbot bölgesi (.settime komutuyla ayarlanabilir)
-        3. UserBot'un barındığı sunucunun tarihi.
+        1- Bölgə bəlirtilərək.
+        2. Varsayılan userbot bölgəsi (.settime əmriylə ayarlanabilir)
+        3. UserBot'un barındığı sunucunun tarixi.
     """
     con = dat.pattern_match.group(1).title()
     tz_num = dat.pattern_match.group(2)
@@ -175,7 +175,7 @@ async def date_func(dat):
         return
 
 CmdHelp('time').add_command(
-    'time', '<ülke ismi/kodu> <saat dilimi numarası>', 'Bir ülkenin saatini gösterir. Eğer bir ülke birden fazla saat dilimine sahipse, tümü birden gösterilir ve seçim sana bırakılır.'
+    'time', '<ölkə adı/kodu> <saat dilimi nömrəsi>', 'Bir ölkənin saatını göstərir. Əgər bir ölkə birdən çox saat diliminə sahibsə, çoxu birdən göstərilir və seçim sənə buraxılır.'
 ).add_command(
-    'date', '<ülke ismi/kodu> <saat dilimi numarası>', 'Bir ülkenin tarihini gösterir. Eğer bir ülke birden fazla saat dilimine sahipse, tümü birden gösterilir. ve seçim sana bırakılır.'
+    'date', '<ölkə adı/kodu> <saat dilimi nömrəsi>', 'Bir ölkənin tarixini göstərir. Əgər bir ölkə birdən çox saat diliminə sahibsə, çoxu birdən göstərilir. və seçim sənə buraxılır.'
 ).add()
