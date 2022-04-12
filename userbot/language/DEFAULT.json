@@ -34,7 +34,7 @@
         },
         
         "__boss": {
-            "NEED_PLUGIN": "✨ Zəhmət olmasa bir𝙱𝚘𝚜𝚜 modulu adı yazın.",
+            "NEED_PLUGIN": "✨ Zəhmət olmasa bir 𝙱𝚘𝚜𝚜 modulu adı yazın.",
             "NEED_MODULE": "✨  𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝙷𝚎𝚕𝚙𝚎𝚛✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n⚡Zəhmət olmasa hansı 𝙱𝙾𝚂𝚂 modulu üçün kömək istədiyinizi qeyd edin !!\nİstifadəsi: .boss <modul adı>"
         },
 
@@ -53,7 +53,7 @@
             "INVALID_MEDIA": "```Media etibarlı deyil.```",
             "PRIVATE": "`Bu əmr xüsusi mesajda istifadə edilə bilməz!`",
             "EKLE": "`Uğurla əlavə edildi`",
-            "BRAIN": "`Oups, Xəta! Bağışla amma bunu Mia'da səlahiyyətli birinə edə bilmərəm 👨‍🚀`",
+            "BRAIN": "`Oups, Xəta! Bağışla amma bunu Boss'da səlahiyyətli birinə edə bilmərəm 👨‍🚀`",
             "BANNING": "`İstifadəçi qara siyahıya əlavə edilir...`",
             "ALREADY_GBANNED": "`Xəta! İstifadəçi artıq dünya miqyasında qadağan edilmişdir.`",
             "GBANNED_REASON": "`İstifadəçi dünya miqyasında qadağan edildi!`\n**Səbəbi:**",
@@ -380,7 +380,7 @@
             "GOODBYE_MFRS": "`Görüşənədək... *Windows XP söndürlmə səsi*`",
             "RESTARTING": "`Bot xotdanır gözlə..`",
             "SUPPORT_GROUP": "[Buradan](http://t.me/BOSSsupportAz) Dəstək qrupumuza çata bilərsiniz.",
-            "CREATOR": "Bu bot [𝙷𝚄̈𝚂𝙽𝚄̈](t.me/TheHusnuMustafayev) və [𝔸𝕣𝕒𝕫](t.me/ghrmnIj) tərəfindən hazırlanmışdır. \n",
+            "CREATOR": "Bu bot [𝙷𝚄̈𝚂𝙽𝚄̈](t.me/TheHusnuMustafayev) və [𝔸𝕣𝕒𝕫](t.me/ghrmnlj) tərəfindən hazırlanmışdır. \n",
             "README": "[BOSS](https://raw.githubusercontent.com/husnumustafayevdi/brenduserbot/main/oxu)",
             "REPO": "[BOSS](https://raw.githubusercontent.com/husnumustafayevdi/brenduserbot/main/oxu)",
             "CHECK_LOGS": "`Tapılmış Mesaj üçün istifadəçi qeydlərini yoxlayın!`"
