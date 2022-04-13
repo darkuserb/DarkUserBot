@@ -27,7 +27,7 @@ async def tmeme(e):
             await e.client.send_message(
                 BOTLOG_CHATID,
                 "#TSPAM \n\n"
-                "TSpam başarıyla gerçekleştirildi"
+                "TSpam Uğurla gerçəkləştirildi"
                 )
 
 @register(outgoing=True, pattern="^.spam")
@@ -43,7 +43,7 @@ async def spammer(e):
             await e.client.send_message(
                 BOTLOG_CHATID,
                 "#SPAM \n\n"
-                "Spam başarıyla gerçekleştirildi"
+                "Spam Uğurla gerçəkləştirildi"
                 )
                                
 @register(outgoing=True, pattern="^.bigspam")
@@ -78,7 +78,7 @@ async def tiny_pic_spam(e):
             await e.client.send_message(
                 BOTLOG_CHATID,
                 "#PICSPAM \n\n"
-                "PicSpam başarıyla gerçekleştirildi"
+                "PicSpam Uğurla gerçəkləştirildi"
                 )
 
 
@@ -100,7 +100,7 @@ async def delayspammer(e):
             await e.client.send_message(
                 BOTLOG_CHATID,
                 "#DelaySPAM \n\n"
-                "DelaySpam başarıyla gerçekleştirildi"
+                "DelaySpam Uğurla gerçələştirildi"
                 )
 
 @register(outgoing=True, pattern="^.mspam(?: |$)(.*)")
@@ -110,14 +110,14 @@ async def media_spam(event):
     
     cmd = event.pattern_match.group(1)
     if len(cmd) < 1:
-        await event.edit("`Lütfen bir sayı belirtin! Örnek: .mspam 10`") 
+        await event.edit("`Xahiş bir sayı deyin! Nümunə: .mspam 10`") 
         return
     elif not cmd.isdigit():
-        await event.edit("`Lütfen sadece sayı belirtin! Örnek: .mspam 10`") 
+        await event.edit("`Xahiş sadəcə sayı deyin! Nümunə: .mspam 10`") 
         return
     replymsg = await event.get_reply_message()
     if not event.reply_to_msg_id or not replymsg.media:
-        await event.edit("`Lütfen bir medyaya yanıt verin. Bu ses, müzik, fotoğraf, sticker, gif, video olabilir.`") 
+        await event.edit("`Xahiş bir medyaya yanıt verin. Bu səs, musiqi, şəkil, sticker, gif, video ola bilər.`") 
         return
     
     i = 0
@@ -130,7 +130,7 @@ async def media_spam(event):
         await event.client.send_message(
             BOTLOG_CHATID,
             "#MedyaSPAM \n\n"
-            "MedyaSpam başarıyla gerçekleştirildi"
+            "MedyaSpam Uğurla gerçəkləştirildi"
             )
 
 
@@ -138,19 +138,19 @@ async def media_spam(event):
 
 
 CmdHelp('spammer').add_command(
-    'tspam', '<metin>', 'Verilen mesajı tek tek göndererek spam yapar.'
+    'tspam', '<mətin>', 'Verilən mesajı tək tək göndərərək spam edər.'
 ).add_command(
-    'spam', '<miktar> <metin>', 'Verilen miktarda spam gönderir.'
+    'spam', '<miqdar> <mətin>', 'Verilən miqdarda spam göndərir.'
 ).add_command(
-    'bigspam', '<miktar> <metin>', 'Verilen miktarda spam gönderir.'
+    'bigspam', '<miqdar> <mətin>', 'Verilən miqdarda spam göndərir.'
 ).add_command(
-    'picspam', '<miktar> <link>', 'Verilen miktarda resimli spam gönderir.'
+    'picspam', '<miqdar> <link>', 'Verilən miqdarda rəsimli spam göndərir.'
 ).add_command(
-    'mspam', '<miktar> <yanıtladığınız medya>', 'Verilen miktar kadar yanıt verdiğiniz fotoğraf/müzik/ses/video spamı yapar.'
+    'mspam', '<miqdar> <yanıtladığınız medya>', 'Verilən miqdar qədər yanıt verdiyiniz şəkil/musiqi/səs/video spamı edər.'
 ).add_command(
-    'delayspam', '<gecikme> <miktar> <metin>', 'Verilen miktar ve verilen gecikme ile gecikmeli spam yapar.'
+    'delayspam', '<gecikmə> <miqdar> <mətin>', 'Verilən miqdar və verilən gecikmə ilə gecikməli spam edər.'
 ).add_command(
     'kill spam', None, "Spam durdurma", None
 ).add_warning(
-    'Sorumluluk size aittir!!'
+    'Məsuliyyət sizin üstünüzdədir!!'
 ).add()
