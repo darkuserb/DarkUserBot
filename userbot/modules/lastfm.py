@@ -170,19 +170,19 @@ async def get_curr_track(lfmbio):
                     await bot(UpdateProfileRequest(about=DEFAULT_BIO))
                     if BOTLOG and LastLog:
                         await bot.send_message(
-                            BOTLOG_CHATID, f"Biyografi geri şuna çevrildi \n{DEFAULT_BIO}")
+                            BOTLOG_CHATID, f"Bio geri buna çevrildi \n{DEFAULT_BIO}")
             except FloodWaitError as err:
                 if BOTLOG and LastLog:
                     await bot.send_message(BOTLOG_CHATID,
-                                           f"Biyografi değiştirilirken hata oluştu :\n{err}")
+                                           f"Bio dəyişdirilirkən xəta oldu :\n{err}")
         except FloodWaitError as err:
             if BOTLOG and LastLog:
                 await bot.send_message(BOTLOG_CHATID,
-                                       f"Biyografi değiştirilirken hata oluştu :\n{err}")
+                                       f"Bio dəyişdirilirkən xəta oldu :\n{err}")
         except WSError as err:
             if BOTLOG and LastLog:
                 await bot.send_message(BOTLOG_CHATID,
-                                       f"Biyografi değiştirilirken hata oluştu: \n{err}")
+                                       f"Bio dəyişdirilirkən xəta oldu: \n{err}")
         await sleep(2)
     RUNNING = False
 
@@ -226,9 +226,9 @@ async def lastlog(lstlog):
         await lstlog.edit(LFM_LOG_ERR)
 
 CmdHelp('lastfm').add_command(
-    'lastfm', None, 'Şu anlık oynatılan parça ya da en son oynatılan parça gösterilir.'
+    'lastfm', None, 'Bu anlıq oynatılan parça ya da ən son oynatılan parça göstərilir.'
 ).add_command(
-    'lastbio', '<on/off>', 'last.fm\'deki şu an oynatılan parça gösterimi etkinleştirilir/devre dışı bırakılır.'
+    'lastbio', '<on/off>', 'last.fm\'dakı bu an oynatılan parça göstərimi açılır/deaktiv olur.'
 ).add_command(
-    'lastlog', '<on/off>', 'last.fm biyografi loglamasını etkinleştirir/devre dışı bırakır.'
+    'lastlog', '<on/off>', 'last.fm bio loglamasını açır/deaktiv olur.'
 ).add()
