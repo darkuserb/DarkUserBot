@@ -36,7 +36,7 @@ async def fstat(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Engellenmiş Yeniden Başlatın Tekrar deneyin.")
+                await event.edit("@MissRose_bot' Bloklanmışdır Yenidən Başladın Təkrar edin.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -51,7 +51,7 @@ async def fstat(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Engellenmiş Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot' Bloklanmışdır Başladın Təkrar edin.")
 
 
 @register(outgoing=True, pattern="^.info ?(.*)")
@@ -77,7 +77,7 @@ async def info(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar edin.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -87,7 +87,7 @@ async def info(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
 
 
 @register(outgoing=True, pattern="^.fedinfo ?(.*)")
@@ -104,7 +104,7 @@ async def fedinfo(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -114,7 +114,7 @@ async def fedinfo(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
 
 
 @register(outgoing=True, pattern="^.myfeds ?(.*)")
@@ -134,7 +134,7 @@ async def myfeds(event):
                 await event.delete()
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+            await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
             
 @register(outgoing=True, pattern="^.fban ?(.*)")
 async def fban(event):
@@ -155,11 +155,7 @@ async def fban(event):
             try:
                 await conv.send_message("/fban " + kullanıcı)
                 audio = await conv.get_response()
-                await event.client.forward_messages(event.chat_id, audio)
-                await event.delete()
-                await event.client.send_read_acknowledge(conv.chat_id)
-            except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                n.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -169,7 +165,7 @@ async def fban(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
                 
 @register(outgoing=True, pattern="^.unfban ?(.*)")
 async def unfban(event):
@@ -194,7 +190,7 @@ async def unfban(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -204,7 +200,7 @@ async def unfban(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
                 
 @register(outgoing=True, pattern="^.feddemote ?(.*)")
 async def feddemote(event):
@@ -229,7 +225,7 @@ async def feddemote(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -239,7 +235,7 @@ async def feddemote(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
                 
 @register(outgoing=True, pattern="^.fpromode ?(.*)")
 async def fpromode(event):
@@ -264,7 +260,7 @@ async def fpromode(event):
                 await event.delete()
                 await event.client.send_read_acknowledge(conv.chat_id)
             except YouBlockedUserError:
-                await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
+                await event.edit("@MissRose_bot'u Yenidən Başladın Təkrar Edin.")
     else:
         async with event.client.conversation(chat) as conv:
             try:
@@ -277,20 +273,20 @@ async def fpromode(event):
                 await event.edit("@MissRose_bot'u Yeniden Başlatın Tekrar Deneyin.")
             
 CmdHelp('rose').add_command(
-    'fstat', '<tag/id>', 'Sadece .fstat Yazarsanız Kendiniz İçin Fban Listesini Verir. \n ID veya @KULLANICI ADI Verirseniz O Kişinin Fban Listesini Verir '
+    'fstat', '<tag/id>', 'Sadəcə .fstat Yazarsanız özünüz Üçün Fban Listini Verir. \n ID vəya @KULLANICI ADI Versəniz O User Fban Listini Verir '
 ).add_command(
-    'info', '<tag/id>', 'Sadece .info Yazarsanız kendiniz için Bilgi verir. \n ID veya @KULLANICI ADI Verirseniz O Kişi İçin Bilgi Veri.'
+    'info', '<tag/id>', 'Sadəcə .info Yazsanız özünüz üçün Məlumat verir. \n ID vəya @KULLANICI ADI Versəniz O Usee Üçün Məlumat Verir.'
 ).add_command(
-    'fedinfo', '<fed id>', 'Sadece .fedinfo yazarsanız Sizin Federasyonunuz İçin Bilgi Verir. \n FED İD Girerseniz O Federasyonun Bilgisini Verir'
+    'fedinfo', '<fed id>', 'Sadəcə .fedinfo yazsanız Sizin Federasiyanız Üçün Məlumat Verir. \n FED İD Girərsəniz O Federasiyanın Məlumatını Verir'
 ).add_command(
-    'myfeds', 'Hangi Federasyonlardan Yetkinizin Olduğunu Gösterir.'
+    'myfeds', 'Hangi Federasiyalardan Yetkinizin Olduğunu Göstərir.'
 ).add_command(
-    'fban', '<tag/id>', 'Bunu Federasyon Sahipleri Kullana Bilir.\n Bulunduğunuz Gruptaki Kişiye Kendi Federasyonunuzdan Fban atabilirsiniz. '
+    'fban', '<tag/id>', 'Bunu Federasiya Sahibləri İşlədə Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban ata bilərsiniz. '
 ).add_command(
-    'unfban', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Bulunduğunuz Gruptaki Kişiye Kendi Federasyonunuzdan Fbanını Açabilirsiniz. '
+    'unfban', '<tag/id>', ' Bunu Federasiya Sahibləri İşlədə Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fbanını Aça bilərsiniz. '
 ).add_command(
-    'fpromote', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Bulunduğunuz Gruptaki Kişiye Kendi Federasyonunuzdan Fban Yetkisi Verebilirsiniz. '
+    'fpromote', '<tag/id>', ' Bunu Federasiya Sahibləri İşlədə Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban Yetkisi Verəbilərsiniz. '
 ).add_command(
-    'feddemote', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Bulunduğunuz Gruptaki Kişiye Kendi Federasyonunuzdan Fban yetkisini Alabilirsiniz. \n NOT: BU KOMUTLAR HER YERDE ÇALIŞMAKTADIR ÖZEL MESAJLARDA VER HANGİ BİR GRUPTA KULLANA BİLİRSİNİZ @SiriUserBot '
+    'feddemote', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban yetkisini Alabilərsiniz. : 'Bu əmrlər hər yerdə işləməyə bilər Özəl mesajlarda yaxud qruplarda işləyə bilər @BossUserBot '
     
 ).add()
