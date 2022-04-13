@@ -103,5 +103,5 @@ async def ReTrieveURL(input_url):
     return r
 
 CmdHelp('rgb').add_command(
-    'rbg', '<Resim bağlantısı/yanıt>', 'remove.bg API kullanarak görüntülerin arka planını kaldırır.'
+    'rbg', '<Rəsim linki/yanıt>', 'remove.bg API işlədərək görüntülərin arxa planını qaldırır.'
 ).add()
