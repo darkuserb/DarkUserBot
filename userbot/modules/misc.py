@@ -50,7 +50,7 @@ async def randomise(items):
 
 @register(pattern="^.sleep( [0-9]+)?$")
 async def sleepybot(time):
-    """ .sleep komutu Siri'nın birkaç saniye uyumasına olanak sağlar. """
+    """ .sleep komutu Boss'nın birkaç saniye uyumasına olanak sağlar. """
     if " " not in time.pattern_match.group(1):
         await time.reply(LANG['SLEEP_DESC'])
     else:
@@ -60,7 +60,7 @@ async def sleepybot(time):
         if BOTLOG:
             await time.client.send_message(
                 BOTLOG_CHATID,
-                "Botu" + str(counter) + "saniye uykuya bıraktın.",
+                "Botu" + str(counter) + "saniyə yuxuya buraxdın.",
             )
         sleep(counter)
         await time.edit(LANG['GOODMORNIN_YALL'])
@@ -74,7 +74,7 @@ async def shutdown(event):
 
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "Bot kapatıldı.")
+                                        "Bot bağlandı.")
     try:
         await bot.disconnect()
     except:
@@ -91,7 +91,7 @@ async def asistanshutdown(ups):
             try:
                 await event.client.send_file(event.chat_id, 'https://www.winhistory.de/more/winstart/mp3/winxpshutdown.mp3', reply_to=reply, caption=LANG['GOODBYE_MFRS'], voice_note=True)
             except:
-                await ups.reply("`Görüşmek üzere.. İsteğin üzere kendimi kapatıyorum.`") 
+                await ups.reply("`Görüşmək üzrə.. İstəyin üzərə özümü bağlıyıram.`") 
             try:
                 await bot.disconnect()
             except:
@@ -105,7 +105,7 @@ async def restart(event):
     if BOTLOG:
         try:
             await event.client.send_message(BOTLOG_CHATID, "#RESTART \n"
-                                            "Bot yeniden başlatıldı.")
+                                            "Bot yeniden başladıldı.")
         except:
             pass
 
@@ -167,35 +167,35 @@ async def raw(event):
     with io.BytesIO(str.encode(the_real_message)) as out_file:
         out_file.name = "raw_message_data.txt"
         await event.edit(
-            "`Çözülmüş mesaj için userbot loglarını kontrol et!`")
+            "`Həll olmuş mesaj üçün userbot loglarını yoxla!`")
         await event.client.send_file(
             BOTLOG_CHATID,
             out_file,
             force_document=True,
             allow_cache=False,
             reply_to=reply_to_id,
-            caption="`Çözülen mesaj`")
+            caption="`Həll olan mesaj`")
 
 CmdHelp('misc').add_command(
-    'random', '<eşya1> <eşya2> ... <eşyaN>', 'Eşya listesinden rastgele bir eşya seçer', 'random mia uniborg userge'
+    'random', '<əşya1> <əşya2> ... <əşyaN>', 'Əşya listəsindəj random bir əşya seçər', 'random boss uniborg userge'
 ).add_command(
-    'sleep', '<süre>', 'Mia de bir insan, o da yoruluyor. Ara sıra biraz uyumasına izin ver.', 'sleep 30'
+    'sleep', '<vaxt>', 'Boss da bir insan, o da yorulur. Ara sıra biraz yatmasına icazə ver.', 'sleep 30'
 ).add_command(
-    'shutdown', None, 'Nostaljik bir şekilde botunuzu kapatın.'
+    'shutdown', None, 'Nostalji bir şəkildə botunuzu bağlayın.'
 ).add_command(
-    'repo', None, 'Mia botunun GitHub\'daki reposuna giden bir bağlantı.'
+    'repo', None, 'Boss botunun GitHub\'daki reposuna gedən bir bağlantı.'
 ).add_command(
-    'readme', None, 'Mia botunun GitHub\'daki README.md dosyasına giden bir bağlantı.'
+    'readme', None, 'Boss botunun GitHub\'daki README.md faylına gedən bir bağlantı.'
 ).add_command(
-    'creator', None, 'Bu güzel botu kimlerin oluşturduğunu öğren :-)'
+    'creator', None, 'Bu gözəl botu kimlərin yaratdığını öyrən :-)'
 ).add_command(
-    'repeat', '<sayı> <metin>', 'Bir metni belli bir sayıda tekrar eder. Spam komutu ile karıştırma!'
+    'repeat', '<sayı> <mətin>', 'Bir mətni bəlli bir sayıda təkrar edər. Spam əmri ilə qarıştırma!'
 ).add_command(
     'restart', None, 'Botu yeniden başlatır.'
 ).add_command(
-    'resend', None, 'Bir medyayı yeniden gönderir.'
+    'resend', None, 'Bir medyayı yenidən göndərir.'
 ).add_command(
-    'resend', None, 'Bir medyayı yeniden gönderir.'
+    'resend', None, 'Bir medyayı yenidən göndərir.'
 ).add_command(
-    'raw', '<yanıt>', 'Yanıt verilen mesaj hakkında bilgi verir.'
+    'raw', '<yanıt>', 'Yanıt verilən mesaj haqqında məlumat  verir.'
 ).add()
