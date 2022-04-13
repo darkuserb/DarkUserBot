@@ -161,7 +161,7 @@ async def add_new_filter(new_handler):
         return
     mesj = split_quotes(new_handler.pattern_match.group(1))
     if new_handler.chat_id == -1001695469818 or new_handler.chat_id == -1001695469818:
-        await new_handler.edit("`Üzrlü say Amma Rəsmi Boss Suppot Grubunda Filtr Salınmaz!`")
+        await new_handler.edit("`Üzrlü say Amma Rəsmi Boss Support Grubunda Filtr Salınmaz!`")
         return
     else:
 
