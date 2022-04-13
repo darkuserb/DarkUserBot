@@ -25,16 +25,16 @@ async def ocr_space_file(filename,
                          api_key=OCR_SPACE_API_KEY,
                          language='tur'):
     """ OCR.space API yerel dosya ister.
-        Python3.5 ve üzeri için - 2.7 üzerinde test edilmedi.
+        Python3.5 ve üzəri üçün - 2.7 üzərinde test edilmədi.
     :param filename: Dosya yolu ve adı.
-    :param overlay: Cevabınızda OCR.space yerleşimi gerekli mi?
-                    Varsayılan olarak Hayır.
+    :param overlay: Cavabınızda OCR.space yerləşimi lazımlıdır?
+                    Varsayılan olaraq Yox.
     :param api_key: OCR.space API key.
-                    varsayılan olarak 'merhabadünya'.
-    :param language: OCR'de kullanılacak dil kodu.
-                    Mevcut dil kodlarının listesi burudan bulunabilir https://ocr.space/OCRAPI
-                    Varsayılan olarak 'tr'.
-    :return: Sonuçlar JSON formatında gelir.
+                    varsayılan olaraq 'salamdünya'.
+    :param language: OCR'de işlədiləcək dil kodu.
+                    Mövcud dil kodlarının yeri buradan tapıla bilər https://ocr.space/OCRAPI
+                    Varsayılan olaraq 'tr'.
+    :return: Nəticələr JSON formatında gəlir.
     """
 
     payload = {
@@ -71,7 +71,7 @@ async def ocr(event):
     os.remove(downloaded_file_name)
 
 CmdHelp('ocr').add_command(
-    'ocr', '<dil>', 'Metin ayıklamak için bir resme veya çıkartmaya cevap verin.'
+    'ocr', '<dil>', 'Mətin ayıqlamaq üçün bir rəsimə vəya stikerə cavab verin.'
 ).add_info(
     'Dil kodlarını [buradan](https://ocr.space/ocrapi) alın.'
 ).add()
