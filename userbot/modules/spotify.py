@@ -199,7 +199,7 @@ def get_spotify_info(TIME=5):
         image = "🔄"
         try:
             url = item['external_urls']['spotify']
-            url = f"[Spotify'da Aç]({url})"
+            url = f"[Spotify'də Aç]({url})"
         except Exception:
             url = "𝘴𝘱𝘰𝘵𝘪𝘧𝘺 𝘯𝘰𝘸 𝘱𝘭𝘢𝘺𝘪𝘯𝘨"  
         nowtime = int(data['progress_ms'])
@@ -331,11 +331,11 @@ async def getmp3(event):
                 await sleep(1)
 
 CmdHelp('spotify').add_command(
-    'spotify aç', None, 'Spotify bio aktifleştirir.'
+    'spotify aç', None, 'Spotify bio aktivləştirir.'
 ).add_command(
-    'spotify kapa', None, 'Spotify bio devredışı bırakır.'
+    'spotify kapa', None, 'Spotify bio deaktiv buraxılır.'
 ).add_command(
-    'spotify np', '<animasyon süre = 5>', "Süre kadar player animasyonlu şekilde Spotify'da çalan şarkınızı gösterir. (Kısaltma komut: .snp)"
+    'spotify np', '<animasiya vaxt = 5>', "Vaxt qədər  player animasiyalı şəkildə Spotify'də çalan musiqinizi göstərir. (Qısaltma əmr: .snp)"
 ).add_command(
-    'spotify mp3', None, "Spotify'da çalan şarkınızı deezer botunda bulup ascii art haliyle gönderir. (Kısaltma komut: .smp3)"
+    'spotify mp3', None, "Spotify'də çalan musiqinizi deezer botunda tapıb ascii art halıya göndərir. (Qısaltma əmr: .smp3)"
 ).add()
