@@ -1,4 +1,4 @@
-# SİRİ USERBOT - PLUGİN
+1# SİRİ USERBOT - PLUGİN
 
 import os
 from telethon.errors import ChatAdminRequiredError
@@ -288,4 +288,5 @@ CmdHelp('rose').add_command(
     'fpromote', '<tag/id>', ' Bunu Federasiya Sahibləri İşlədə Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban Yetkisi Verəbilərsiniz. '
 ).add_command(
     'feddemote', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban yetkisini Alabilərsiniz. NOT: Bu əmrlər hər yerdə işləməyə bilər Özəl mesajlarda yaxud qruplarda işləyə bilər @BossUserBot     
+
 ).add()
