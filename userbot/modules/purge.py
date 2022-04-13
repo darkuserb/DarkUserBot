@@ -137,11 +137,11 @@ async def selfdestruct(destroy):
 CmdHelp('purge').add_command(
     'purge', None, 'Hedeflenen yanıttan başlayarak tüm mesajları temizler.'
 ).add_command(
-    'purgeme', '<sayı>', 'Hedeflenen yanıttan başlayarak kendi mesajlarınızı temizler.'
+    'purgeme', '<sayı>', 'Hədəflənən yanıttan başlayaraq öz mesajlarınızı təmizləyər.'
 ).add_command(
-    'del', '<yanıt>', 'Yanıt verilen mesajı siler.'
+    'del', '<yanıt>', 'Yanıt verilən mesajı silər.'
 ).add_command(
-    'edit', '<yeni mesaj>', 'Yanıt verdiğiniz mesajı yeni mesaj ile değiştirir.'
+    'edit', '<yeni mesaj>', 'Yanıt verdiyiniz mesajı yeni mesaj ilə dəyişdirir.'
 ).add_command(
-    'sd', '<x> <mesaj>', 'x saniye içinde kendini yok eden bir mesaj oluşturur.'
+    'sd', '<x> <mesaj>', 'x saniyə içində özünü yox edən bir mesaj yaradır.'
 ).add()
