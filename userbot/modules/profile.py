@@ -182,17 +182,17 @@ async def remove_profilepic(delpfp):
         LANG['DELPFP'] % len(input_photos))
 
 CmdHelp('profile').add_command(
-    'username', '<yeni kullanıcı adı>', 'Telegram\'daki kullanıcı adınızı değişir.'
+    'username', '<yeni user adı>', 'Telegram\'dakı kullanıcı adınızı dəyişir.'
 ).add_command(
-    'setname', '<isim> or .name <isim> <soyisim>', 'Telegram\'daki isminizi değişir. (Ad ve soyad ilk boşluğa dayanarak birleştirilir.)'
+    'setname', '<ad> or .name <ad> <soyad>', 'Telegram\'dakı adınızı dəyişər. (Ad və soyad ilk boşluğa dayanaraq birləşdirilir.)'
 ).add_command(
-    'setpfp', None, 'Bir resmi Telegram\'da profil resmi yapmak için .setpfp komutuyla cevap verin.'
+    'setpfp', None, 'Bir rəsmi Telegram\'da profil rəsmi etmək üçün .setpfp əmriylə cavab verin.'
 ).add_command(
-    'setbio', '<yeni biyografi>', 'Telegram\'daki biyografinizi bu komutu kullanarak değiştirin.'
+    'setbio', '<yeni bio>', 'Telegram\'dakı bionuzu bu əmri işlədərək dəyişdirin.'
 ).add_command(
-    'delpfp', '<numara/all>', 'Telegram profil fotoğrafınızı kaldırır.'
+    'delpfp', '<numara/all>', 'Telegram profil şəkilinizi qaldırır.'
 ).add_command(
-    'reserved', None, 'Rezerve ettiğiniz kullanıcı adlarını gösterir.'
+    'reserved', None, 'Rezerve ettiyiniz kullanıcı adlarını göstərir.'
 ).add_command(
-    'count', None, 'Gruplarınızı, sohbetlerinizi, aktif botları vs. sayar.'
+    'count', None, 'Gruplarınızı, söhbətlərinizi, aktiv botları v s. sayar.'
 ).add()
