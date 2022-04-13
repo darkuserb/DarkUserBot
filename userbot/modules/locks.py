@@ -200,17 +200,17 @@ async def rem_locks(event):
 
 CMD_HELP.update({
     "locks":
-    ".lock <kilitlenecek medya tipi> veya .unlock <kilitlenecek medya tipi>\
-\nKullanım: Sohbetteki birtakım şeyleri engelleyebilmeni sağlar. (sticker atmak, oyun oynamak vs.)\
-[Not: Yönetici hakları gerektirir!]\
-\n\nKilitleyebileceğin ve kilidini açabileceklerin şunlardır: \
+    ".lock <kilitlənəcək medya tipi> vəya .unlock <kilitlənəcək medya tipi>\
+\nKullanım: Söhbəttəki bir sıra şeyləri bloklaya bilməni edər. (sticker atmaq, oyun oynamaq vs.)\
+[Not: Yönetici haqları lazmlıdır!]\
+\n\nKilitləyə biləcəyin və kilidini aça biləcəklərin bunlardır: \
 \n`all, msg, media, sticker, gif, game, inline, poll, invite, pin, info`"
 })
 
 CmdHelp('locks').add_command(
-    'lock', '<kilitlenecek medya tipi> veya .unlock <kilitlenecek medya tipi>', 'Sohbetteki birtakım şeyleri engelleyebilmeni sağlar. (sticker atmak, oyun oynamak vs.)'
+    'lock', '<kilitlənəcək medya tipi> vəya .unlock <kilitlənəcək medya tipi>', 'Söhbəttəki bir sıra şeyləri bloklaya bilməni edər. (sticker atmaq, oyun oynamaq vs.)'
 ).add_info(
-    'Kilitleyebileceğin ve kilidini açabileceklerin şunlardır: all, msg, media, sticker, gif, game, inline, poll, invite, pin, info'
+    'Kilitləyə biləcəyin və kilidini aça biləcəklerin bunlardır: all, msg, media, sticker, gif, game, inline, poll, invite, pin, info'
 ).add_warning(
-    'Yönetici hakları gerektirir!'
+    'Yönetici səlahiyyəti lazımlıdır!'
 ).add()
