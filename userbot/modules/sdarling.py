@@ -10,7 +10,7 @@ async def adddarling(e):
     reply = await e.get_reply_message()
     reply_user = await e.client.get_entity(reply.from_id)
     SEVGILI = int(reply_user.id)
-    await e.edit('`Sevgiliniz eklendi.. ❤️\nGlobal değerlere işlenmesi için lütfen 2 dakika bekleyin!`')
+    await e.edit('`Sevgiliniz salındı.. ❤️\nGlobal değerlere işlenmesi için lütfen 2 dakika bekleyin!`')
     if heroku_var and app:
         heroku_var["SEVGILI"] = reply_user.id
     return True
@@ -32,4 +32,4 @@ async def darlingonly(e):
 
 
 a = CmdHelp('darling')
-a.add_command('adddarling',None,'Yanıt verdiğiniz kişiyi botta sevgiliniz yapar').add_command('rmdarling',None,'Bottaki sevgilinizi siler').add()
+a.add_command('adddarling',None,'Yanıt verdiyiniz useri botta sevgiliniz edər').add_command('rmdarling',None,'Bottaki sevgilinizi silər').add()
