@@ -586,7 +586,7 @@ CmdHelp('updown').add_command(
 ).add_command(
     'wupload', ' <fayla yanıt verin> anonfiles|transfer|filebin|tmpninja|anonymousfiles|megaupload|bayfiles|letsupload|vshare', 'Seçtiyiniz websayta yüklüyərr.'
 ).add_command(
-    'unzip', '<yanıt>', 'Yanıt verdiğiniz Zip dosyasını çıxarır.'
+    'unzip', '<yanıt>', 'Yanıt verdiyiniz Zip dosyasını çıxarır.'
 ).add_command(
-    'uploadir', '<fayl>', 'Tüm faylı yüklüyər.'
+    'uploadir', '<fayl>', 'Bütün faylı yüklüyər.'
 ).add()
