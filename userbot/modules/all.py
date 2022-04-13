@@ -50,9 +50,9 @@ async def _(q):
 
 
 CmdHelp("all").add_command(
-	"all", "<sebep>", "Gruptaki Üyeleri Etiketler.. En Fazla 3000 Kişi (Flood Wait Nedeniyle)"
+	"all", "<səbəb>", "Gruptakı Üzvləri Etiketləyər.. Ən çox 3000 user (Flood Wait Səbəbiylə)"
 	).add_command(
-	"alladmin", "<sebep>", "Gruptaki Adminleri Etiketler "
+	"alladmin", "<səbəb>", "Gruptakı Adminləri Etiketləyər "
         ).add_command(
-        "kill all", None, "Etiketleme işlemini durdurur."
+        "kill all", None, "Etiketləmə işini dayandırır."
 ).add()
