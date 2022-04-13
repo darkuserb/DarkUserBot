@@ -430,7 +430,7 @@ CmdHelp('pmpermit').add_command(
 ).add_command(
     'unblock', '<user adı/yanıt>', 'Userin blokunu qaldırır.'
 ).add_command(
-    'notifoff', None, 'Pm atmasına izin vermədiyiniz userlərdən bildirim almanızı bağlayar.'
+    'notifoff', None, 'Pm atmasına icazə vermədiyiniz userlərdən bildirim almanızı bağlayar.'
 ).add_command(
-    'notifon', None, 'Pm atmasına izin vermədiyiniz userlərdən bildirim almanızı açar.'
+    'notifon', None, 'Pm atmasına icazə vermədiyiniz userlərdən bildirim almanızı açar.'
 ).add()
