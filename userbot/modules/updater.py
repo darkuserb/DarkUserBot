@@ -404,7 +404,7 @@ async def asistan_update(ups):
     
 
 CmdHelp('update').add_command(
-    'update', None, 'Botunuza siz kurduktan sonra herhangi bir güncelleme gelip gelmediğini kontrol eder.'
+    'update', None, 'Botunuza siz qurduqdan sonra hərhansı bir güncəlləmə gəlib gəlmədiyini yoxlayar.'
 ).add_command(
-    'update now', None, 'Botunuzu günceller.'
+    'update now', None, 'Botunuzu güncəlləyər.'
 ).add()
