@@ -142,4 +142,4 @@ async def fetch_info(chat, event):
         caption += f'{LANG["GOND"]}: <code>{messages_sent_alt}</code> {warn_emoji}\n'
     return caption
     
-CmdHelp('combot').add_command('stats', None, 'Mesaj istatistikleri (combot gibi).').add()
+CmdHelp('combot').add_command('stats', None, 'Mesaj istatistikləri (combot kimi).').add()
