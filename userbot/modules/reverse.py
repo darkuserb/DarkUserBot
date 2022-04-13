@@ -152,5 +152,5 @@ async def scam(results, lim):
     return imglinks
 
 CmdHelp('reverse').add_command(
-    'reverse', '<yanıt>', 'Fotoğraf veya çıkartmaya yanıt vererek görüntüyü Google üzerniden arayabilirsiniz.'
+    'reverse', '<yanıt>', 'Şəkil vəya stikerə yanıt verərək görüntüyü Google üzərindən axtara bilərsiniz.'
 ).add()
