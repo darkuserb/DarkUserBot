@@ -47,5 +47,5 @@ async def _(event):
 CmdHelp('tagall').add_command(
     'tagall', None, 'Bu əmri işlətdiyinizdə söhbət içərisində ki hərkəsi etiketləyər.'
 ).add_command(
-    'admin', None, 'Bu əmri kullandığınızda söhbət içərisində ki adminləri etiketləyər.'
+    'admin', None, 'Bu əmri işlətdiyinizdə söhbət içərisində ki adminləri etiketləyər.'
 ).add()
