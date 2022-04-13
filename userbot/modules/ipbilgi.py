@@ -3,7 +3,7 @@ import urllib.request
 from userbot.events import register 
 from userbot.cmdhelp import CmdHelp 
 
-@register(outgoing=True, pattern=".ipbilgi (.*)") 
+@register(outgoing=True, pattern=".ipmelumat (.*)") 
 async def _(event):
     if event.fwd_from:
         return
@@ -22,9 +22,9 @@ async def _(event):
     d = result["city"]
     e = result["zip"]
     f = result["latitude"]
-    await event.edit("**Verdiğiniz ip adresinden bilgileri arıyorum...** 👀")
+    await event.edit("**Verdiyiniz ip adresindən məlumatları axtarıram...** 👀")
     await event.edit(
-        f"<b><u>Mia UserBot Modülü</b></u>\n\n<b>IP tipi :-</b><code>{a}</code>\n<b>Ülke kodu:- </b> <code>{b}</code>\n<b>Devlet adı :-</b><code>{c}</code>\n<b>Şehir adı :- </b><code>{d}</code>\n<b>Posta kodu :-</b><code>{e}</code>\n<b>Adres kordinatı:- </b> <code>{f}</code>",
+        f"<b><u>Boss UserBot Modulu</b></u>\n\n<b>IP tipi :-</b><code>{a}</code>\n<b>Ölkə kodu:- </b> <code>{b}</code>\n<b>Dövlət adı :-</b><code>{c}</code>\n<b>Şəhər adı :- </b><code>{d}</code>\n<b>Posta kodu :-</b><code>{e}</code>\n<b>Adres koordinatı:- </b> <code>{f}</code>",
         parse_mode="HTML")
 
-CmdHelp("ipbilgi").add_command('ipbilgi', "{IP adress yazin}", "yazdiginiz ip adressine göre yer tespiti yapar.").add()
+CmdHelp("ipmelumat").add_command('ipmelumat', "{IP adress yazin}", "yazdığınız ip adressinə görə yer təsbiti edər.").add()
