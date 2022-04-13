@@ -70,7 +70,7 @@ async def clone(event):
     await event.delete()
     await event.client.send_message(
       event.chat_id,
-      "`Hahahah, Mia Sayesinde Sana Benzedim.`",
+      "`Hahahah, Boss Sayəsində Sənə Oxşadım.`",
       reply_to=reply_message
       )
 
@@ -83,7 +83,7 @@ async def revert(event):
     if DEFAULT_NAME:
         name = f"{DEFAULT_NAME}"
     else:
-        await event.edit("**Lütfen herhangi bi sohbete** `.set var DEFAULT_NAME isminiz` **yazıp gönderin. İsminiz yazan kısma kendi isminizi yazmayı unutmayın.**")
+        await event.edit("**Xahiş hərhansı bir söhbətə** `.set var DEFAULT_NAME adınıs` **yazıb göndərin. Adınız yazan qismə öz adınızı yazmayı unutmayın.**")
         return
 
 
@@ -94,9 +94,9 @@ async def revert(event):
         await bot(functions.account.UpdateProfileRequest(about=DEFAULT_BIO))
         await event.edit(f"`{DEFAULT_NAME}, hesabınız başarıyla eski haline döndürüldü!`")
     except AboutTooLongError:
-        srt_bio = "🎆 @MiaUserBot"
+        srt_bio = "🎆 @BossUserBot"
         await bot(functions.account.UpdateProfileRequest(about=srt_bio))
-        await event.edit("`Hesabınız başarıyla eski haline döndürüldü! Fakat bio'nuz çok uzun olduğu için hazır bio kullandım.`")
+        await event.edit("`Hesabınız Uğurla əvvəlki halına döndərildi! Fəqət bio'nuz çox uzun olduğu üçün hazır bio işlətdim.`")
 
 
 async def get_full_user(event):
@@ -153,7 +153,7 @@ async def get_full_user(event):
             except Exception as e:
                 return None, e
 
-CmdHelp('klon').add_command('klon','<mesajı yanıtlayarak>','Mesajına yanıt verdiğiniz kişinin klonu olursunuz.','klon'
-).add_command('revert',None,'Klondan sonra hesabınızın eski haline dönmesi için :p','revert'
-).add_warning('Herokuda DEFAULT_NAME değişkenin tanımlı olması lazım. Bu ne demek bilmiyorsanız herhangi bir sohbete `.revert` yazın.'
+CmdHelp('klon').add_command('klon','<mesajı yanıtlayaraq>','Mesajına yanıt verdiyiniz kişinin klonu olursuz.','klon'
+).add_command('revert',None,'Klondan sonra hesabınızın əvvəlki halına dönməsi üçün :p','revert'
+).add_warning('Herokuda DEFAULT_NAME dəyişkənin tanımlı olması lazım. Bu nə demək bilmirsizsə hərhansı bir söhbətə `.revert` yazın.'
 ).add_info('🎆 Thx to').add()
