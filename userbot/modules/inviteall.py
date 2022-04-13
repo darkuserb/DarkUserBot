@@ -1,4 +1,4 @@
-# Copyright (C) 2021-2022 CyberUserBot
+# Copyright (C) 2021-2022 BossUserBot
 # This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
 # Please read the GNU General Public License v3.0 in
 # <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
@@ -14,7 +14,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
-from userbot.events import register as cyber
+from userbot.events import register as boss
 from userbot import bot, BLACKLIST_CHAT
 
 # ---------------------------------- #
@@ -87,7 +87,7 @@ async def get_users(event):
     f = 0
     error = "None"
 
-    await cyber.edit("**C Y B Ξ R SCRAPER**\n\n`İstifadəçilər əlavə edilir...`")
+    await cyber.edit("BOSS UserBot\n\n`İstifadəçilər əlavə edilir...`")
     async for user in event.client.iter_participants(farid.full_chat.id):
         try:
             if error.startswith("Too"):
@@ -109,6 +109,6 @@ async def get_users(event):
     )
 
 
-CmdHelp('scraper').add_command(
-    'inviteall', '<daşıyacağınız qrupun istifadəçi adı>', 'Qeyd etdiyiniz qrupdaki istifadəçiləri olduğunuz qrupa əlavə edər.'
+CmdHelp('adamsal').add_command(
+    'adamsal', '<daşıyacağınız qrupun istifadəçi adı>', 'Qeyd etdiyiniz qrupdaki istifadəçiləri olduğunuz qrupa əlavə edər.'
 ).add()
