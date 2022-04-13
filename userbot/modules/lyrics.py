@@ -128,7 +128,7 @@ async def singer(lyric):
             
 
 CmdHelp('lyrics').add_command(
-    'lyrics', ' <sanatçı adı> - <şarkı ismi>', 'Şarkı sözlerini getirir.', 'lyrics System Of a Down - Scince'
+    'lyrics', ' <sənətçinin adı> - <musiqi adı>', 'Musiqi sözlərini gətirir.', 'lyrics System Of a Down - Scince'
 ).add_command(
-    'singer', ' <sanatçı adı> - <şarkı ismi>', 'Şarkı söyler.', 'singer System Of a Down - Scince'
+    'singer', ' <sənətçinin adı> - <musiqi adı>', 'Musiqi söyləyər.', 'singer System Of a Down - Scince'
 ).add()
