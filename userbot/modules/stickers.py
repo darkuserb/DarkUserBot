@@ -258,11 +258,11 @@ async def resize_photo(photo):
     return image
 
 CmdHelp('stickers').add_command(
-    'dızla', None, 'Dızla ile bir çıkartmaya ya da resme yanıtlayarak kendi çıkartma paketinize çıkartma olarak ekleyebilirsiniz.'
+    'dızla', None, 'Dızla ilə bir stikerə ya da rəsmə yanıtlayaraq öz stiker paketinizə stiker olaraq sala bilərsiniz.'
 ).add_command(
-    'dızla', '<emoji(ler)>', 'Dızla gibi çalışır fakat istediğiniz emojiyi çıkartmanın emojisi olarak belirtir.'
+    'dızla', '<stiker(lər)>', 'Dızla kimi işləyir fəqət istədiyiniz  stikerin emojisi olaraq deyilir.'
 ).add_command(
-    'dızla', '<numara>', 'Çıkartmayı ya da resmi belirtilen pakete ekler, emoji olarak rastgele bir tane kullanılır '
+    'dızla', '<numara>', 'Çıxartmayı ya da rəsmi deyilən paketə salar, emoji olaraq random bir dənə işlədilir '
 ).add_command(
-    'dızla', '<emoji(ler)> <numara>', 'Çıkartmayı ya da resmi belirtilen pakete ekler ve belirttiğiniz emoji çıkartmanın emojisi olarak kullanılır.'
+    'dızla', '<emoji(ler)> <nömrə>', 'Çıxartmayı ya da rəsmi deyilən paketə salar və dediyiniz emoji çıxartmanın emojisi olaraq işlədilir.'
 ).add()
