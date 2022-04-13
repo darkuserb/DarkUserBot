@@ -250,7 +250,7 @@ async def approvepm(apprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import approve
     except:
-        await apprvpm.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await apprvpm.edit("`Bot Non-SQL modunda işləyir!!`")
         return
 
     if apprvpm.reply_to_msg_id:
@@ -260,9 +260,9 @@ async def approvepm(apprvpm):
         reply_user = await apprvpm.client.get_entity(apprvpm.chat_id)
 
     if DEFAULT_NAME:
-        siri_sahip = f"{DEFAULT_NAME}"
+        boss_sahip = f"{DEFAULT_NAME}"
     else:
-        siri_sahip = "Sahibim"
+        boss_sahip = "Sahibim"
 
     id = reply_user.id
     first_name = str(reply_user.first_name)
@@ -312,7 +312,7 @@ async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
     except:
-        await disapprvpm.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await disapprvpm.edit("`Bot Non-SQL modunda işləyir!!`")
         return
 
     if disapprvpm.reply_to_msg_id:
@@ -332,7 +332,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " kişisinin PM atma izni kaldırıldı.",
+            " kişisinin PM atma icazəsi qaldırıldı.",
         )
 
 
@@ -344,7 +344,7 @@ async def blockpm(block):
         replied_user = await block.client.get_entity(reply.from_id)
         if replied_user.id in BRAIN_CHECKER or replied_user.id in WHITELIST:
             await block.edit(
-                "`Oups, Hata! Beni Bağışla Ama Bunu SiriUserBot Yetkilisine Yapamam!!`"
+                "`Oups, Xəta! Məni Bağışla Ama Bunu BossUserBot Yetkilisinə edə bilmərəm!!`"
             )
             return
 
@@ -368,7 +368,7 @@ async def blockpm(block):
     else:
         if block.chat_id in BRAIN_CHECKER:
             await block.edit(
-                "`Oups, Hata! Beni Bağışla Ama Bunu SiriUserBot Yetkilisine Yapamam!!`"
+                "`Oups, Xəta! Mənii Bağışla Amma Bunu BossUserBot Yetkilisinə Edə bilmərəm!!`"
             )
             return
 
@@ -422,15 +422,15 @@ async def unblockpm(unblock):
         )
 
 CmdHelp('pmpermit').add_command(
-    'approve', None, 'Cevap verilen kişiye PM yazma yetkisi verilir.', 
+    'approve', None, 'Cavab verilən kişiyə PM yazma yetkisi verilir.', 
 ).add_command(
-    'disapprove', None, 'Cevap verilen kişiden PM yetkisini alır.'
+    'disapprove', None, 'Cavab verilən kişidən PM yetkisini alır.'
 ).add_command(
-    'block', '<kişi adı/yanıt>', 'Kişiyi Engeller.'
+    'block', '<user adı/yanıt>', 'Useri Bloklayar.'
 ).add_command(
-    'unblock', '<kişi adı/yanıt>', 'Kişinin engelini kaldırır.'
+    'unblock', '<user adı/yanıt>', 'Userin blokunu qaldırır.'
 ).add_command(
-    'notifoff', None, 'Pm atmasına izin vermediğiniz kişilerden bildirim almanızı kapatır.'
+    'notifoff', None, 'Pm atmasına izin vermədiyiniz userlərdən bildirim almanızı bağlayar.'
 ).add_command(
-    'notifon', None, 'Pm atmasına izin vermediğiniz kişilerden bildirim almanızı açar.'
+    'notifon', None, 'Pm atmasına izin vermədiyiniz userlərdən bildirim almanızı açar.'
 ).add()
