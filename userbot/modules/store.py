@@ -43,10 +43,10 @@ async def magaza(event):
         random = choice(random)
         random_file = random.file.name
 
-    result = f'**✨Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**🔎 Veriler:** `{plugin}`\n**🔢 Sonuç: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
+    result = f'**✨Boss Plugin Mağazası**\n__Versiyon 0.1__\n\n**🔎 Veriler:** `{plugin}`\n**🔢 Sonuç: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
     
     if len(plugins) == 0:
-        result += f'**Bu İsimde Plugin Bulamadım...**\n`{random_file}` __Bu plugini Denemek İster Misin ?__'
+        result += f'**Bu adda Plugin Tapmadım...**\n`{random_file}` __Bu plugini Denemek İster Misin ?__'
     else:
         for plugin in plugins:
             plugin_lines = plugin.raw_text.splitlines()
@@ -66,13 +66,13 @@ async def sinstall(event):
     try:
         plugin = int(plugin)
     except:
-        return await event.edit('**Mia Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Hata:** `Lütfen Sadece Sayı Yazınız.. Örneğin: .sinstall 2`')
+        return await event.edit('**Mia Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Xəta:** `Xahiş Sadəcə Sayı Yazın.. Nümunə: .sinstall 2`')
     
-    await event.edit('**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`🔎 Plugin\'i Getiriyorum...`')
+    await event.edit('**Boss Plugin Mağazası**\n__Versiyon 0.1__\n\n`🔎 Plugin\'i Getiriyorum...`')
     plugin = await event.client.get_messages(STORECHANNEL, ids=plugin)
-    await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`✅ {plugin.file.name} Plugini Getirildi!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
+    await event.edit(f'**Boss Plugin Mağazası**\n__Versiyon 0.1__\n\n`✅ {plugin.file.name} Plugini Getirildi!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
     dosya = await plugin.download_media('./userbot/modules/')
-    await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
+    await event.edit(f'**Boss Plugin Mağazası**\n__Versiyon 0.1__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
     
     try:
         spec = importlib.util.spec_from_file_location(dosya, dosya)
@@ -80,7 +80,7 @@ async def sinstall(event):
         spec.loader.exec_module(mod)
     except Exception as e:
         os.remove("./userbot/modules/" + dosya)
-        return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**⚠️ Hata:** `Plugin Hatalı. {e}`\n**LÜTFEN BUNU ADMİNLERE BİLDİRİN!**')
+        return await event.edit(f'**Boss Plugin Mağazası**\n__Versiyon 0.1__\n\n**⚠️ Hata:** `Plugin Hatalı. {e}`\n**LÜTFEN BUNU ADMİNLERE BİLDİRİN!**')
 
     dosy = open(dosya, "r").read()
     if re.search(r"@tgbot\.on\(.*pattern=(r|)\".*\".*\)", dosy):
@@ -100,7 +100,7 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımı İçin__ `.mia {cmdhelp}` __Yazın.__')
+                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımı İçin__ `.boss {cmdhelp}` __Yazın.__')
             else:
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -109,12 +109,12 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.mia {cmdhelp}` __Yazınız.__')
+                return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**✅ Modul Uğurla Yükləndi!**\n__ℹ️ Modulun İşlədilişini Öyrənmək Üçün__ `.boss {cmdhelp}` __Yazınız.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.mia {dosyaAdi}` __Yazınız.__')
+                return await event.edit(f'**Boss Plugin Mağazası**\n__Versiyon 0.1__\n\n**✅ Modul Uğurla Yükləndi!**\n__ℹ️ Modulun işlədilişini Öyrənmək Üçün__ `.mia {dosyaAdi}` __Yazınız.__')
 
 userbot.cmdhelp.CmdHelp('store').add_command(
     'store', '<kelime>', 'Plugin kanalına son atılan Pluginleri getirir. Eğer kelime yazarsanız onu kanalda arar.'
