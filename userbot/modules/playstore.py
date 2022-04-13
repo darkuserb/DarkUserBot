@@ -21,8 +21,8 @@ async def play_store(message):
             await message.edit(f'`{LANG["EKS"]} : ``.playstore Telegram`')
             return
             
-        remove_siri = app_name.split(' ')
-        final_name = '+'.join(remove_siri)
+        remove_boss = app_name.split(' ')
+        final_name = '+'.join(remove_boss)
         page = requests.get(f"https://play.google.com/store/search?q={final_name}&c=apps")
         soup = bs4.BeautifulSoup(page.content, 'lxml', from_encoding='utf-8')
         results = soup.findAll("div", "ZmHEEd")
@@ -42,7 +42,7 @@ async def play_store(message):
         app_details += f'\n<code>{LANG["PUAN"]}</code> ' + app_rating.replace(
             "Rated ", "").replace(" out of ", "/").replace(
                 " stars", "", 1).replace(" stars", "⭐️").replace("five", "5")
-        app_details += f"\n<code>{LANG['OZLLK']}</code> <a href='" + app_link + "'>Google Play'da göster</a>"
+        app_details += f"\n<code>{LANG['OZLLK']}</code> <a href='" + app_link + "'>Google Play'da göstər</a>"
         await message.edit(app_details, parse_mode='html')
     except IndexError:
         await message.edit(LANG["NOT_FOUND"])
