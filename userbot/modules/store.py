@@ -61,7 +61,7 @@ async def sinstall(event):
         return await event.edit('**ẞoss Plugin Mağazası**\n__Versiya 1.0__\n\n**⚠️ Xəta:** `Xaiş sadəcə rəqəm yazın. Əgəe Plugin axtarmaq istəyirsizsə .store əmrini işlədin.`')
     
     await event.edit('**ẞoss Plugin Mağazası**\n\n`🔎 Plugin\'i gətirirəm... Xaiş biraz gözlə.`')
-    plugin = await event.client.get_messages('@dtoplugin', ids=plugin)
+    plugin = await event.client.get_messages('@bossplugin', ids=plugin)
     await event.edit(f'**ẞoss Plugin Mağazası**\n\n`✅ {plugin.file.name} plugini gətirildi!`\n`⬇️ Plugini yükləyirəm... Xaiş gözləyin.`')
     dosya = await plugin.download_media('./userbot/modules/')
     await event.edit(f'**ẞoss Plugin Mağazası**\n\n`✅ {plugin.file.name} yüklənmə uğurlu oldu!`\n`⬇️ Plugini yükləyirəm... Xaiş gözləyin.`')
@@ -122,10 +122,10 @@ async def sinstall(event):
                             KomutStr = Command
                         Komutlar.append(KomutStr)
 
-                # DtoPY
-                Dtopy = re.search('\"\"\"DTOPY(.*)\"\"\"', dosy, re.DOTALL)
-                if not Dtopy == None:
-                    Dtopy = Dtopy.group(0)
+                # BossPY
+                Bosspy = re.search('\"\"\"BOSSPY(.*)\"\"\"', dosy, re.DOTALL)
+                if not Bosspy == None:
+                    Bosspy = Bosspy.group(0)
                     for Satir in Dtopy.splitlines():
                         if (not '"""' in Satir) and (':' in Satir):
                             Satir = Satir.split(':')
