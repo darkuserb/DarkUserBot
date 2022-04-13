@@ -24,17 +24,17 @@ async def pm(event):
     mssg = await event.get_reply_message() 
     if event.reply_to_msg_id:
         await event.client.send_message(chat_id, mssg)
-        await event.edit("`Mia Mesajı gönderdi ✔️`")
+        await event.edit("`Boss Mesajı göndərdi ✔️`")
     for i in m[1:]:
         msg += i + " "
     if msg == "":
         return
     try:
         await event.client.send_message(chat_id, msg)
-        await event.edit("`Mia Mesajı gönderdi ✔️`")
+        await event.edit("`Boss Mesajı göndərdi ✔️`")
     except BaseException:
-        await event.edit("** @MiaUserBot Mesajınızı Gönderemedi :(**")
+        await event.edit("** @BossUserBot Mesajınızı Göndərə bilmədi :(**")
         
 CmdHelp('pmyaz').add_command(
-    'pmyaz', '.pmyaz <kullanıcı adı> <mesaj>', 'Yazdığınız mesajı seçtiğiniz kullanıcıya gönderir', '.pmyaz @Miauserbot selam'
+    'pmyaz', '.pmyaz <user adı> <mesaj>', 'Yazdığınız mesajı seçdiyiniz userə göndərir', '.pmyaz @BossUserbot salam'
 ).add()
