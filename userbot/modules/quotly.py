@@ -22,7 +22,7 @@ async def _(event):
 
     if not event.reply_to_msg_id:
 
-       await event.edit("```Herhangi bir kullanıcı mesajını yanıtlayın.```")
+       await event.edit("```Hərhansı bir userin mesajını yanıtlayın.```")
 
        return
 
@@ -30,7 +30,7 @@ async def _(event):
 
     if not reply_message.text:
 
-       await event.edit("```Metin mesajını yanıtla```")
+       await event.edit("```Mətin mesajını yanıtla```")
 
        return
 
@@ -40,11 +40,11 @@ async def _(event):
 
     if reply_message.sender.bot:
 
-       await event.edit("```Gerçek kullanıcı mesajını yanıtlayın.```")
+       await event.edit("```Gerçək user mesajını yanıtlayın.```")
 
        return
 
-    await event.edit("```Alıntı Yapmak```")
+    await event.edit("```Alıntı etmək```")
 
     async with bot.conversation(chat) as conv:
 
@@ -58,13 +58,13 @@ async def _(event):
 
           except YouBlockedUserError: 
 
-              await event.reply("```Lütfen @QuotLyBot'un engellemesini kaldırın ve tekrar deneyin```")
+              await event.reply("```Xahiş @QuotLyBot'un əngəlləməsini qaldırın və təkrar cəhd edin```")
 
               return
 
           if response.text.startswith("Hi!"):
 
-             await event.edit("```İleriye dönük gizlilik ayarlarınızı nazikçe devre dışı bırakır mısınız?```")
+             await event.edit("```Qabağa dönüb gizlilik ayarlarınızı nazikçə deaktiv edə bilərsən?```")
 
           else: 
 
