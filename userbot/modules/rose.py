@@ -287,6 +287,5 @@ CmdHelp('rose').add_command(
 ).add_command(
     'fpromote', '<tag/id>', ' Bunu Federasiya Sahibləri İşlədə Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban Yetkisi Verəbilərsiniz. '
 ).add_command(
-    'feddemote', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban yetkisini Alabilərsiniz. : 'Bu əmrlər hər yerdə işləməyə bilər Özəl mesajlarda yaxud qruplarda işləyə bilər @BossUserBot '
-    
+    'feddemote', '<tag/id>', ' Bunu Federasyon Sahipleri Kullana Bilir.\n Tapıldığınız Gruptaki Userə öz Federasiyanızdan Fban yetkisini Alabilərsiniz. NOT: Bu əmrlər hər yerdə işləməyə bilər Özəl mesajlarda yaxud qruplarda işləyə bilər @BossUserBot     
 ).add()
