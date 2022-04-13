@@ -79,7 +79,7 @@ async def barcode_read(event):
         else:
             message = previous_message.message
     else:
-        event.edit("SÖZDİZİMİ: `.barcode <eklenecek uzun metin>`")
+        event.edit("SÖZDİZİMİ: `.barcode <əlavə ediləj uzun mətin>`")
         return
 
     bar_code_type = "code128"
@@ -139,9 +139,9 @@ async def make_qr(makeqr):
     await makeqr.delete()
 
 CmdHelp('qrcode').add_command(
-    'barcode', '<içerik>', 'Verilen içerikten bir barkod yapın.', 'barcode www.google.com'
+    'barcode', '<məzmun>', 'Verilən məzmunu bir barkod edin.', 'barcode www.google.com'
 ).add_command(
-    'decode', '<yanıt>', 'Barkod veya QRCode çözmek için.'
+    'decode', '<yanıt>', 'Barkod vəya QRCode həll etmək üçün.'
 ).add_command(
-    'makeqr', '<içerik>', 'Verilen içerikten bir QR kodu yapın.', 'makeqr www.google.com'
+    'makeqr', '<içerik>', 'Verilən məzmunu bir QR kodu edin.', 'makeqr www.google.com'
 ).add()
