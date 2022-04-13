@@ -25,7 +25,7 @@ def searchTureng_tr(word):
     except:
         return "No connection"
     soup = BeautifulSoup(answer.content, 'html.parser')
-    trlated='{} Kelimesinin Anlamı/Anlamları:\n\n'.format(word)
+    trlated='{} Kəliməsinin Mənası/Mənaları:\n\n'.format(word)
     try:
         table = soup.find('table')
         td = table.find_all('td', attrs={'lang':'en'})
@@ -34,7 +34,7 @@ def searchTureng_tr(word):
             trlated = '{}👉  {}\n'.format(trlated , val.text )
         return trlated
     except:
-        return "Sonuç bulunamadı"
+        return "Nəticə tapılmadı"
 
 @register(outgoing=True, pattern="^.tureng ?(.*)")
 async def tureng(event): 
@@ -66,13 +66,13 @@ def getSimilarWords(kelime, limit = 5):
 @register(outgoing=True, pattern="^.tdk ?(.*)")
 async def tdk(event): 
     inp = event.pattern_match.group(1)
-    await event.edit('**Bekle!**\n__Sözlükte arıyorum...__')
+    await event.edit('**Gözlə!**\n__Sözlüktə axtarıram...__')
     response = requests.get(f'https://sozluk.gov.tr/gts?ara={inp}').json()
     if 'error' in response:
-        await event.edit(f'**Kelimeniz({inp}) Büyük Türkçe Sözlük\'te Bulunamadı!**')
+        await event.edit(f'**Kelimeniz({inp}) Böyük Türkçə Sözlüy\'də Tapılmadı!**')
         words = getSimilarWords(inp)
         if not words == '':
-            return await event.edit(f'__Kelimeniz({inp}) Büyük Türkçe Sözlük\'te Bulunamadı!__\n\n**Benzer Kelimeler:** {words}')
+            return await event.edit(f'__Kəliməniz({inp}) Böyük Türkçə Sözlüy\'də Tapılmadı!__\n\n**Oxşar Kəlimələr:** {words}')
     else:
         anlamlarStr = ""
         for anlam in response[0]["anlamlarListe"]:
@@ -92,13 +92,13 @@ async def tdk(event):
                 ozel = '✅'
 
 
-        await event.edit(f'**Kelime:** `{inp}`\n\n**Çoğul Mu:** {cogul}\n**Özel Mi:** {ozel}\n\n**Anlamlar:**{anlamlarStr}')
+        await event.edit(f'**Kəlimə:** `{inp}`\n\n**Çoğul Mu:** {cogul}\n**Özəl Mi:** {ozel}\n\n**Anlamlar:**{anlamlarStr}')
         words = getSimilarWords(inp)
         if not words == '':
-            return await event.edit(f'**Kelime:** `{inp}`\n\n**Çoğul Mu:** `{cogul}`\n**Özel Mi:** {ozel}\n\n**Anlamlar:**{anlamlarStr}' + f'\n\n**Benzer Kelimeler:** {words}')
+            return await event.edit(f'**Kəlimə:** `{inp}`\n\n**Çoğul Mu:** `{cogul}`\n**Özəl di:** {ozel}\n\n**Mənalar:**{anlamlarStr}' + f'\n\n**Benzer Kelimeler:** {words}')
 
 CmdHelp('sozluk').add_command(
-    'tdk', '<kelime>', 'Verdiğiniz kelimeyi TDK Sözlükte arar.'
+    'tdk', '<kəlimə>', 'Verdiyiniz kəliməyi TDK Sözlüydə axtarar.'
 ).add_command(
-    'tureng', '<kelime>', 'Verdiğiniz kelimeyi Tureng Sözlükte arar.'
+    'tureng', '<kəlimə>', 'Verdiyiniz kəliməyi Tureng Sözlüydə axtarar.'
 ).add()
