@@ -118,5 +118,5 @@ async def get_font_file(client, channel_id):
     return await client.download_media(font_file_message)
 
 CmdHelp('auto').add_command(
-    'auto', 'isim ,pp ya da bio', 'Otomatik saate göre Değişir', '.auto isim(isminiz değil "isim" Kelimesi)'
+    'auto', 'ad ,pp ya da bio', 'Otomatik saata görə Dəyişir', '.auto ad(adınız deyil "ad" Kəliməsi)'
 ).add()
