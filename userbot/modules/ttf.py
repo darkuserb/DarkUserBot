@@ -30,7 +30,7 @@ async def get(event):
     await bot.send_file(event.chat_id,name,force_document=True)
     
 Help = CmdHelp('ttf')
-Help.add_command('open', '<bir dosya yanıtla>', 'Dosyanın içeriğini okuyun ve Telegram mesajı olarak gönderin.')
-Help.add_command("ttf","<Metin yanıtı> <Dosya adı>","Bir metni dosya haline çevirip Telegram mesajı olarak atar.")
-Help.add_info("**@wiperowner**")
+Help.add_command('open', '<bir fayl yanıtla>', 'Faylın məzmununu oxuyun və Telegram mesajı olaraq göndərin.')
+Help.add_command("ttf","<Mətin yanıtı> <Fayl adı>","Bir mətni dosya halına çevirib Telegram mesajı olaraq atar.")
+Help.add_info("**@ghrmnlj**"
 Help.add()
