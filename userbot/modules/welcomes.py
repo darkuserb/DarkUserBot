@@ -162,23 +162,23 @@ async def del_welcome(event):
 CMD_HELP.update({
     "welcome":
     "\
-.setwelcome <karışlama mesajı> veya .setwelcome ile bir mesaja cevap verin\
+.setwelcome <qarşılama mesajı> veya .setwelcome ilə bir mesaja cavab verin\
 \nKullanım: Mesajı sohbete karşılama notu olarak kaydeder.\
-\n\nKarşılama mesajlarını biçimlendirmek için kullanılabilir değişkenler :\
+\n\nQarşılama mesajlarını biçimləndirmək üçün işlədiləbilir dəyişkənlər :\
 \n`{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`\
 \n\n.checkwelcome\
-\nKullanım: Sohbette karşılama notu olup olmadığını kontrol edin.\
+\nKullanım: Söhbəttə qarşılama notu olub olmadığını yoxlayın.\
 \n\n.rmwelcome\
-\nKullanım: Geçerli sohbet için karşılama notunu siler.\
+\nKullanım: Keçərli söhbət üçün qarşılama notunu silər.\
 "
 })
 
 CmdHelp('welcome').add_command(
-    'setwelcome', '<karışlama mesajı>', 'Mesajı sohbete karşılama notu olarak kaydeder.'
+    'setwelcome', '<qarşılama mesajı>', 'Mesajı söhbətə qarşılama notu olaraq yükləyər.'
 ).add_command(
-    'checkwelcome', None, 'Sohbette karşılama notu olup olmadığını kontrol edin.'
+    'checkwelcome', None, 'Söhbəttə qarşılama notu olub olmadığını yoxlayın.'
 ).add_command(
-    'rmwelcome', None, 'Geçerli sohbet için karşılama notunu siler.'
+    'rmwelcome', None, 'Keçərli söhbət üçün qarşılama notunu silər.'
 ).add_info(
-    'Değişkenler: `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`'
+    'Dəyişkənlər: `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`'
 ).add()
