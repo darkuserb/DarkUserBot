@@ -45,7 +45,7 @@ async def remove_notes(clr):
     try:
         from userbot.modules.sql_helper.notes_sql import rm_note
     except AttributeError:
-        await clr.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await clr.edit("`Bot Non-SQL modunda işləyir!!`")
         return
     notename = clr.pattern_match.group(1)
     if rm_note(clr.chat_id, notename) is False:
@@ -73,7 +73,7 @@ async def add_note(fltr):
                 BOTLOG_CHATID, f"#NOTE\
             \nGrup ID: {fltr.chat_id}\
             \nAnahtar kelime: {keyword}\
-            \n\nBu mesaj sohbette notu cevaplamak için kaydedildi, lütfen bu mesajı silmeyin!"
+            \n\nBu mesaj söhbəttə notu cavablamaq üçün kaydedildi, Xahiş bu mesajı silməyin!"
             )
             msg_o = await fltr.client.forward_messages(entity=BOTLOG_CHATID,
                                                        messages=msg,
@@ -82,7 +82,7 @@ async def add_note(fltr):
             msg_id = msg_o.id
         else:
             await fltr.edit(
-                "`Bir medyayı not olarak kaydetmek için BOTLOG_CHATID değerinin ayarlanmış olması gereklidir.`"
+                "`Bir medyayı not olaraq kaydetmek üçün BOTLOG_CHATID dəyərinin ayarlanmış olması lazımlıdır.`"
             )
             return
     elif fltr.reply_to_msg_id and not string:
@@ -90,9 +90,9 @@ async def add_note(fltr):
         string = rep_msg.text
     success = "`{} {}. ` #{} `{}`"
     if add_note(str(fltr.chat_id), keyword, string, msg_id) is False:
-        return await fltr.edit(success.format(LANG['SUCCESS'], 'güncellendi', keyword, LANG['CALL']))
+        return await fltr.edit(success.format(LANG['SUCCESS'], 'güncəlləndi', keyword, LANG['CALL']))
     else:
-        return await fltr.edit(success.format(LANG['SUCCESS'], 'eklendi', keyword, LANG['CALL']))
+        return await fltr.edit(success.format(LANG['SUCCESS'], 'salındı', keyword, LANG['CALL']))
 
 
 @register(pattern=r"#\w*",
@@ -128,11 +128,11 @@ async def incom_note(getnt):
         pass
 
 CmdHelp('notes').add_command(
-    '#<notismi>', None, 'Belirtilen notu çağırır.'
+    '#<notismi>', None, 'Deyilən notu çağırır.'
 ).add_command(
-    'save', '<not adı> <not olarak kaydedilecek şey> ya da bir mesajı .save <not adı> şeklinde yanıtlayarak kullanılır', 'Yanıtlanan mesajı ismiyle birlikte bir not olarak kaydeder. (Resimler, belgeler ve çıkartmalarda da çalışır.)'
+    'save', '<not adı> <not olaraq kaydediləcək şey> ya da bir mesajı .save <not adı> şeklində yanıtlayaraq işlədilir', 'Yanıtlanan mesajı adıyla birliktə bir not olaraq kaydedər. (Rəsimlər, fayllar ve stikerlər də işləyir.)'
 ).add_command(
-    'notes', None, 'Bir sohbetteki tüm notları çağırır.'
+    'notes', None, 'Bir söhbəttəki bütün notları çağırır.'
 ).add_command(
-    'clear', '<not adı>', 'Belirtilen notu siler.'
+    'clear', '<not adı>', 'Deyilən notu silər.'
 ).add()
