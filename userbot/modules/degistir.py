@@ -73,9 +73,9 @@ async def deyisdir(event):
 CmdHelp('degistir').add_command(
     'değiştir', '<modul> <mesaj/yanıt>', 'Deyişdir, bottaki plugin-mesajlarını dəyiştirmənizə yarar. Əgər mesaj yazmazsanız Plugin mesajını original halına döndərər.', '.deyisdir afk \"İndi burada deyiləm... Bəlkə heç gəlmərəm\"'
 ).add_info(
-    '**Desteklenen Pluginler:** `afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block`\n**Alive Değişkenleri:** `{plugin}, {telethon}, {siri}, {python}, {sirisahip}`\n\
-**Ban/Mute Değişkenleri:** `{id}, {username}, {first_name}, {last_name}, {mention}, {date}, {count}`\n\
+    '**Dəstəklənən Pluginler:** `afk/alive/pm/kickme/dızcı/ban/mute/approve/disapprove/block`\n**Alive Değişkenleri:** `{plugin}, {telethon}, {siri}, {python}, {sirisahip}`\n\
+**Ban/Mute Dəyişkənləri:** `{id}, {username}, {first_name}, {last_name}, {mention}, {date}, {count}`\n\
 **AFK Değişkenleri:** `{username}, {mention}, {first_name}, {last_name}, {last_seen_seconds}, {last_seen}, {last_seen_long}`\n\
-**PMpermit Değişkenler(pm, block, approve, disapprove):** `{id}, {username}, {mention}, {first_name}, {last_name}`\
-**Kickme Değişkenleri:** `{title}`'
+**PMpermit Dəyişkənləri(pm, block, approve, disapprove):** `{id}, {username}, {mention}, {first_name}, {last_name}`\
+**Kickme Dəyişkənləri:** `{title}`'
 ).add()
