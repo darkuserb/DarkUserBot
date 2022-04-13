@@ -95,7 +95,7 @@ async def on_snip_list(event):
     try:
         from userbot.modules.sql_helper.snips_sql import get_snips
     except AttributeError:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda işləyir!`")
         return
 
     message = LANG['NO_SNIP']
@@ -116,7 +116,7 @@ async def on_snip_delete(event):
     try:
         from userbot.modules.sql_helper.snips_sql import remove_snip
     except AttributeError:
-        await event.edit("`SQL dışı modda çalışıyor!`")
+        await event.edit("`SQL qırağı modda !`")
         return
     name = event.pattern_match.group(1)
     if remove_snip(name) is True:
@@ -127,9 +127,9 @@ async def on_snip_delete(event):
 CmdHelp('snips').add_command(
     '$<snip_adı>', None, 'Snipi çağırır.'
 ).add_command(
-    'snip', '<isim> <veri/yanıt>', 'Bir snip (küresel not) olarak kaydeder. (Resimler, dokümanlar ve çıkartmalar ile çalışır !)'
+    'snip', '<ad> <yanıt>', 'Bir snip (küresel not) olaraq yüklərə. (Resimler, dokümanlar ve çıkartmalar ile çalışır !)'
 ).add_command(
-    'snips', None, 'Kaydedilen tüm snip\'leri listeler.'
+    'snips', None, 'Endirilən bütün snip\'ləri atar.'
 ).add_command(
-    'remsnip', '<snip adı>', 'Belirtilen snip\'i siler.'
+    'remsnip', '<snip adı>', 'Deyilən snip\'i silər.'
 ).add()
