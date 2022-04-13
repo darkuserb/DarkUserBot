@@ -249,7 +249,7 @@ async def creation(event):
         if response.text.startswith("Looks"):
             await event.edit(LANG['PRIVACY_ERR'])
         else:
-            await event.edit(f"**Rapor hazır: **`{response.text.replace('**','')}`")
+            await event.edit(f"**Diləkçə hazır: **`{response.text.replace('**','')}`")
         await conv.mark_read()
         await conv.cancel_all()
 
@@ -303,7 +303,7 @@ async def voicy(event):
     if reply_message.sender.bot:
        await event.edit(LANG['REPLY_TO_MSG'])
        return
-    await event.edit("`Ses dinleniyor... Erkan enegtarlar...`")
+    await event.edit("`Səs dinlənir... Erkan enegtarlar...`")
     async with event.client.conversation(chat) as conv:
         response = conv.wait_event(events.MessageEdited(incoming=True,from_users=259276793))
         await force_send_message(event,reply_message,forward=True, chat=259276793)
@@ -353,15 +353,15 @@ async def quotly(event):
             await event.edit(LANG['UNBLOCK_QUOTLY'])
             return
         except asyncio.TimeoutError:
-            await event.edit("`Botdan cevap alamadım!`")
+            await event.edit("`Botdan cavab alammadım!`")
             return
         except ValueError:
             await event.edit(LANG['QUOTLY_VALUE_ERR'])
             return
             
         if not response:
-            await event.edit("`Botdan cevap alamadım!`")
-        elif response.text.startswith("Merhaba!"):
+            await event.edit("`Botdan cavab alammadım!`")
+        elif response.text.startswith("Salam!"):
             await event.edit(LANG['USER_PRIVACY'])
         else: 
             await event.delete()
@@ -370,17 +370,17 @@ async def quotly(event):
         await conv.cancel_all()
 
 CmdHelp('scrapers_bot').add_command(
-    'sangmata', '<yanıt>', 'Belirtilen kullanıcının isim geçmişini görüntüleyin.'
+    'sangmata', '<yanıt>', 'Deyilən userin ad keçmişini görüntüləyin.'
 ).add_command(
-    'scan', '<yanıt>', 'Belirtilen dosyada virüs var mı yok mu bakın.'
+    'scan', '<yanıt>', 'Deyilən faylda virus var mı yox mu baxın.'
 ).add_command(
-    'meme', '<font> <üst;alt>', 'Fotoğrafa yazı ekleyin. İsterseniz font büyüklüğünü de yazabilirsiniz.', 'meme 30 siri;usta'
+    'meme', '<font> <üst;alt>', 'Şəkilə yazı əlavə edin. İstərsəniz font böyüklüyünü də yazabilərsiniz.', 'meme 30 boss;usta'
 ).add_command(
-    'voicy', '<yanıt>', 'Sesi yazıya çevirin.'
+    'voicy', '<yanıt>', 'Səsi yazıya çevirin.'
 ).add_command(
-    'q', '<sayı>', 'Metninizi çıkartmaya dönüştürün.'
+    'q', '<sayı>', 'Mətninizi stikerə çevirin.'
 ).add_command(
-    'ocr2', '<yanıt>', 'Fotoğraftaki metini okuyun.'
+    'ocr2', '<yanıt>', 'Şəkilədəki mətini oxuyun.'
 ).add_command(
-    'creation', '<yanıt>', 'Yanıt verdiğiniz kişinin hesabı oluşturma tarihinin öğrenin.'
+    'creation', '<yanıt>', 'Yanıt verdiyiniz userin hesabı yaradıldığı tarixini öyrənin.'
 ).add()
