@@ -96,7 +96,7 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**ẞoss Plugin Mağazası**\n\n**✅ Modul uğurlar yükləndi!**\n__ℹ️ Modulun əmrləri və işlədilişi haqqında məlumat almaq üçün__ `.up {cmdhelp}` __yazın.__')
+                return await event.edit(f'**ẞoss Plugin Mağazası**\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun əmrləri və işlədilişi haqqında məlumat almaq üçün__ `.boss {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 CmdHelp = userbot.cmdhelp.CmdHelp(dosyaAdi, False)
@@ -138,7 +138,7 @@ async def sinstall(event):
                     CmdHelp.add_command(Komut, None, 'Bu plugin qırağdan yüklənib. Hər hansı bir açıqlama edilməyib.')
                 CmdHelp.add()
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**ẞoss Plugin Mağazası**\n\n**✅ Modül uğurla yükləndi!**\n__ℹ️ Modulun əmrləri və işlədilişi haqqında məlumat almaq üçün` `.up {dosyaAdi}` `yazın.__')
+                return await event.edit(f'**ẞoss Plugin Mağazası**\n\n**✅ Modul uğurla yükləndi!**\n__ℹ️ Modulun əmrləri və işlədilişi haqqında məlumat almaq üçün` `.boss {dosyaAdi}` `yazın.__')
 
 userbot.cmdhelp.CmdHelp('store').add_command(
     'store', '<söz>', 'Plugin kanalına son atılan Pluginləri gətirər. Əgər söz yazarsanız axtarış edər.'
