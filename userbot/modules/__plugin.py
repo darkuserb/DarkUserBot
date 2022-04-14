@@ -174,7 +174,7 @@ async def pins(event):
 #    plugins = await event.client.get_messages('@bossplugin', limit=None, search=dosyaAdi, filter=InputMessagesFilterDocument)
 
 #    if len(plugins) == 0:
-#        await event.edit('🍕 `Bu bir Mia Plugini değil!`')
+#        await event.edit('🍕 `Bu bir Boss Plugini deyil!`')
 #        return
 
 
@@ -248,8 +248,8 @@ async def ptest(event):
         await event.edit(f"{LANG['PLUGIN_BUGGED']} {e}`")
         return os.remove("./userbot/temp_plugins/" + dosya)
 
-    return await event.edit(f'**Modül Başarıyla Yüklendi!**\
-    \n__Modülü Test Edebilirsiniz. Botu yeniden başlattığınızda plugin silinecektir.__')
+    return await event.edit(f'**Modul Uğurla Yükləndi!**\
+    \n__Modulu Test Edə bilərsiniz. Botu yenidən başlattığınızda plugin silinəcəktir.__')
 
 @register(pattern="^.psend ?(.*)")
 async def psend(event):
@@ -338,7 +338,7 @@ async def asistanpremove(ups):
                     try: 
                         if BOTLOG:
                             await ups.client.send_message(BOTLOG_CHATID, "#OTORESTART \n"
-                                                    "Plugin silme sonrası bot yeniden başlatıldı.")
+                                                    "Plugin silmə sonrası bot yenidən başlatıldı.")
 
                         await bot.disconnect()
                     except:
@@ -395,21 +395,21 @@ async def pinsasistan(ups):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.mia {cmdhelp}` __yazın.__')
+                return await usp.edit(f'**Modul Uğurla Yükləndi!**\n__Modulun İşlədilişini Öyrənmək Üçün__ `.boss {cmdhelp}` __yazın.__')
             else:
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
+                userbot.cmdhelp.CmdHelp(dosya).add_warning('Əmrlər tapılammadı!').add()
                 return await usp.edit(LANG['PLUGIN_DESCLESS'])
         else:
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımını Öğrenmek İçin__ `.mia {cmdhelp}` __yazın.__')
+                return await usp.edit(f'**Modül Uğurla Yüklendi!**\n__Modulun işlədilişini Öyrənmək üçün__ `.boss {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Başarıyla Yüklendi**\n__Modülün  Kullanımını Öğrenmek İçin__ `.mia {dosyaAdi}` __yazın.__')
+                return await usp.edit(f'**Modul Uğurla Yükləndi**\n__Modulun  İşlədilişini Öyrənmək üçün__ `.boss {dosyaAdi}` __yazın.__')
 
 
 
