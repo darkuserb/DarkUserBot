@@ -2,16 +2,16 @@ from telethon import functions
 from userbot.events import register
 
 
-@register(outgoing=True, pattern="^.invite(?: |$)(.*)")
+@register(outgoing=True, pattern="^.adamsal(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
     to_add_users = event.pattern_match.group(1)
     if event.is_private:
-        await event.edit("`.invite` istifadəçilər Şəxsi Mesaj üçün deyil, söhbət üçün")
+        await event.edit("`.adamsal` istifadəçilər Şəxsi Mesaj üçün deyil, söhbət üçün")
     else:
         if not event.is_channel and event.is_group:
-            # https://lonamiwebs.github.io/Telethon/methods/messages/add_chat_user.html
+            #BossUserBot
             for user_id in to_add_users.split(" "):
                 try:
                     await event.client(functions.messages.AddChatUserRequest(
