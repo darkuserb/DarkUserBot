@@ -284,7 +284,7 @@ async def approvepm(apprvpm):
         id=id,
         username=username,
         mention=mention,
-        sirisahip=siri_sahip,
+        bossahip=boss_sahip,
         first_name=first_name,
         last_name=last_name
     ))
@@ -294,7 +294,7 @@ async def approvepm(apprvpm):
         id=id,
         username=username,
         mention=first_name,
-        sirisahip=siri_sahip,
+        bossahip=boss_sahip,
         first_name=first_name,
         last_name=last_name
     )):
