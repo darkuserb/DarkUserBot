@@ -101,7 +101,7 @@ async def asistanping(ups):
 CmdHelp('www').add_command(
     'speed', None, 'Bir speedtest qurar və sonucu göstərir.'
 ).add_command(
-    'dc', None, 'Sunucunuza ən yaxın datacenter\'ı göstərir.'
+    'dc', None, 'Serverinizə ən yaxın datacenter\'ı göstərir.'
 ).add_command(
     'ping', None, 'Botun ping dəyərini göstərir.'
 ).add()
