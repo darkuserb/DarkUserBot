@@ -206,5 +206,5 @@ CmdHelp('system_stats').add_command(
 ).add_command(
     'pip', '<modül(ler)>', 'Pip modüllerinde arama yapar.'
 ).add_command(
-    'alive', None, 'Mia botunun çalışıp çalışmadığını kontrol etmek için kullanılır.'
-).add()
+    'alive', None, 'Boss botunun işləyib işləmədiyini nəzarət etmək üçün işlədilir.'
+).ad
