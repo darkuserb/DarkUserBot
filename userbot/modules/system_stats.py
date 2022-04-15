@@ -207,4 +207,4 @@ CmdHelp("system_stats").add_command(
     'pip', '<modül(ler)>', 'Pip modüllerinde arama yapar.'
 ).add_command(
     'alive', None, 'Boss botunun işləyib işləmədiyini nəzarət etmək üçün işlədilir.'
-).ad
+).add()
