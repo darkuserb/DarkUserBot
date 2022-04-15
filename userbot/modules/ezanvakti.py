@@ -68,5 +68,5 @@ async def ezanvakti(event):
     await event.edit(vakitler)
 
 CmdHelp('ezanvakti').add_command(
-    'ezanvaxt', '<şəhər> <ilçe>', 'Deyilən şəhər üçün namaz vaxtlarını göstərir.', 'ezanvaxtı Azərbaycan Bakı'
+    'ezanvaxt', '<şəhər> <rayon>', 'Deyilən şəhər üçün namaz vaxtlarını göstərir.', 'ezanvaxtı Azərbaycan Bakı'
 ).add()
