@@ -58,7 +58,7 @@ LastLog = False
 @register(outgoing=True, pattern="^.lastfm$")
 async def last_fm(lastFM):
     """ .lastfm komutu last.fm'den verileri çeker. """
-    await lastFM.edit("İşleniyor...")
+    await lastFM.edit("İşlənir...")
     preview = None
     playing = User(LASTFM_USERNAME, lastfm).get_now_playing()
     username = f"https://www.last.fm/user/{LASTFM_USERNAME}"
