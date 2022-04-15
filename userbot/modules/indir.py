@@ -20,7 +20,7 @@ async def bossinsta(event):
     if reply_message.sender.bot:
         await event.edit("`Boss Endirmədi Bəzi Xətalar Nədəniylə Başqa Link Cəhd et Də Ürəyim ✓`")
         return
-    asc = await event.edit("`Siri Yüklüyor Sabırlı Ol...`")
+    asc = await event.edit("`Boss Yükləyir Səbirli Ol...`")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -33,7 +33,7 @@ async def bossinsta(event):
             return
         if response.text.startswith("Forward"):
             await event.edit(
-                "`Gizlilik ayarlarınızdakı iləti qismini düzəldin.`"
+                "`Gizlilik ayarlarınızdakı mesaj qismini düzəldin.`"
             )
         elif "Что поддерживается?" in response.text:
             await event.edit(
