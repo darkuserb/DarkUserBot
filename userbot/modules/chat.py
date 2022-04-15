@@ -76,7 +76,7 @@ async def log(log_text):
         else:
             await log_text.edit("`Bununla ne yapmam gerekiyor ?`")
             return
-        await log_text.edit("`Günlüğe Kaydedildi`")
+        await log_text.edit("`Günlüyə Yükləndi`")
     else:
         await log_text.edit(LANG['NEED_LOG'])
     await sleep(2)
@@ -92,7 +92,7 @@ async def kickme(leave):
         await leave.edit(f"{PLUGIN_MESAJLAR['kickme']}\n **Reason:** `{sebep}`".format(
             id=chat.id,
             title=chat.title,
-            member_count="Bilinmiyor" if chat.participants_count == None else (chat.participants_count - 1)
+            member_count="Bilinmir" if chat.participants_count == None else (chat.participants_count - 1)
         ))
     else:
         await leave.edit(f"{PLUGIN_MESAJLAR['kickme']}".format(
@@ -109,7 +109,7 @@ async def unmute_chat(unm_e):
     try:
         from userbot.modules.sql_helper.keep_read_sql import unkread
     except AttributeError:
-        await unm_e.edit('`SQL dışı modda çalışıyor!`')
+        await unm_e.edit('`SQL qırağı modda işləyir!`')
         return
     unkread(str(unm_e.chat_id))
     await unm_e.edit(LANG['UNMUTED'])
@@ -123,7 +123,7 @@ async def mute_chat(mute_e):
     try:
         from userbot.modules.sql_helper.keep_read_sql import kread
     except AttributeError:
-        await mute_e.edit("`SQL dışı modda çalışıyor!`")
+        await mute_e.edit("`SQL qırağı modda işləyir!`")
         return
     await mute_e.edit(str(mute_e.chat_id))
     kread(str(mute_e.chat_id))
@@ -133,7 +133,7 @@ async def mute_chat(mute_e):
     if BOTLOG:
         await mute_e.client.send_message(
             BOTLOG_CHATID,
-            str(mute_e.chat_id) + " susturuldu.")
+            str(mute_e.chat_id) + " susduruldu.")
 
 
 @register(incoming=True, disable_errors=True)
@@ -168,12 +168,12 @@ async def sedNinjaToggle(event):
     global regexNinja
     if event.pattern_match.group(1) == "on":
         regexNinja = True
-        await event.edit("`Regexbot için ninja modu etkinleştirdi.`")
+        await event.edit("`BossUserbot üçün ninja modu aktivləşdirildi.`")
         await sleep(1)
         await event.delete()
     elif event.pattern_match.group(1) == "off":
         regexNinja = False
-        await event.edit("`Regexbot için ninja modu devre dışı bırakıldı.`")
+        await event.edit("`BossUserbot üçün ninja modu deaktivləşdirildi.`")
         await sleep(1)
         await event.delete()
 
@@ -189,12 +189,12 @@ CMD_HELP.update({
 \n\n.kickme\
 \nKullanım: Deyilən gruptan ayrılmanızı edər.\
 \n\n.unmutechat\
-\nKullanım: Susturulmuş bir sohbətin səsini açar.\
+\nKullanım: Susturulmuş bir söhbətin səsini açar.\
 \n\n.mutechat\
 \nKullanım: Deyilən qrupu susturur.\
-\n\n.link <kullanıcı adı/kullanıcı id> : <istəyə bağlı mətin> (vəya) hərhansı birinin mesajına .link ilə yanıt verərək <istəyə bağlı mətin>\
+\n\n.link <user adı/user id> : <istəyə bağlı mətin> (vəya) hərhansı birinin mesajına .link ilə yanıt verərək <istəyə bağlı mətin>\
 \nKullanım: İstəyə bağlı özəl mətin ilə kullanıcının profilinə qalıcı bir bağlantı oluşturun.\
-\n\n.regexninja on/off\
-\nKullanım: Kürəsəl olaraq regex ninja modulunu açar / geri buraxır.\
-\nRegex ninja modulu regex bot tərəfindan tetiklənəj mesajları silmək üçün yardımcı olur."
+\n\n.Bossuserbot on/off\
+\nKullanım: Ümumi olaraq BossUserBot modulunu açar / geri buraxır.\
+\nBossUserBot modulu  tərəfindan tetiklənən mesajları silmək üçün köməkçi olur."
 })
