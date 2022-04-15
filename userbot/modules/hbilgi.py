@@ -73,7 +73,7 @@ async def hesapstat(event: NewMessage.Event) -> None:  # pylint: disable = R0912
     stop_time = time.time() - start_time
 
     full_name = inline_mention(await event.client.get_me())
-    response = f'🔸 **Bu userin istatistikleri: {full_name}** \n\n'
+    response = f'🔸 **Bu userin statistikləri: {full_name}** \n\n'
     response += f'**Özəl Mesajlar:** {private_chats} \n'
     response += f'   📊 `Userlər: {private_chats - bots}` \n'
     response += f'   📊 `Botlar: {bots}` \n'
@@ -85,8 +85,8 @@ async def hesapstat(event: NewMessage.Event) -> None:  # pylint: disable = R0912
     response += f'**Admin olduğun kanallar:** {admin_in_broadcast_channels} \n'
     response += f'   📊 `Qurucu olduğun kanallar: {creator_in_channels}` \n'
     response += f'   📊 `Admin olduğun kanallar: {admin_in_broadcast_channels - creator_in_channels}` \n'
-    response += f'✉️**Okunmamış Mesajlar:** {unread} \n\n'
-    response += f'📧**Okunmamış Etikətlər:** {unread_mentions} \n\n'
+    response += f'✉️**Oxunmamış Mesajlar:** {unread} \n\n'
+    response += f'📧**Oxinmamış Etikətlər:** {unread_mentions} \n\n'
     response += f'__Bunları hesablamam__ {stop_time:.02f} __saniyə sürdü__ \n'
 
     await event.edit(response)
