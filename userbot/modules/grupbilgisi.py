@@ -187,9 +187,9 @@ async def fetch_info(chat, event):
     if hasattr(chat_obj_info, "scam") and chat_obj_info.scam:
     	caption += "Scam: <b>Evet</b>\n\n"
     if hasattr(chat_obj_info, "verified"):
-        caption += f"Telegram tarafından doğrulandı: {verified}\n\n"
+        caption += f"Telegram tərəfindən doğrulandı: {verified}\n\n"
     if description:
-        caption += f"Açıklama: \n<code>{description}</code>\n"
+        caption += f"Açıqlama: \n<code>{description}</code>\n"
     return caption    
 
 CmdHelp('grupməlumatı').add_command('grupməlumatı', None, 'Grup haqqında məlumat verir.').add()
