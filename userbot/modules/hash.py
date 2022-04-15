@@ -42,7 +42,7 @@ async def gethash(hash_q):
             hash_q.chat_id,
             "hashes.txt",
             reply_to=hash_q.id,
-            caption="`Çok büyük, bunun yerine bir metin dosyası gönderiliyor. `")
+            caption="`Çox böyük, bunun yerinə bir mətin faylı göndərilir. `")
         runapp(["rm", "hashes.txt"], stdout=PIPE)
     else:
         await hash_q.reply(ans)
@@ -63,7 +63,7 @@ async def endecrypt(query):
         await query.reply("Decoded: `" + lething[:-1] + "`")
 
 CmdHelp('hash').add_command(
-    'base64', None, 'Verilən dizənin base64 kodlamasını tapın'
+    'base64', None, 'Verilən kateqoriyanın base64 kodlamasını tapın'
 ).add_command(
-    'hash', None, 'Bir txt faylı yazıldığında md5, sha1, sha256, sha512 dizələrini tapın.'
+    'hash', None, 'Bir txt faylı yazıldığında md5, sha1, sha256, sha512 kateqoriyalarını tapın.'
 ).add()
