@@ -3,7 +3,7 @@
 # Licensed under the GPL-3.0 License;
 # you may not use this file except in compliance with the License.
 ##
-# - tg: @siriot - @sirisupport - Berceste  # Thx: fireganqQ
+# - tg: @BossUserBot - @bosssupportaz - Araz,Hüsnü  # Thx: fireganqQ
 
 
 """ AFK ile ilgili komutları içeren UserBot modülü """
@@ -400,5 +400,5 @@ async def type_afk_is_not_true(notafk):
 CmdHelp('afk').add_command(
     'afk', 
     '<İsteğe bağlı sebep>', 
-    'AFK olrda. Kim size pm atarsa ya da sizi etiketlerse sizin AFK olduğunuzu ve belirlediğiniz sebebi gösterir. Herhangi bir yere mesaj yazdığınızda AFK modu kapanır.'
+    'AFK olur. Kimsə sizə pm atarsa ya da sizi etiketləyərsə sizin AFK olduğunuzu və dediyiniz səbəbi göstərir. Hər hansı bir yerə mesaj yazdığınızda AFK modu bağlanır.'
     ).add()
