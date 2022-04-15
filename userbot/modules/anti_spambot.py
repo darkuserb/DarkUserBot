@@ -86,7 +86,7 @@ async def anti_spambot(welcm):
                     print(f"Sohbet: {welcm.chat.title}")
                     print(f"Zaman: {join_time}")
                     print(
-                        f"Gönderdiği mesaj: {message.text}\n\n[Zaman: {message_date}]"
+                        f"Göndərdiyi mesaj: {message.text}\n\n[Zaman: {message_date}]"
                     )
                     ##############################################
 
@@ -96,7 +96,7 @@ async def anti_spambot(welcm):
                         data = r.json()
                     except BaseException:
                         print(
-                            "CAS kontrolü başarısız, eski anti_spambot kontrolüne dönülüyor."
+                            "CAS nəzarəti Uğursuzdur, köhnə anti_spambot nəzarətinə keçid edilir."
                         )
                         data = None
                         pass
@@ -111,7 +111,7 @@ async def anti_spambot(welcm):
                         reason = "Bacarıq reklam mesajı"
                         spambot = True
                     elif message.fwd_from:
-                        reason = "Başqasından ilətilən mesaj"
+                        reason = "Başqasından göndərilən mesaj"
                         spambot = True
                     elif "?start=" in message.text:
                         reason = "Telegram botu `start` linki"
@@ -155,7 +155,7 @@ async def anti_spambot(welcm):
                         await welcm.reply(
                             "@admin\n"
                             "`ANTI SPAMBOT Tapıldı!\n"
-                            "BU User Mənim SpamBot Alqortimalarımıa Eşləşir!`"
+                            "Bu User Mənim SpamBot Alqortimimə uyğun gəlmir!`"
                             f"SEBEP: {reason}")
                         kicked = False
                         reported = True
@@ -200,7 +200,7 @@ async def anti_spambot(welcm):
 
 CMD_HELP.update({
     'anti_spambot':
-    "Kullanım: Bu modul config.env dosyasında ya da env dəyəri ilə etkinləştirilmişsə,\
-        \neğer bu spamcılar UserBot'un anti-spam alqoritmasıyla eşləşirsə, \
+    "Kullanım: Bu modul config.env dosyasında ya da env dəyəri aktiv olunmuşsa,\
+        \nəgər bu spamcılar UserBot'un anti-spam alqoritmiylə uyğun gəlirsə, \
         \nbu modul qruptakı spamcıları gruptan qadağan edər (ya da adminlərə məlumat verir)."
 })
