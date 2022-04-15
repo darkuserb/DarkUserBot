@@ -98,7 +98,7 @@ async def tdk(event):
             return await event.edit(f'**Kəlimə:** `{inp}`\n\n**Çoğul Mu:** `{cogul}`\n**Özəl di:** {ozel}\n\n**Mənalar:**{anlamlarStr}' + f'\n\n**Benzer Kelimeler:** {words}')
 
 CmdHelp('sozluk').add_command(
-    'tdk', '<kəlimə>', 'Verdiyiniz kəliməyi TDK Sözlüydə axtarar.'
+    'tdk', '<söz>', 'Verdiyiniz sözü TDK Sözlüydə axtarar.'
 ).add_command(
-    'tureng', '<kəlimə>', 'Verdiyiniz kəliməyi Tureng Sözlüydə axtarar.'
+    'tureng', '<söz>', 'Verdiyiniz sözü Tureng Sözlüydə axtarar.'
 ).add()
