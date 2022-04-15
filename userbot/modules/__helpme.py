@@ -6,7 +6,7 @@
 
 # SiriUserBot - Berceste
 
-# @Qulec tarafından yazılmıştır.
+# @BossUserBor tərəfindən yazılmıştır.
 # Thanks @Spechide.
 
 from userbot import BOT_USERNAME
@@ -25,7 +25,7 @@ async def yardim(event):
     if tgbotusername is not None:
         results = await event.client.inline_query(
             tgbotusername,
-            "@SiriUserBot"
+            "@BossUserBot"
         )
         await results[0].click(
             event.chat_id,
