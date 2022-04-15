@@ -44,14 +44,14 @@ except:
 
 @register(outgoing=True, pattern="^.addai$")
 async def add_chatbot(event):
-    "Yanıtlanan kişi üçün zəkayı etkin edir"
+    "Yanıtlanan kişi üçün zəkayı aktiv edir"
     if not RANDOM_STUFF_API_KEY:
         return await event.edit(
-            "`ChatBot'u etkinləştirmek üçün bir API key ayarlayın! `"
+            "`ChatBot'u aktivləştirmək üçün bir API key ayarlayın! `"
         )
     if event.reply_to_msg_id is None:
         return await event.edit(
-            "`ChatBot'u etkinləştirmək üçün bir userin mesajını yanıtlayın! `"
+            "`ChatBot'u aktivləştirmək üçün bir userin mesajını yanıtlayın! `"
         )
     catevent = await event.edit("`Useri ChatBot'a salıram...`")
     previous_message = await event.get_reply_message()
@@ -70,7 +70,7 @@ async def add_chatbot(event):
     user_name = user.first_name
     user_username = user.username
     if is_added(chat_id, user_id):
-        return await event.edit("`User də  ChatBot etkinləştirildi.`")
+        return await event.edit("`User də  ChatBot aktivləştirildi.`")
     try:
         addai(chat_id, user_id, chat_name, user_name, user_username, chat_type)
     except Exception as e:
@@ -83,11 +83,11 @@ async def remove_chatbot(event):
     "Kullanıcı için ChatBot'u durdurmak"
     if not RANDOM_STUFF_API_KEY:
         return await event.edit(
-            "`ChatBot'u etkinləştirmek üçün2 bir API key ayarlayın! `"
+            "`ChatBot'u aktivləştirmek üçün bir API key ayarlayın! `"
         )
     if event.reply_to_msg_id is None:
         return await event.edit(
-            "Yapay zekayı durdurmak için bir kullanıcının mesajını yanıtlayın."
+            "Süni zəkayı durdurmaq üçün bir userin mesajını yanıtlayın."
         )
     reply_msg = await event.get_reply_message()
     user_id = reply_msg.sender_id
@@ -98,9 +98,9 @@ async def remove_chatbot(event):
         except Exception as e:
             await event.edit(f"**Error:**\n`{str(e)}`")
         else:
-            await event.edit("`ChatBot user için durduruldu!`")
+            await event.edit("`ChatBot user üçün durduruldu!`")
     else:
-        await event.edit("`Userdə onsuz ChatBot etkinləştirilmədi!`")
+        await event.edit("`Userdə onsuz ChatBot aktivləştirilmədi!`")
 
 
 #@register(incoming=True, disable_edited=True,disable_errors=True)
@@ -120,7 +120,7 @@ async def ai_reply(event):
         await event.reply(response.message)
 
 CmdHelp('chatbot').add_command(
-    'addai', '<yanıtlayaraq>', 'ChatBot\'un avto söhbətini etkinləştirir.'
+    'addai', '<yanıtlayaraq>', 'ChatBot\'un avto söhbətini aktivləştirir.'
 ).add_command(
     'remai', '<yanıtlayaraq>', 'ChatBot\'un avto söhbətini geri buraxır.'
 ).add()
