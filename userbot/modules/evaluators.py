@@ -151,7 +151,7 @@ async def terminal_runner(term):
         from os import geteuid
         uid = geteuid()
     except ImportError:
-        uid = "Bu değil şef!"
+        uid = "Bu deyil usta!"
 
     if term.is_channel and not term.is_group:
         await term.edit(LANG['FORBIDDEN_IN_CHANNEL'])
@@ -194,7 +194,7 @@ async def terminal_runner(term):
     if BOTLOG:
         await term.client.send_message(
             BOTLOG_CHATID,
-            "Terminal Komutu " + command + " başarıyla yürütüldü",
+            "Terminal Komutu " + command + " uğurla yürütüldü",
         )
 
 CmdHelp('evaluators').add_command(
