@@ -127,7 +127,7 @@ async def on_snip_delete(event):
 CmdHelp('snips').add_command(
     '$<snip_adı>', None, 'Snipi çağırır.'
 ).add_command(
-    'snip', '<ad> <yanıt>', 'Bir snip (küresel not) olaraq yüklərə. (Resimler, dokümanlar ve çıkartmalar ile çalışır !)'
+    'snip', '<ad> <yanıt>', 'Bir snip (ümumi not) olaraq yüklənər. (Şəkillər, fayllar və stikerlər ilə işləyir !)'
 ).add_command(
     'snips', None, 'Endirilən bütün snip\'ləri atar.'
 ).add_command(
