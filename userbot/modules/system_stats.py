@@ -199,7 +199,7 @@ async def asistanalive(ups):
     await ups.reply(f"__{hitap} səni sevirəm❤! Boss işləyir!__")
 
 
-CmdHelp('system_stats').add_command(
+CmdHelp("system_stats").add_command(
     'sysd', None, 'Neofetch modülünü kullanarak sistem bilgisi gösterir.'
 ).add_command(
     'botver', None, 'Userbot sürümünü gösterir.'
