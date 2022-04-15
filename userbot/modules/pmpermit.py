@@ -44,9 +44,9 @@ async def permitpm(event):
             notifsoff = gvarstatus("NOTIF_OFF")
 
             if DEFAULT_NAME:
-                siri_sahip = f"{DEFAULT_NAME}"
+                boss_sahip = f"{DEFAULT_NAME}"
             else:
-                siri_sahip = "Sahibim"
+                boss_sahip = "Sahibim"
             reply_user = await event.get_sender()
             id = reply_user.id
             first_name = str(reply_user.first_name)
@@ -76,7 +76,7 @@ async def permitpm(event):
                                     mention=first_name,
                                     first_name=first_name,
                                     last_name=last_name,
-                                    sirisahip=siri_sahip
+                                    bosssahip=boss_sahip
                                 )
                             ):
                                 await message.delete()
@@ -86,7 +86,7 @@ async def permitpm(event):
                                 mention=mention,
                                 first_name=first_name,
                                 last_name=last_name,
-                                sirisahip=siri_sahip
+                                bosssahip=boss_sahip
                             ))
                         else:
                             async for message in event.client.iter_messages(
@@ -101,7 +101,7 @@ async def permitpm(event):
                                     mention=mention,
                                     first_name=first_name,
                                     last_name=last_name,
-                                    sirisahip=siri_sahip
+                                    bosssahip=boss_sahip
                                 )
 
                             await event.reply(PLUGIN_MESAJLAR['pm'])
@@ -113,7 +113,7 @@ async def permitpm(event):
                                     mention=mention,
                                     first_name=first_name,
                                     last_name=last_name,
-                                    sirisahip=siri_sahip
+                                    bosssahip=boss_sahip
                                 ))
                     LASTMSG.update({event.chat_id: event.text})
 
@@ -173,9 +173,9 @@ async def auto_accept(event):
         chat = await event.get_chat()
         id = chat.id
         if DEFAULT_NAME:
-            siri_sahip = f"{DEFAULT_NAME}"
+            boss_sahip = f"{DEFAULT_NAME}"
         else:
-            siri_sahip = "Sahibim"
+            boss_sahip = "Sahibim"
         first_name = str(chat.first_name)
         if chat.last_name:
             last_name = str(chat.last_name)
@@ -196,7 +196,7 @@ async def auto_accept(event):
                                     id=id,
                                     username=username,
                                     mention=mention,
-                                    sirisahip=siri_sahip,
+                                    bosssahip=boss_sahip,
                                     first_name=first_name,
                                     last_name=last_name
                                 ) and message.from_id == self_user.id:
@@ -226,7 +226,7 @@ async def notifoff(noff_event):
     try:
         from userbot.modules.sql_helper.globals import addgvar
     except AttributeError:
-        await noff_event.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await noff_event.edit("`Bot Non-SQL modunda işləyir!!`")
         return
     addgvar("NOTIF_OFF", True)
     await noff_event.edit(LANG['NOTIFOFF'])
