@@ -113,7 +113,7 @@ async def set_var(var):
                     "**ConfigVar Değişikliği**:\n"
                     f"`{variable}` = `{value}`"
                 )
-            await var.edit(f"`✅ {variable} değeri değiştirildi!`")
+            await var.edit(f"`✅ {variable} dəyəri dəyiştirildi!`")
         except:
              fix = True
              await var.edit("😒 Botlog grubundan çıxmısan.. Sənin üçün düzəldirəm..")
