@@ -64,5 +64,5 @@ async def github(event):
                 await event.edit(REPLY)
 
 CmdHelp('git').add_command(
-    'git', '<kullanıcı adı>', 'Hədəflənən kişinin GitHub məlumatlarını göstərir.', 'git quiec'
+    'git', '<kullanıcı adı>', 'Hədəflənən userin GitHub məlumatlarını göstərir.', 'git quiec'
 ).add()
