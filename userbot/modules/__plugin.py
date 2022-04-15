@@ -404,7 +404,7 @@ async def pinsasistan(ups):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await usp.edit(f'**Modül Uğurla Yüklendi!**\n__Modulun işlədilişini Öyrənmək üçün__ `.boss {cmdhelp}` __yazın.__')
+                return await usp.edit(f'**Modul Uğurla Yüklendi!**\n__Modulun işlədilişini Öyrənmək üçün__ `.boss {cmdhelp}` __yazın.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
