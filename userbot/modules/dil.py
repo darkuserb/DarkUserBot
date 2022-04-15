@@ -34,14 +34,14 @@ async def dil(event):
             await reply.forward_to(pchannel)
             
             LANGUAGE_JSON = dosya
-            await event.edit(f"✅ `{dosya['LANGUAGE']}` `dili Uğurla yüklendi!`\n\n**İşləmlərin keçərli olması üçün botu yenidən başladın!**")
+            await event.edit(f"✅ `{dosya['LANGUAGE']}` `dili Uğurla yüklendi!`\n\n**Əməliyyatların keçərli olması üçün botu yenidən başladın!**")
         else:
             await event.edit("**Xahiş bir dil faylına yanıt verin!**")
     elif search(r"məlumat|info", komut):
         await event.edit("`Dil faylı məlumatları gətirilir... Xahiş gözlə.`")
         if event.is_reply:
             reply = await event.get_reply_message()
-            if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "sirijson")):
+            if ((len(reply.file.name.split(".")) >= 1) and (not reply.file.name.split(".")[1] == "bossjson")):
                 return await event.edit("`Xahiş keçərli bir` **BossJSON** `faylı verin!`")
 
             dosya = await reply.download_media()
@@ -49,7 +49,7 @@ async def dil(event):
             try:
                 dosya = loads(open(dosya, "r").read())
             except JSONDecodeError:
-                return await event.edit("`Xahiş keçərli bir` **BodsJSON** `faylı verin!`")
+                return await event.edit("`Xahiş keçərli bir` **BossJSON** `faylı verin!`")
 
             await event.edit(
                 f"**Dil: **`{dosya['LANGUAGE']}`\n"
@@ -59,7 +59,7 @@ async def dil(event):
                 f"\n\n`Dil faylını yükləmək üçün` `.dil yükle` `yazın`"
             )
         else:
-            await event.edit("**Lütfen bir dil faylına yanıt verin!**")
+            await event.edit("**Xahiş bir dil faylına yanıt verin!**")
     else:
         await event.edit(
             f"**🪙 Dil: **`{LANGUAGE_JSON['LANGUAGE']}`\n"
