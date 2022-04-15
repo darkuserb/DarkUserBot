@@ -440,13 +440,13 @@ async def gdrive_search(http, search_query):
     return msg
 
 CmdHelp('gdrive').add_command(
-    'gdrive', '<fayl yolu / yanıtlayaraq / URL|dosya-adı>', 'Bəlirtilən faylı Google Drive\'a uploadlayar.'
+    'gdrive', '<fayl yolu / yanıtlayaraq / URL|dosya-adı>', 'Deyilən faylı Google Drive\'a uploadlayar.'
 ).add_command(
     'gsetf', '<GDrive Fayl URL\'si>', 'Yeni faylların uploadlanacağı faylı deyər.'
 ).add_command(
-    'gsetclear', None, 'Halhazırda işlədilən upload dizinini göstərir.'
+    'gsetclear', None, 'Halhazırda işlədilən upload kataloqunu göstərir.'
 ).add_command(
-    'list', '<sorgu>', 'Google Drive\'da tapılan fayllar və dizinlərdə axtarış edər.'
+    'list', '<sorgu>', 'Google Drive\'da tapılan fayllar və kataloqlarda axtarış edər.'
 ).add_command(
     'ggd', '<serverdəki-fayl-yolu>', 'Bəlirtilən dizindəki Bütün faylları Google Drive\'a uploadlayar.'
 ).add()
