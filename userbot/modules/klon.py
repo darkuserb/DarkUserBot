@@ -155,5 +155,5 @@ async def get_full_user(event):
 
 CmdHelp('klon').add_command('klon','<mesajı yanıtlayaraq>','Mesajına yanıt verdiyiniz kişinin klonu olursuz.','klon'
 ).add_command('revert',None,'Klondan sonra hesabınızın əvvəlki halına dönməsi üçün :p','revert'
-).add_warning('Herokuda DEFAULT_NAME dəyişkənin tanımlı olması lazım. Bu nə demək bilmirsizsə hərhansı bir söhbətə `.revert` yazın.'
+).add_warning('Herokuda DEFAULT_NAME dəyişkənin müəyyənləşmiş olması lazımdır. Bu nə demək bilmirsizsə hərhansı bir söhbətə `.revert` yazın.'
 ).add_info('🎆 Thx to').add()
