@@ -26,7 +26,7 @@ async def notes_active(svd):
     try:
         from userbot.modules.sql_helper.notes_sql import get_notes
     except AttributeError:
-        await svd.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await svd.edit("`Bot Non-SQL modunda işləyir!!`")
         return
     message = LANG['NOT_FOUND']
     notes = get_notes(svd.chat_id)
@@ -61,7 +61,7 @@ async def add_note(fltr):
     try:
         from userbot.modules.sql_helper.notes_sql import add_note
     except AttributeError:
-        await fltr.edit("`Bot Non-SQL modunda çalışıyor!!`")
+        await fltr.edit("`Bot Non-SQL modunda işləyir!!`")
         return
     keyword = fltr.pattern_match.group(1)
     string = fltr.text.partition(keyword)[2]
@@ -73,7 +73,7 @@ async def add_note(fltr):
                 BOTLOG_CHATID, f"#NOTE\
             \nGrup ID: {fltr.chat_id}\
             \nAnahtar kelime: {keyword}\
-            \n\nBu mesaj söhbəttə notu cavablamaq üçün kaydedildi, Xahiş bu mesajı silməyin!"
+            \n\nBu mesaj söhbəttə notu cavablamaq üçün yüklənildi, Xahiş bu mesajı silməyin!"
             )
             msg_o = await fltr.client.forward_messages(entity=BOTLOG_CHATID,
                                                        messages=msg,
@@ -82,7 +82,7 @@ async def add_note(fltr):
             msg_id = msg_o.id
         else:
             await fltr.edit(
-                "`Bir medyayı not olaraq kaydetmek üçün BOTLOG_CHATID dəyərinin ayarlanmış olması lazımlıdır.`"
+                "`Bir medyayı not olaraq yükləmək üçün BOTLOG_CHATID dəyərinin ayarlanmış olması lazımlıdır.`"
             )
             return
     elif fltr.reply_to_msg_id and not string:
