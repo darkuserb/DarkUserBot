@@ -178,7 +178,7 @@ CmdHelp('welcome').add_command(
 ).add_command(
     'checkwelcome', None, 'Söhbəttə qarşılama notu olub olmadığını yoxlayın.'
 ).add_command(
-    'rmwelcome', None, 'Keçərli söhbət üçün qarşılama notunu silər.'
+    'rmwelcome', None, 'Etibarlı söhbət üçün qarşılama notunu silər.'
 ).add_info(
     'Dəyişkənlər: `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`'
 ).add()
