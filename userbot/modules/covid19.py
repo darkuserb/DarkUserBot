@@ -52,6 +52,6 @@ async def covid(event):
     await event.edit(sonuclar)
 
 CmdHelp('covid19').add_command(
-    'covid', '<ölkə kodu>', 'Həm Dünya geneli həm də verdiyiniz ölkə üçün güncəl Covid 19 istatistikləri. Ölkəniz fərqli isə əmrin yanına salmanız yetərlidir.',
-    'covid az -> Azerbaycanı getirir.'
-).add_warning('`Ölkə yazmazsanız Türkiyeyi seçer.`').add()
+    'covid', '<ölkə kodu>', 'Həm Dünya həm də verdiyiniz ölkə üçün cari Covid 19 statistikaları. Ölkəniz fərqli isə əmrin yanına salmanız yetərlidir.',
+    'covid az -> Azərbaycanı getirir.'
+).add_warning('`Ölkə yazmazsanız Türkiyəyi seçər.`').add()
