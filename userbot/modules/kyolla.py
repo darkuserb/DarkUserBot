@@ -22,4 +22,4 @@ async def tm(event):
   await event.client.forward_messages("me", mesaj)
   await event.edit(LANG["SUCCESSFUL"])
   
-CmdHelp('kyolla').add_command('kyolla', '<bir mesaja yanıt verin>', 'Yanıt verdiyiniz mesajı Kayıtlı Mesajlar(Saved Messages) bölümüne gönderir.').add()
+CmdHelp('kyolla').add_command('kyolla', '<bir mesaja yanıt verin>', 'Yanıt verdiyiniz mesajı Kayıtlı Mesajlar(Saved Messages) bölümünə göndərir.').add()
