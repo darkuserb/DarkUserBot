@@ -4,11 +4,11 @@
 # you may not use this file except in compliance with the License.
 #
 
-# SiriUserBot - Berceste 
+#BossUserBot - Araz
 #
 
 """
-Grup yönetmenize yardımcı olacak UserBot modülü
+Grup idarə etməyinizə yardımcı olacaq UserBot modulu
 """
 
 from asyncio import sleep
@@ -1548,47 +1548,47 @@ async def get_bots(show):
         remove("botlist.txt")
 
 CmdHelp('admin').add_command(
-        'promote', '<kullanıcı adı/yanıtlama> <özel isim (isteğe bağlı)>', 'Sohbetteki kişiye yönetici hakları sağlar.'
+        'promote', '<user adı/yanıtlama> <özəl ad (istəyə bağlı)>', 'Söhbəttəki hər hansı bir userə adminlik səlahiyyəti  verər.'
     ).add_command(
-        'tagver', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişiyi yetki diye yalvarıyorsa ve vermeye pek gönlünüz yoksa bunu kullanın.'
+        'tagver', '<user adı/yanıtlama>', 'Söhbəttəki userə yetki deyə yalvarırsa və verməyə tam gönlünüz yoxdusa bunu işlədin.'
     ).add_command(
-        'demote', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yönetici izinlerini iptal eder.'
+        'demote', '<user adı/yanıtlama>', 'Söhbəttəki userin yönetici icazələrini ləğv edər.'
     ).add_command(
-        'ban', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Sohbetteki kişiyi susturur, yöneticilerde de çalışır.'
+        'ban', '<user adı/yanıtlama> <səbəbi (istəyə bağlı)>', 'Söhbəttəki useri susturur, adminlər də işləyir.'
     ).add_command(
-        'unban', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yasağını kaldırır.'
+        'unban', '<user adı/yanıtlama>', 'Söhbəttəki userin qadağasını qaldırır.'
     ).add_command(
-        'kick', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Gruptan belirttiğiniz kişiyi tekmeler.'
+        'kick', '<user adı/yanıtlama> <səbəbi (istəyə bağlı)>', 'Gruptan dediyin useri təpiyləyər.'
     ).add_command(
-        'gmute', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Kişiyi yönetici olduğunuz tüm gruplarda susturur.'
+        'gmute', '<user adı/yanıtlama> <səbəbi (istəyə bağlı)>', '`Useri Dünya miqyasında susdurur`.'
     ).add_command(
-        'ungmute', '<kullanıcı adı/yanıtlama>', 'Kişiyi küresel olarak sessize alınanlar listesinden kaldırır.'
+        'ungmute', '<user adı/yanıtlama>', 'Useri toplu olaraq səssizə alınanlar siyahısından qaldırır.'
     ).add_command(
-        'zombies', None, 'Bir gruptaki silinmiş hesapları arar. Gruptan silinen hesapları kaldırmak için .zombies clean komutunu kullanın.'
+        'zombies', None, 'Bir gruptakı silinmiş hesabları axtarar. Gruptan silinən hesabları qaldırmaq üçün .zombies clean əmrini işlədin.'
     ).add_command(
-        'admins', None, 'Sohbet yöneticilerinin listesini alır.'
+        'admins', None, 'Söhbət adminlərinin siyahısını alır.'
     ).add_command(
-        'bots', None, 'Bir gruptaki silinmiş hesapları arar. Gruptan silinen hesapları kaldırmak için .zombies clean komutunu kullanın.'
+        'bots', None, 'Bir gruptaki silinmiş hesabları axtarar. Gruptan silinən hesabları qaldırmaq üçün .zombies clean əmrini işlədin.'
     ).add_command(
-        'users veya .users', '<kullanıcı adı> <kullanıcı adı/yanıtlama>', 'Sohbetteki tüm (veya sorgulanan) kullanıcıları alır.'
+        'users veya .users', '<user adı> <user adı/yanıtlama>', 'Söhbəttəki bütün (vəya sorğulanan) userləri alır.'
     ).add_command(
-        'setgppic', '<yanıtlanan resim>', 'Grubun resmini değiştirir.'
+        'setgppic', '<yanıtlanan rəsim>', 'Grubun şəklini dəyiştirir.'
     ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
+        'warn', '<user adı/yanıtlamma> <səbəb (istəyə bağlı>', 'Dediyiniz userə xəbərdarlıq verər.'
     ).add_command(
-        'unwarn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcının uyarısını kaldırır.'
+        'unwarn', '<user adı/yanıtlamma> <səbəb (istəyə bağlı>', 'Dediyiniz userin xəbərdarlığını qaldırır.'
     ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
+        'warn', '<user adı/yanıtlamma> <səbəb (istəyə bağlı>', 'Dediyiniz userə xəbərdarlıq edər.'
     ).add_command(
-        'usersdel', None, 'Grup içerisinde silinen hesapları göstürür.'
+        'usersdel', None, 'Grup içərisində silinən hesabları göstərir.'
     ).add_command(
-        'ekle', '<kullanıcı ad(lar)ı>', 'Gruba üye ekler.'
+        'ekle', '<user ad(lar)ı>', 'Gruba üzv əlavə edər.'
     ).add_command(
-        'gban', '<kullanıcı adı/yanıtlama>', 'Kullanıcıyı küresel olarak yasaklar.'
+        'gban', '<user adı/yanıtlama>', 'Useri Dünya miqyasında qadağan edər.'
     ).add_command(
-        'ungban', '<kullanıcı adı/yanıtlama>', 'Kullanıcının küresel yasaklamasını kaldırır.'
+        'ungban', '<user adı/yanıtlama>', 'Userin Dünya miqyasında qadağasını qaldırır.'
     ).add_command(
-        'pin', '<yanıtlama>', 'Yanıt verdiğiniz mesajı başa sabitler.'
+        'pin', '<yanıtlama>', 'Yanıt verdiyiniz mesajı başa sabitləyər.'
     ).add_command(
-        'setgpic', '<yanıtlama>', 'Grup fotoğrafını değiştirir.'
+        'setgpic', '<yanıtlama>', 'Grup Şəklini dəyişdirir.'
     ).add()
