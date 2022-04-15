@@ -27,4 +27,4 @@ async def _(event):
         f"<b><u>Boss UserBot Modulu</b></u>\n\n<b>IP tipi :-</b><code>{a}</code>\n<b>Ölkə kodu:- </b> <code>{b}</code>\n<b>Dövlət adı :-</b><code>{c}</code>\n<b>Şəhər adı :- </b><code>{d}</code>\n<b>Posta kodu :-</b><code>{e}</code>\n<b>Adres koordinatı:- </b> <code>{f}</code>",
         parse_mode="HTML")
 
-CmdHelp("ipmelumat").add_command('ipmelumat', "{IP adress yazin}", "yazdığınız ip adressinə görə yer təsbiti edər.").add()
+CmdHelp("ipmelumat").add_command('ipmelumat', "{IP adress yazin}", "yazdığınız ip adressinə görə yer qətiyyəti edər.").add()
