@@ -35,7 +35,7 @@ ALIVE_MSG = [
     "`⛈️ Yeni kimi görünür!`, **{mention}<3**",
     "✨ `Userbot sahibinin əmrinə hazır...`",
     "`Huh!` **{mention}** `məni çağırır 🍰 < bu sənin üçündü 🥺..`",
-    "{mention} **Boss mia sənin üçün işləyir✨**",
+    "{mention} **Boss  sənin üçün işləyir✨**",
     "{username}, `bossuserbot {worktime} zamandır işləyir...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{boss}`\n**Python sürümü    :** `{python}`\n**Plugin sayı :** `{plugin}`\n——————————————\n**Əmrinə tabeyəm dostum... 😇**"
 ]
 
@@ -47,30 +47,30 @@ DIZCILIK_STR = [
 ]
 
 AFKSTR = [
-    "Şu an acele işim var, daha sonra mesaj atsan olmaz mı? Zaten yine geleceğim.",
-    "Aradığınız kişi şu anda telefona cevap veremiyor. Sinyal sesinden sonra kendi tarifeniz üzerinden mesajınızı bırakabilirsiniz. Mesaj ücreti 49 kuruştur. \n`biiiiiiiiiiiiiiiiiiiiiiiiiiiiip`!",
-    "Birkaç dakika içinde geleceğim. Fakat gelmezsem...\ndaha fazla bekle.",
-    "Şu an burada değilim, ama muhtemelen başka bir yerdeyim.",
-    "Güller kırmızı\nMenekşeler mavi\nBana bir mesaj bırak\nVe sana döneceğim.",
-    "Bazen hayattaki en iyi şeyler beklemeye değer…\nHemen dönerim.",
-    "Hemen dönerim,\nama eğer geri dönmezsem,\ndaha sonra dönerim.",
-    "Henüz anlamadıysan,\nburada değilim.",
-    "Merhaba, uzak mesajıma hoş geldiniz, bugün sizi nasıl görmezden gelebilirim?",
-    "7 deniz ve 7 ülkeden uzaktayım,\n7 su ve 7 kıta,\n7 dağ ve 7 tepe,\n7 ovala ve 7 höyük,\n7 havuz ve 7 göl,\n7 bahar ve 7 çayır,\n7 şehir ve 7 mahalle,\n7 blok ve 7 ev...\n\nMesajların bile bana ulaşamayacağı bir yer!",
-    "Şu anda klavyeden uzaktayım, ama ekranınızda yeterince yüksek sesle çığlık atarsanız, sizi duyabilirim.",
-    "Şu yönde ilerliyorum\n---->",
-    "Şu yönde ilerliyorum\n<----",
-    "Lütfen mesaj bırakın ve beni zaten olduğumdan daha önemli hissettirin.",
-    "Sahibim burada değil, bu yüzden bana yazmayı bırak.",
-    "Burada olsaydım,\nSana nerede olduğumu söylerdim.\n\nAma ben değilim,\ngeri döndüğümde bana sor...",
-    "Uzaklardayım!\nNe zaman dönerim bilmiyorum !\nUmarım birkaç dakika sonra!",
-    "Sahibim şuan da müsait değil. Adınızı, numarınızı ve adresinizi verirseniz ona iletibilirm ve böylelikle geri döndüğü zaman.",
-    "Üzgünüm, sahibim burada değil.\nO gelene kadar benimle konuşabilirsiniz.\nSahibim size sonra döner.",
-    "Bahse girerim bir mesaj bekliyordun!",
-    "Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum...",
-    "Şu an burada değilim....\nama öyleysem ...\n\nbu harika olmaz mıydı?",
-    "Beni hatırladığına sevindim ama şuanda klavye bana çok uzak",
-    "Belki İyiyim, Belki Kötüyüm Bilmiyorsun Ama AFK Olduğumu Görebiliyorsun"
+    "İndi tələsirəm işim var, daha sonra mesaj atsan olmaz dı? Onsuz yenə gələcəm.",
+    "Çağırdığınız kişi indi telefona cavab verə bilmir. Siqnal səsindən sonra öz tərifiniz üzərindən mesajınızı buraxa bilərsiniz. Mesaj haqqı 49 qəpikdir. \n`biiiiiiiiiiiiiiiiiiiiiiiiiiiiip`!",
+    "Bir neçə dəqiqəyə gələcəm. gəlməzsəm...\ndaha çox gözlə.",
+    "İndi burada deyiləm, ama ehtimal edirəmki başqa bir yerdəyəm.",
+    "Güllər qırmızı\bənövşələr mavi\nMənə bir mesaj buraz\nVə sənə dönəcəm.",
+    "Bəzən həyattakı ən yaxşı şeyləri gözləməyə dəyər…\nİndi dönürəm.",
+    "İndi gəlirəm,\namma əgər geri gəlməzsəm,\ndaha sonra gələrəm.",
+    "İndi anlamamısansa,\nburada deyiləm.",
+    "Salam, uzaq mesajıma xoş gəldiniz, bugün sizi necə görməzdən gələ bilərəm?",
+    "7 dəniz və 7 ölkədən uzaqdayam,\n7 su və 7 qitə,\n7 dağ və 7 təpə,\n7 ovala və 7 kurqan,\n7 hovuz və 7 göl,\n7 yaz və 7 çəmən,\n7 şəhər və 7 məhəllə,\n7 blok və 7 ev...\n\nMesajların belə mənə çata bilməyəcəyi bir yer!",
+    "Bu dəqiqə klaviyaturadan uzaqdayaç, amma ekranınızda yetərincə yüksek səslə qışqırsanəz, sizi eşidə bilərəm.",
+    "Bu yöndə gedirəm\n---->",
+    "Bu yöndə qaçıram\n<----",
+    "Xahiş mesaj buraxın və məni olduğumdan daha özəl hiss etdirin.",
+    "Sahibim burada deyil, bu səbəbdən mənə yazma.",
+    "Burada olsaydım,\nSənə harada olduğumu deyərdim.\n\nAmma mən deyiləm,\ngeri gəldiyimdə mənə de...",
+    "Uzaqlardayam!\nNə zaman gələrəm bilmirəm !\nÜmid varamki bir neçə dəqiqə sonra!",
+    "Sahibim indi məşğuldur. Adınızı, nömrənizi və adresinizi versəniz ona ata bilərəm və beləlikle geri döndüyü zaman.",
+    "Təəssüf ki, sahibim burada deyil.\nO gələnə qədər mənlə danışa bilərsiniz.\nSahibim sizə sonra baxar.",
+    "Bəhsə girərəm bir mesaj gözləyirdin!",
+    "Həyat çox qısa, edəcək çox şey var...\nOnlardan birini edirəm...",
+    "İndi burada deyiləm....\namma eləsəmm ...\n\nbu yaxşı olmaz mıydı?",
+    "Məni xatırladığına sevindim ama indi klaviyatura mənə çox uzaq",
+    "Bəlkə yaxşıyam, Bəlkə pis Bilmirsən Ama AFK Olduğumu Görə bilirsən"
 ]
 
 KICKME_MSG = [
