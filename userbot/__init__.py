@@ -116,6 +116,7 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 
 
 UPSTREAM_REPO_URL = "https://github.com/bossuserb/BossUserBot" 
+EMERGENCY = "https://github.com/bossuserb/bossuserbot.git
 
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
