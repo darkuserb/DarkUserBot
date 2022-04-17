@@ -17,7 +17,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HELP, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, ASISTAN, MYID, BRAIN_CHECKER, AUTO_UPDATE, BOSS_VERSION, upVer, EMERGENCY
+from userbot import CMD_HELP, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, ASISTAN, MYID, BRAIN_CHECKER, AUTO_UPDATE, BOSS_VERSION, ForceVer, EMERGENCY
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 
@@ -55,7 +55,7 @@ async def update_requirements():
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
 async def upstream(ups):
     BossVer = int(BOSS_VERSION.split(".")[1])
-    if BossVer < upVer:
+    if BossVer < ForceVer:
      await ups.edit(f"**Sakın Yanlış Anlama Bazı Kısıtlamalar Yapılmalıdır Botunu Sağlıksız Güncellemen Botuna Zarar Verir**.\n\nDurum: İzin Verilmiyor. ") #CR vERMEYEN NE OLSUN - ByMisakiMey
      return
     await ups.edit(LANG['DETECTING'])
@@ -111,7 +111,7 @@ async def upstream(ups):
 
     if conf != "now" and not force_update:
         BossVer = int(BOSS_VERSION.split(".")[1])
-        if BossVer < upVer:
+        if BossVer < ForceVer:
           await ups.edit(f"**Lütfen boss yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @BossUserBot")
           return
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
@@ -409,7 +409,7 @@ async def asistan_update(ups):
 @register(outgoing=True, pattern=r"^\.er(?: |$)(.*)")
 async def upstream(ups):
     BossVer = int(BOSS_VERSION.split(".")[1])
-    if BossVer < upVer:
+    if BossVer < ForceVer:
      await ups.edit(f"**Lütfen boss yöneticileri izin vermeden güncelleme yapmaya çalişma\n Botun bozulabilir\n Güncelleme kanali :** @BossUserBot") #CR vERMEYEN NE OLSUN - ByMisakiMey
      return
     await ups.edit(LANG['DETECTING'])
@@ -466,7 +466,7 @@ async def upstream(ups):
 
     if conf != "now" and not force_update:
         BossVer = int(BOSS_VERSION.split(".")[1])
-        if BossVer < upVer:
+        if BossVer < ForceVer:
           await ups.edit(f"**Lütfen boss yöneticileri izin vermeden güncelleme yapmaya çalışma\n Botun bozulabilir\n Güncelleme kanalım :** @BossUserBot")
           return
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
