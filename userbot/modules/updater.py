@@ -52,7 +52,7 @@ async def update_requirements():
     except Exception as e:
         return repr(e)
 
-
+@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
 async def upstream(ups):
     ".update komutu ile botunun güncel olup olmadığını denetleyebilirsin."
