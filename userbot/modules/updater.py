@@ -98,18 +98,18 @@ async def upstream(ups):
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
         if len(changelog_str) > 4096:
             await ups.edit(LANG['BIG'])
-            file = open("UPDΔTΣ.txt", "w+")
+            file = open("boss.txt", "w+")
             file.write(changelog_str)
             file.close()
             await ups.client.send_file(
                 ups.chat_id,
-                "UPDΔTΣ.txt",
+                "boss.txt",
                 reply_to=ups.id,
             )
-            remove("UPDΔTΣ.txt")
+            remove("boss.txt")
         else:
             await ups.edit(changelog_str)
-        await ups.respond('`Botunuz U S Σ R Δ T O R tərəfindən yenilənir`')
+        await ups.respond('`Botunuz ẞoss tərəfindən yenilənir`')
         return
 
     if force_update:
@@ -224,15 +224,15 @@ async def upstream(ups):
         changelog_str = LANG['WAS_UPDATE'].format(ac_br, changelog)
         if len(changelog_str) > 4096:
             await ups.edit(LANG['BIG'])
-            file = open("UPDΔTΣ.txt", "w+")
+            file = open("boss.txt", "w+")
             file.write(changelog_str)
             file.close()
             await ups.client.send_file(
                 ups.chat_id,
-                "UPDΔTΣ.txt",
+                "boss.txt",
                 reply_to=ups.id,
             )
-            remove("UPDΔTΣ.txt")
+            remove("boss.txt")
         else:
             await ups.edit(changelog_str)
         await ups.respond(LANG['DO_UPDATE'])
