@@ -627,7 +627,9 @@
             "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilməmişdir.`",
             "HEROKU_UPDATING": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 𝙱𝙾𝚂𝚂 UserBot-unun daha yaxşı olacağına əmin ola bilərsən :) Bu müddət maksimum 7-8 dəqiqə çəkir.Səbrli ol__",
             "ERRORS": "Qarşılaşdığımız səhvlər bunlardır",
-            "SUCCESSFULLY": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
+            "SUCCESSFULLY": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__",
+            "UPDATE1": "salam",
+            "UPDATE2": "sagol"
         },
 
         "upload_download": {
