@@ -61,7 +61,7 @@ async def update_requirements():
     except Exception as e:
         return repr(e)
 
-@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.upal(?: |$)(.*)")
+@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.update all(?: |$)(.*)")
 async def upstream(ups):
     ".update əmri ilə botunun yenk versiyada olub olmadığını yoxlaya bilərsiz."
     await ups.edit(LANG['DETECTING'])
