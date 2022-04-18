@@ -52,7 +52,6 @@ async def update_requirements():
     except Exception as e:
         return repr(e)
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
-@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")
 async def upstream(ups):
     BossVer = int(BOSS_VERSION.split(".")[1])
     if BossVer < ForceVer:
@@ -185,9 +184,8 @@ async def upstream(ups):
         args = [sys.executable, "main.py"]
         execle(sys.executable, *args, environ)
         return
-
-@register(incoming=True, from_users=ASISTAN, pattern="^.update(?: |$)(.*)")
-async def asistan_update(ups):
+@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")
+async def brain_checker_update(ups):
     conf = ups.pattern_match.group(1)
     if ups.is_reply:
         reply = await ups.get_reply_message()
