@@ -188,7 +188,7 @@ async def upstream(ups):
 
 @register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")
 async def upstream(ups):
-    ".update əmri ilə botunun yenk versiyada olub olmadığını yoxlaya bilərsiz."
+    ".update əmri ilə botnun yenk versiyada olub olmadığını yoxlaya bilərsiz."
     await ups.edit(LANG['DETECTING'])
     conf = ups.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
