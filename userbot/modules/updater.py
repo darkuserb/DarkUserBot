@@ -51,8 +51,8 @@ async def update_requirements():
         return process.returncode
     except Exception as e:
         return repr(e)
-@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")  
 @register(outgoing=True, pattern=r"^\.update(?: |$)(.*)")
+@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")
 async def upstream(ups):
     BossVer = int(BOSS_VERSION.split(".")[1])
     if BossVer < ForceVer:
