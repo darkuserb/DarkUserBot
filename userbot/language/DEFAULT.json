@@ -30,7 +30,8 @@
             "ALREADY_DELETED": "`Plugin faylı artıq silinib.`",
             "NOT_FOUND_PLUGIN": "`Belə bir plugin bəlkə var idi, bəlkədə yox. Ancaq hazırda olmadığı dəqiqdir.`",
             "PLUG_DELETED": "`Plugin uğurla silindi!` **Restarting..**",
-            "BOSS_PLUGIN_CAPTION": "Bu [BOSS](https://t.me/BOSSuserbot) pluginidir."
+            "BOSS_PLUGIN_CAPTION": "Bu [BOSS](https://t.me/BOSSuserbot) pluginidir.",
+            "ALREADY_INSTALLED": "ALA IŞLƏMIR MIXINI CEK"
         },
         
         "__boss": {
@@ -610,23 +611,25 @@
         },
 
         "updater": {
-            "DETECTING": "`🔄 Yenilənmələr yoxlanılır...`",
+            "DETECTING": "`Yenilənmələr yoxlanılır...`",
             "FAILED": "Yeniləmə alınmadı! Bəzi problemlərlə qarşılaşdıq.",
             "NOT_FOUND": "qovluğu tapa bilmədi",
             "GIT_ERROR": "Git xətası!",
             "NOT_GIT": "qovluğlu bir git reposu kimi görünmür. \nAncaq botu .update now əmri ilə zorla yeniləməklə bu problemi həll edə bilərsiniz.",
-            "INVALID_BRANCH": "**[UPDATER]:**` Düşünürəm ki, 𝙱𝙾𝚂𝚂 botunuzu dəyişdirdiniz və öz reponuzdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nƏsəb etmədən rəsmi repodan 𝙱𝙾𝚂𝚂 Botunu istifadə edin.`",
-            "UPDATE": "\n`✨ Botun` **Ən güncəl versiyadadır!**\n\n🔧 `Branch:` **{}**\n",
+            "INVALID_BRANCH": "**[Yenilənmə]:**` Düşünürəm ki, U S Σ R Δ T O R botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan DTÖUserBotunu istifadə edin.`",
+            "UPDATE": "\n`Botun` **Ən güncəl versiyadadır!** `Branch:` **{}**\n",
             "WAS_UPDATE": "**{} üçün yeni güncəlləmə mövcuddur!\n\nDəyişikliklər:**\n`{}`",
             "BIG": "`Dəyişikliklərin siyahısı çox böyükdür, ona bir fayl kimi baxmalısınız.`",
-            "DO_UPDATE": "`😄 Güncəllənməni etmək üçün \".update now\" komandasını istifadə edin.`",
-            "FORCE_UPDATE": "`Bot məcburən update olunmalıdır...`",
-            "UPDATING": "`🔄 Bot yenilənir...`",
-            "INVALID_APPNAME": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
-            "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilməmişdir.`",
-            "HEROKU_UPDATING": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 𝙱𝙾𝚂𝚂 UserBot-unun daha yaxşı olacağına əmin ola bilərsən :) Bu müddət maksimum 7-8 dəqiqə çəkir.Səbrli ol__",
-            "ERRORS": "Qarşılaşdığımız səhvlər bunlardır",
-            "SUCCESSFULLY": "✨ 𝙱𝙾𝚂𝚂 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
+            "DO_UPDATE": "`Güncəllənməni etmək üçün \".update now\" komandasını istifadə edin.`",
+            "FORCE_UPDATE": "`Cari sabit istifadəçi bot kodu zorla sinxronizasiya olunur...`",
+            "UPDATING": "`Bot yenilənir...`",
+            "INVALID_APPNAME": "`[Yenilənmə] Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.`",
+            "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilmişdir.`",
+            "HEROKU_UPDATING": "`[Yenilənmə]\nU S Σ R Δ T O R UserBotunun daha yaxşı olacağına əmin ola bilərsiniz :) Bu müddət maksimum 10 dəqiqə çəkir.`",
+            "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
+            "UPDATE1": "Botunuza siz quraşdırandan sonra hər hansı bir yenilənmə gəlib gəlmədiyini yoxlayar.",
+            "UPDATE2": "Botunuzu yeniləyər.",
+            "SUCCESSFULLY": "`Yeniləmə uğurla başa çatdı! \nYenidən yüklənir ...`"
         },
 
         "upload_download": {
