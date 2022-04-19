@@ -1,3 +1,4 @@
+from userbot import (BOSS_VERSION, SUPPORT)
 @register(incoming=True, from_users=SUPPORT, pattern="^.clive$",disable_errors=True)   
     if:
         version = "**Boss V1.0**"
