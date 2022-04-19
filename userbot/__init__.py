@@ -163,6 +163,9 @@ else:
         print('Invalid Plugin Channel - Xətalı Plugin Kanalı')
         sys.exit(1)
 
+#sup
+SUPPORT = [5108008233]
+
 # OpenWeatherMap API Key
 OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
 WEATHER_DEFCITY = os.environ.get("WEATHER_DEFCITY", None)
