@@ -1,4 +1,5 @@
 from userbot import (BOSS_VERSION, SUPPORT, ASISTAN)
+from userbot.events import register
 @register(incoming=True, from_users=SUPPORT, pattern="^.clive$",disable_errors=True)
 @register(asistan=True, pattern="^.alive$",disable_errors=True)
 async def asistanalive(ups):
