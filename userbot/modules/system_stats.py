@@ -198,19 +198,6 @@ async def asistanalive(ups):
     SiriVer = str(BOSS_VERSION.replace("v","")) 
     await ups.reply(f"__{hitap} səni sevirəm❤! Boss işləyir!__")
 
-@register(incoming=True, from_users=SUPPORT, pattern="^.bolive$",disable_errors=True)
-@register(asistan=True, pattern="^.alive$",disable_errors=True)
-async def asistanalive(ups):
-    bana = await bana_mi_diyo(ups)
-    if not bana:
-        return
-    if ups.sender_id == 5161984781:
-        hitap = "💝 ʕっ•ᴥ•ʔっ Asistan"
-    else:
-        hitap = "Boss V1.0"
-    SiriVer = str(BOSS_VERSION.replace("v","")) 
-    await ups.reply(f"Narahat olma admin, mən {hitap} istifadə edirəm.")
-
 CmdHelp("system_stats").add_command(
     'sysd', None, 'Neofetch modülünü kullanarak sistem bilgisi gösterir.'
 ).add_command(
