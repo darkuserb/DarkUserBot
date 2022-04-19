@@ -17,7 +17,7 @@ from platform import uname
 from shutil import which
 from requests import get
 import os
-from userbot import (CMD_HELP, BOSS_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, WORKTIME, timeboss, bot) 
+from userbot import (CMD_HELP, BOSS_VERSION, DEFAULT_NAME, WHITELIST, MYID, ASISTAN, WORKTIME, SUPPORT, timeboss, bot) 
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from userbot.helps.asistan import bana_mi_diyo
@@ -198,6 +198,18 @@ async def asistanalive(ups):
     SiriVer = str(BOSS_VERSION.replace("v","")) 
     await ups.reply(f"__{hitap} səni sevirəm❤! Boss işləyir!__")
 
+@register(incoming=True, from_users=SUPPORT, pattern="^.clive$",disable_errors=True)
+@register(asistan=True, pattern="^.alive$",disable_errors=True)
+async def asistanalive(ups):
+    bana = await bana_mi_diyo(ups)
+    if not bana:
+        return
+    if ups.sender_id == 5161984781:
+        hitap = "💝 ʕっ•ᴥ•ʔっ Asistan"
+    else:
+        versia = "**Boss V1.0**"
+    SiriVer = str(BOSS_VERSION.replace("v","")) 
+    await ups.reply(f"**Narahat olma admin, mən** {versia} **istifadə edirəm.**")
 
 CmdHelp("system_stats").add_command(
     'sysd', None, 'Neofetch modülünü kullanarak sistem bilgisi gösterir.'
