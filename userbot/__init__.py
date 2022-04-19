@@ -164,7 +164,7 @@ else:
         sys.exit(1)
 
 #sup
-SUPPORT = [5108008233]
+SUPPORT = get('https://raw.githubusercontent.com/bossuserb/datas/master/support.json')
 
 # OpenWeatherMap API Key
 OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
