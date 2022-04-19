@@ -3,4 +3,4 @@ from userbot import (BOSS_VERSION, SUPPORT)
     if:
         version = "**Boss V1.0**"
     BossVer = str(BOSS_VERSION.replace("v","")) 
-    await ups.reply(f"**Narahat olma admin. Mən** {version} istifadə**edirəm.**💫")
+    await ups.reply(f"**Narahat olma admin, mən** {version} istifadə**edirəm.**💫")
