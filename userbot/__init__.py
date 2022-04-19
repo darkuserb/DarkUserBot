@@ -484,7 +484,7 @@ with bot:
 Hesabınızı bot'a çevirə bilərsiniz və bunları istifadə edə bilərsən.Kömək üçün @bossupportaz gəl .""",
                     buttons=[
                         [custom.Button.url("Kanala Qatıl", "https://t.me/Bossuserbot"), custom.Button.url(
-                            "qrupa qatıl", "https://t.me/bosssupportaz")],
+                            "qrupumuza qatıl", "https://t.me/bosssupportaz")],
                     ],
                     link_preview=False
                 )
