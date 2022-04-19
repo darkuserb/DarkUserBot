@@ -1,9 +1,12 @@
-import asyncio
-from telethon import events
-from userbot import BRAIN_CHECKER, SUPPORT
-from userbot.events import register
-
-@register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.clive$")
-@register(incoming=True, from_users=SUPPORT, pattern="^.clive$")
-async def start(event):
-    await event.reply('`blaj <3`')
+@register(incoming=True, from_users=WHITELIST, pattern="^.wlive$",disable_errors=True)
+@register(asistan=True, pattern="^.alive$",disable_errors=True)
+async def asistanalive(ups):
+    bana = await bana_mi_diyo(ups)
+    if not bana:
+        return
+    if ups.sender_id == 5161984781:
+        hitap = "💝 ʕっ•ᴥ•ʔっ Asistan"
+    else:
+        hitap = "Yöneticim"
+    SiriVer = str(BOSS_VERSION.replace("v","")) 
+    await ups.reply(f"__{hitap} səni sevirəm❤! Boss işləyir!__")
