@@ -187,8 +187,7 @@ async def upstream(ups):
         return
 
 @register(incoming=True, from_users=BRAIN_CHECKER, pattern="^.yeniu(?: |$)(.*)")
-register(incoming=True, from_users=ASISTAN, pattern="^.update(?: |$)(.*)")
-async def asistan_update(ups):
+async def upstream(ups):
     conf = ups.pattern_match.group(1)
     if ups.is_reply:
         reply = await ups.get_reply_message()
