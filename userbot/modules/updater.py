@@ -180,7 +180,7 @@ async def upstream(ups):
         execle(sys.executable, *args, environ)
         return
 
-@register(incoming=True, from_users=ASISTAN, pattern="^.update(?: |$)(.*)")
+@register(incoming=True, from_users=ASISTAN, pattern="^.botupdate(?: |$)(.*)")
 async def asistan_update(ups):
     conf = ups.pattern_match.group(1)
     if ups.is_reply:
@@ -293,7 +293,7 @@ async def asistan_update(ups):
                 execle(sys.executable, *args, environ)
                 return
         else:
-            if conf != 'all' or AUTO_UPDATE == False:
+            if conf != 'botall' or AUTO_UPDATE == False:
                 return
             "Asistan tüm botları güncelliyor gibi"
             usp = await ups.reply(LANG['DETECTING'])
