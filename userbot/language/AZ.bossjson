@@ -629,7 +629,9 @@
             "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
             "UPDATE1": "Botunuza siz quraşdırandan sonra hər hansı bir yenilənmə gəlib gəlmədiyini yoxlayar.",
             "UPDATE2": "Botunuzu yeniləyər.",
-            "SUCCESSFULLY": "`Yeniləmə uğurla başa çatdı! \nYenidən yüklənir ...`"
+            "SUCCESSFULLY": "`Yeniləmə uğurla başa çatdı! \nYenidən yüklənir ...`",
+            "UP1": "'Botunuza yüklədikdən sonra hər hansı bir yeniləməni yoxlayır.'",
+            "UP2": "'Botunuzu yeniləyir.'"
         },
 
         "upload_download": {
