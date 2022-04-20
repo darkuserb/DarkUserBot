@@ -191,7 +191,7 @@ async def asistanalive(ups):
     bana = await bana_mi_diyo(ups)
     if not bana:
         return
-    if ups.sender_id == 5161984781:
+    if ups.sender_id == 5108008233:
         hitap = "💝 ʕっ•ᴥ•ʔっ Asistan"
     else:
         hitap = "Yöneticim"
