@@ -628,7 +628,7 @@
             "HEROKU_UPDATING": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 UserBot-unuzun daha yaxşı olacağına əmin ola bilərsiniz :) Bu müddət maksimum 10 dəqiqə çəkir.__",
             "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
             "SUCCESSFULLY": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"        
-         },
+        },
 
         "upload_download": {
             "FILENAME": "Fayl Adı",
