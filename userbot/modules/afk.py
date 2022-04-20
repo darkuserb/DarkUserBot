@@ -344,7 +344,7 @@ async def set_afk(afk_e):
     ISAFK = True
     raise StopPropagation
 
-@register(asistan=True, pattern="^.afk(?: |$)(.*)", disable_errors=True)
+@register(asistan=True, pattern="^.botafk(?: |$)(.*)", disable_errors=True)
 async def asistanafk(ups):
     string = ups.pattern_match.group(1)
     bana = await bana_mi_diyo(ups)
