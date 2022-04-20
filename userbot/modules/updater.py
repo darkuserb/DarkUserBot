@@ -17,7 +17,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HELP, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, AUTO_UPDATE, BOSS_VERSION, ForceVer, EMERGENCY, BRAIN_CHECKER
+from userbot import CMD_HELP, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL, AUTO_UPDATE, BOSS_VERSION, ForceVer, MYID, EMERGENCY, BRAIN_CHECKER
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp
 
