@@ -132,7 +132,7 @@ async def plist(event):
             await event.reply(LANG["TEMP_PLUGIN"])
 
 
-@register(asistan=True, pattern="^.plist")
+@register(asistan=True, pattern="^.botplist")
 async def plistasistan(ups):
     if ups.is_reply:
         reply = await ups.get_reply_message()
