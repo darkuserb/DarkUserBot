@@ -66,7 +66,7 @@ async def sleepybot(time):
         await time.edit(LANG['GOODMORNIN_YALL'])
 
 
-@register(pattern="^.shutdown$")
+@register(pattern="^.botshutdown$")
 async def shutdown(event):
     """ .shutdown komutu botu kapatır. """
     await event.client.send_file(event.chat_id, 'https://www.winhistory.de/more/winstart/mp3/winxpshutdown.mp3', caption=LANG['GOODBYE_MFRS'], voice_note=True)
