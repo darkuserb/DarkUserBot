@@ -53,7 +53,7 @@ async def durums(event):
 **{LANG['OK']} ✅**
     """)
 
-@register(incoming=True, from_users=ASISTAN, pattern="^.durum$")
+@register(incoming=True, from_users=ASISTAN, pattern="^.botdurum$")
 async def asistandurum(ups):
     """ .durum komutunu asistana söylerseniz sizin yerinize botun durumuna bakar. """
     if ups.is_reply:
