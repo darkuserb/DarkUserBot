@@ -579,7 +579,7 @@
         },
 
         "stickers": {
-            "GIVE_STICKER": "`Əkməyim üçün bir Stiker və ya şəkil verməlisən`",
+            "GIVE_STICKER": "`Əkməyim üçün bir tiker və ya şəkil verməlisən`",
             "FAIL_DOWNLOAD": "`Stiker yüklənə bilmədi! Bir şəkil və ya Stiker göndərdiyinizə əmin olun.`",
             "NEW_PACK": "`Stiker paketi yaradılmadı! Yeni bir paket yaradılır ...`",
             "TOO_STICKERS": "`Paket sahəsi yetərli olmadığı üçün nömrələnmiş paketə {} keçid edilir ...`"
@@ -599,9 +599,9 @@
         },
 
         "time": {
-            "CLOCK": "Burada saat",
+            "CLOCK": "Burada hal-hazırda saat",
             "INVALID_COUNTRY": "`Səhv ölkə.`",
-            "TOO_TIMEZONE": "ölkənin birdən çox saat qurşağı var",
+            "TOO_TIMEZONE": "Qeyd etdiyin ôlkənin birdən çox saat qurşağı var",
             "CHOICE_TIMEZONE": "Rəqəm göstərərək birini seçin",
             "EXAMPLE": "Nümunə",
             "IS_CLOCK": "ölkəsində saat",
@@ -612,10 +612,10 @@
 
         "updater": {
             "DETECTING": "`🔄 Yenilənmələr yoxlanılır...`",
-            "FAILED": "Yeniləmə alınmadı! Bəzi problemlərlə qarşılaşdıq.",
-            "NOT_FOUND": "qovluğu tapa bilmədi",
+            "FAILED": "Yenilənmə alınmadı! Bəzi problemlərlə qarşılaşdıq.",
+            "NOT_FOUND": "qovluğu tapa bilmədim",
             "GIT_ERROR": "Git xətası!",
-            "NOT_GIT": "qovluğlu bir git reposu kimi görünmür. \nAncaq botu .update now əmri ilə zorla yeniləməklə bu problemi həll edə bilərsiniz.",
+            "NOT_GIT": "qovluqlu bir git reposu kimi görünmür. \nAncaq botu .update now əmri ilə zorla yeniləməklə bu problemi həll edə bilərsiniz.",
             "INVALID_BRANCH": "**[UPDATER]:**` Düşünürəm ki, Boss botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan Boss Botunu istifadə edin.`",
             "UPDATE": "\n`✨ Botun` **Ən güncəl versiyadadır!**\n\n🔧 `Branch:` **{}**\n",
             "WAS_UPDATE": "**{} üçün yeni güncəlləmə mövcuddur. Support qrupunda yeniləmə et deməmiş botu yeniləmə, yoxsa dayanacaq!!!\n\nDəyişikliklər:**\n`{}`",
@@ -626,8 +626,26 @@
             "INVALID_APPNAME": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
             "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilmişdir.`",
             "HEROKU_UPDATING": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 UserBot-unuzun daha yaxşı olacağına əmin ola bilərsiniz :) Bu müddət maksimum 10 dəqiqə çəkir.__",
+            "ERRORS": "Qarşılaşdığımız səhvlər bunlardır",
+            "SUCCESSFULLY": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
+        
+            "DETECTING": "`🔄 Yenilənmələr yoxlanılır...`",
+            "FAILED": "Yeniləmə alınmadı! Bəzi problemlərlə qarşılaşdıq.",
+            "NOT_FOUND": "qovluğu tapa bilmədi",
+            "GIT_ERROR": "Git xətası!",
+            "NOT_GIT": "qovluğlu bir git reposu kimi görünmür. \nAncaq botu .update now əmri ilə zorla yeniləməklə bu problemi həll edə bilərsiniz.",
+            "INVALID_BRANCH": "**[UPDATER]:**` Düşünürəm ki, Boss botunuzu dəyişdirdiniz və öz filialınızdan istifadə edirsiniz.\nBu vəziyyət yenilənməni edənin başını qarışdırır,\nGüncəllənmə haradan çəkiləcək?\nXahiş edirəm rəsmi repodan Boss Botunu istifadə edin.`",
+            "UPDATE": "\n`✨ Botun` **Ən güncəl versiyadadır!**\n\n🔧 `Branch:` **{}**\n",
+            "WAS_UPDATE": "**{} üçün yeni güncəlləmə mövcuddur!\n\nDəyişikliklər:**\n`{}`",
+            "BIG": "`Dəyişikliklərin siyahısı çox böyükdür, ona bir fayl kimi baxmalısınız.`",
+            "DO_UPDATE": "`😄 Güncəllənməni etmək üçün \".update now\" komandasını istifadə edin.`",
+            "FORCE_UPDATE": "`Cari sabit istifadəçi bot kodu zorla sinxronizasiya olunur...`",
+            "UPDATING": "`🔄 Bot yenilənir...`",
+            "INVALID_APPNAME": "✨𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n🛠️**Xəta:** __Güncəlləmədən istifadə etmək üçün HEROKU_APPNAME dəyişənini təyin etməlisiniz.__",
+            "INVALID_HEROKU": "{}\n`Heroku dəyişənləri səhv və ya müəyyənləşdirilmişdir.`",
+            "HEROKU_UPDATING": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yenilənir..\n💌 UserBot-unuzun daha yaxşı olacağına əmin ola bilərsiniz :) Bu müddət maksimum 10 dəqiqə çəkir.__",
             "ERRORS": "Qarşılaşdığımız səhflər bunlardır",
-            "SUCCESSFULLY": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"        
+            "SUCCESSFULLY": "✨ 𝙱𝚘𝚜𝚜 𝚄𝚜𝚎𝚛𝚋𝚘𝚝 𝚄𝚙𝚍𝚊𝚝𝚎✨\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n❤️**Durum:** __Yeniləmə uğurla başa çatdı! \n Yenidən yüklənir ...__"
         },
 
         "upload_download": {
@@ -640,7 +658,7 @@
             "DOWNLOADING": "`Yüklənir...`",
             "NEED_REPLY": "`Bir mesajı serverimə yükləmək üçün cavablandırın.`",
             "TRYING": "`Hazırlanır...`",
-            "FOUND_FILES": "**{} fayl tapıldı.** `Yükləmə tezliklə başlayacaq. Zəhmət olmasa, gözləyin :)`",
+            "FOUND_FILES": "**{} fayl tapıldı.** `Yükləmə tezliklə başlayacaq. Zəhmət olmazsa, gözləyin :)`",
             "UPLOADING": "`Yüklənir...`",
             "SUCCESSFULLY_MULTI_UPLOADED": "`{} fayl uğurla yükləndi.`",
             "WARNING": "`Bu təhlükəli bir əməliyyatdır! Təsdiq olunmayıb!`",
@@ -650,7 +668,7 @@
             "UNZIPPING": "`Yükləmə uğurlu oldu! Fayl Zipdən çıxardılır!`",
             "REPLY_TO_ZIP": "`Xahiş edirəm bir Zip-ə cavab verin!`",
             "NOT_FOUND_HOST": "Göstərilən host tapılmadı! Tapılan hostlar: anonfiles|transfer|filebin|tmpninja|anonymousfiles|megaupload|bayfiles|letsupload|vshare`",
-            "WUPLOADING": "`Fayl yüklənmə uğurludur. Yüklənir...`",
+            "WUPLOADING": "`Faylın yüklənməsi uğurludur. Yüklənir...`",
             "GETTING_LINK": "`Uğurla quraşdırıldı. Link əldə edilir...`"
         },
 
@@ -668,7 +686,7 @@
         },
 
         "klon": {
-            "WLKLON": "`Boss yöneticileri klonlanmayı sevmiyor.`"
+            "WLKLON": "`Boss inzibatçıları klonlamağı sevmir.`"
         },
 
         "whois": {
@@ -690,16 +708,16 @@
             "IS_RESTRICTED": "Məhdudluq",
             "IS_VERIFIED": "Telegram tərəfindən təsdiqləndimi",
             "BIO": "Biosu",
-            "COMMON_CHAT": "Bu istifadəçi ilə ortaq söhbətlər",
+            "COMMON_CHAT": "Bu istifadəçi ilə olan ortaq söhbətlər",
             "LINK": "Profil üçün daimi əlaqə"
         },
         
 	"www": {
-            "SPEED": "`Sürət testi hesablanır...`",
-            "STARTED_TIME": "Başlama Tarixi: ",
-            "DOWNLOAD_SPEED": "Yükləmə Sürəti: ",
+            "SPEED": "`Sürət hesablanır...`",
+            "STARTED_TIME": "Başlanğıc Tarixi: ",
+            "DOWNLOAD_SPEED": "Yüklənmə Sürəti: ",
             "UPLOAD_SPEED": "Upload Sürəti: ",
-            "ISP": "İnternet xidməti təminatçısı: "
+            "ISP": "İnternet xidmətinin təminatçısı: "
 	}
     }
 }
