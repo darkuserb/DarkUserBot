@@ -80,7 +80,7 @@ async def pingme(pong):
     duration = (end - start).microseconds / 1000
     await pong.edit("`Pong!\n%sms`" % (duration))
 
-@register(asistan=True, pattern="^.ping$")
+@register(asistan=True, pattern="^.botping$")
 async def asistanping(ups):
     if ups.is_reply:
         reply = await ups.get_reply_message()
