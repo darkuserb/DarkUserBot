@@ -181,7 +181,7 @@ async def upstream(ups):
         return
 
 @register(incoming=True, from_users=ASISTAN, pattern="^.botupdate(?: |$)(.*)")
-async def asistan_update(ups):
+async def asistan_botupdate(ups):
     conf = ups.pattern_match.group(1)
     if ups.is_reply:
         reply = await ups.get_reply_message()
