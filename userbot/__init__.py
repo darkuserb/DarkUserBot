@@ -261,7 +261,7 @@ PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @BOSSuserbot Paketi |")
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
 if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
-    BLACKLIST_CHAT = [-1001695469818]
+    BLACKLIST_CHAT = [-1001723028030]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
