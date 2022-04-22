@@ -1,12 +1,11 @@
-# Mia UserBot - Ч ⁪⁬⁮⁮
+# Copyright (C) 2021-2022 CyberUserBot
+# This file is a part of < https://github.com/FaridDadashzade/CyberUserBot/ >
+# Please read the GNU General Public License v3.0 in
+# <https://www.github.com/FaridDadashzade/CyberUserBot/blob/master/LICENSE/>.
 
 from userbot import PATTERNS, CMD_HELP, CMD_HELP_BOT
 
 class CmdHelp:
-    """
-    Komut yardımlarını daha iyi üretmek için yazdığım sınıf.
-    """
-
     FILE = ""
     ORIGINAL_FILE = ""
     FILE_AUTHOR = ""
@@ -53,13 +52,12 @@ class CmdHelp:
         """
         Sonuç getirir.
         """
-        ffile = str(self.FILE)
-        fFile = ffile.capitalize()
-        result = f"🗂️ `{fFile}` **Plugini:** \n"
+
+        result = f"**▶️ Fayl adı:** `{self.FILE}`\n"
         if self.WARNING == '' and self.INFO == '':
-            result += f"**✨ Official:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
+            result += f"**⬇️ Rəsmi:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
-            result += f"**✨ Official:** {'✅' if self.IS_OFFICIAL else '❌'}\n"
+            result += f"**⬇️ Rəsmi:** {'✅' if self.IS_OFFICIAL else '❌'}\n"
             
             if self.INFO == '':
                 if self.WARNING != '':
@@ -67,34 +65,31 @@ class CmdHelp:
             else:
                 if self.WARNING != '':
                     result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n"
-                result += f"**ℹ️ Info:** {self.INFO}\n\n"
+                result += f"**📘 Məlumat:** {self.INFO}\n\n"
                      
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"**🔧 Əmr:** `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"**🛠 Əmr:** `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"**🔧 Əmr:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"**🛠 Əmr:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"**🌀 Nümunə:** `{command['usage']}`\n\n"
+                result += f"**✉ Açıqlama:** `{command['usage']}`\n\n"
             else:
-                result += f"**🌀 Açıxlama:** `{command['usage']}`\n"
-                result += f"**💌 Nümunə:** `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"**✉ Açıqlama:** `{command['usage']}`\n"
+                result += f"**⌨️ Nümunə:** `{PATTERNS[:1]}{command['example']}`\n\n"
         return result
 
     def add(self):
-        """
-        Direkt olarak CMD_HELP ekler.
-        """
         CMD_HELP_BOT[self.FILE] = {'info': {'official': self.IS_OFFICIAL, 'warning': self.WARNING, 'info': self.INFO}, 'commands': self.COMMANDS}
         CMD_HELP[self.FILE] = self.get_result()
         return True
     
     def getText(self, text : str):
         if text == 'REPLY_OR_USERNAME':
-            return '<kullanıcı adı> <kullanıcı adı/yanıtlama>'
+            return '<istifadeçi adı> <istifadeçi adı/reply>'
         elif text == 'OR':
             return 'veya'
         elif text == 'USERNAMES':
-            return '<kullanıcı ad(lar)ı>'
+            return '<istifadeçi ad(lar)ı>'
