@@ -77,7 +77,7 @@ class CmdHelp:
                 result += f"🔧 Əmr: `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"**🌀 Nümunə:** `{command['usage']}`\n\n"
+                result += f"🌀 Nümunə: `{command['usage']}`\n\n"
             else:
                 result += f"**🌀 Açıxlama:** `{command['usage']}`\n"
                 result += f"**💌 Nümunə:** `{PATTERNS[:1]}{command['example']}`\n\n"
