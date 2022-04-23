@@ -72,12 +72,12 @@ class CmdHelp:
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"🔧 Əmr: `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"🔧 **Əmr:** `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"🔧 Əmr: `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"🔧 **Əmr:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"🌀 Nümunə: `{command['usage']}`\n\n"
+                result += f"🌀 **Nümunə:** `{command['usage']}`\n\n"
             else:
                 result += f"**🌀 Açıxlama:** `{command['usage']}`\n"
                 result += f"**💌 Nümunə:** `{PATTERNS[:1]}{command['example']}`\n\n"
