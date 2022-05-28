@@ -72,15 +72,15 @@ class CmdHelp:
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"🔧 Ə𝖒𝖗: `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"🔧 Ə𝖒𝖗: {command['command']}\n"
             else:
-                result += f"🔧 Ə𝖒𝖗: `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"🔧 Ə𝖒𝖗: {command['command']} {command['params']}\n"
                 
             if command['example'] == None:
-                result += f"🌀 𝕹ü𝖒𝖚𝖓ə: `{command['usage']}`\n\n"
+                result += f"🌀 𝕹ü𝖒𝖚𝖓ə: {command['usage']}\n\n"
             else:
-                result += f"🌀 𝕬çı𝖖𝖑𝖆𝖒𝖆: `{command['usage']}`\n"
-                result += f"💌 𝕹ü𝖒𝖚𝖓ə: `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"🌀 𝕬çı𝖖𝖑𝖆𝖒𝖆: {command['usage']}\n"
+                result += f"💌 𝕹ü𝖒𝖚𝖓ə: {command['example']}\n\n"
         return result
 
     def add(self):
