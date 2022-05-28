@@ -57,30 +57,30 @@ class CmdHelp:
         fFile = ffile.capitalize()
         result = f"🗂️ `{fFile}` **Plugini:** \n"
         if self.WARNING == '' and self.INFO == '':
-            result += f"✨ Official: {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
+            result += f"✨ 𝕺𝖋𝖋𝖎𝖈𝖎𝖆𝖑: {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
-            result += f"✨ Official: {'✅' if self.IS_OFFICIAL else '❌'}\n"
+            result += f"✨ 𝕺𝖋𝖋𝖎𝖈𝖎𝖆𝖑: {'✅' if self.IS_OFFICIAL else '❌'}\n"
             
             if self.INFO == '':
                 if self.WARNING != '':
-                    result += f"⚠️ Xəbərdarlıq: {self.WARNING}\n\n"
+                    result += f"⚠️ 𝖃ə𝖇ə𝖗𝖉𝖆𝖗𝖑ı𝖖: {self.WARNING}\n\n"
             else:
                 if self.WARNING != '':
-                    result += f"⚠️ Xəbərdarlıq: {self.WARNING}\n"
-                result += f"**ℹ️ Info:** {self.INFO}\n\n"
+                    result += f"⚠️ 𝖃ə𝖇ə𝖗𝖉𝖆𝖗𝖑ı𝖖: {self.WARNING}\n"
+                result += f"ℹ️ 𝖎𝖓𝖋𝖔: {self.INFO}\n\n"
                      
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"🔧 Əmr: `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"🔧 Ə𝖒𝖗: `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"🔧 Əmr: `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"🔧 Ə𝖒𝖗: `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"🌀 Nümunə: `{command['usage']}`\n\n"
+                result += f"🌀 𝕹ü𝖒𝖚𝖓ə: `{command['usage']}`\n\n"
             else:
-                result += f"__🌀 Açıxlama:** `{command['usage']}`\n"
-                result += f"💌 Nümunə: `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"🌀 𝕬çı𝖖𝖑𝖆𝖒𝖆: `{command['usage']}`\n"
+                result += f"💌 𝕹ü𝖒𝖚𝖓ə: `{PATTERNS[:1]}{command['example']}`\n\n"
         return result
 
     def add(self):
