@@ -57,30 +57,30 @@ class CmdHelp:
         fFile = ffile.capitalize()
         result = f"🗂️ `{fFile}` **Plugini:** \n"
         if self.WARNING == '' and self.INFO == '':
-            result += f"**✨ Official:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
+            result += f"__✨ Official:__ {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
-            result += f"**✨ Official:** {'✅' if self.IS_OFFICIAL else '❌'}\n"
+            result += f"__✨ Official:__ {'✅' if self.IS_OFFICIAL else '❌'}\n"
             
             if self.INFO == '':
                 if self.WARNING != '':
-                    result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n\n"
+                    result += f"__⚠️ Xəbərdarlıq:__ {self.WARNING}\n\n"
             else:
                 if self.WARNING != '':
-                    result += f"**⚠️ Xəbərdarlıq:** {self.WARNING}\n"
+                    result += f"__⚠️ Xəbərdarlıq:__ {self.WARNING}\n"
                 result += f"**ℹ️ Info:** {self.INFO}\n\n"
                      
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"🔧 **Əmr:** `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"🔧 __Əmr:__ `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"🔧 **Əmr:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"🔧 __Əmr:__ `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"🌀 **Nümunə:** `{command['usage']}`\n\n"
+                result += f"🌀 __Nümunə:__ `{command['usage']}`\n\n"
             else:
-                result += f"**🌀 Açıxlama:** `{command['usage']}`\n"
-                result += f"**💌 Nümunə:** `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"__🌀 Açıxlama:** `{command['usage']}`\n"
+                result += f"__💌 Nümunə:__ `{PATTERNS[:1]}{command['example']}`\n\n"
         return result
 
     def add(self):
