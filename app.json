@@ -17,14 +17,17 @@
   "env": {
     "API_KEY": {
       "description": "Bu dəyəri my.telegram.org adresindən alın.",
+      "value": "False",
       "required": true
     },
     "API_HASH": {
       "description": "Bu dəyəri my.telegram.org adresindən alın.",
+      "value": "False",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
       "description": "İstəyə bağlıdır",
+      "value": "False",
       "required": false
     },
     "SPOTIFY_DC": {
