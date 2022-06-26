@@ -26,9 +26,9 @@ async def adddarling(e):
 
 
 
-@register(sevgili=True,pattern='^!darling')
+@register(sevgili=True,pattern='^.darling')
 async def darlingonly(e):
-    await e.reply('✨ **Love u!**')
+    await e.reply('✨ **İt Nəmşim, səni sevirəm** 🫀❤️🥰 **hər şeyim!**')
 
 
 a = CmdHelp('darling')
