@@ -45,6 +45,7 @@
     },
     "STRING_SESSION": {
       "description": "python3 GenerateStringSession.py faylını yerel olaraq işlədərək bu dəyəri alın",
+      "value": "False",
       "required": true
     },
     "HEROKU_MEMEZ": {
