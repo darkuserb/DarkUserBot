@@ -29,12 +29,12 @@ ASYNC_POOL = []
 if CONSOLE_LOGGER_VERBOSE:
     basicConfig(
         level=DEBUG,
-        format="[%(asctime)s - %(levelname)s] - @Bossuserbot : %(message)s",
+        format="[%(asctime)s - %(levelname)s] - @Darkuserbots : %(message)s",
         datefmt='%d-%b-%y %H:%M:%S')
 else:
     basicConfig(
         level=INFO,
-        format="[%(asctime)s - %(levelname)s] - @BossUserbot : %(message)s",
+        format="[%(asctime)s - %(levelname)s] - @Darkuserbots : %(message)s",
         datefmt='%d-%b-%y %H:%M:%S')
 LOGS = getLogger(__name__)
 
@@ -62,7 +62,7 @@ if LANGUAGE not in ["AZ", "DEFAULT"]:
     LANGUAGE = "DEFAULT"
     
 # BOSS versiyon
-BOSS_VERSION = "v1.0"
+DARK_VERSION = "v1.0"
 
 # Telegram API KEY ve HASH
 API_KEY = os.environ.get("API_KEY", None)
@@ -152,7 +152,7 @@ WORKTIME = time.time()
 
 PLUGINID = os.environ.get("PLUGIN_CHANNEL_ID", None)
 
-STORECHANNEL = os.environ.get("STORECHANNEL", '@BOSSplugin')
+STORECHANNEL = os.environ.get("STORECHANNEL", '@Darkplugin')
 
 if not PLUGINID:
     PLUGIN_CHANNEL_ID = "me"
