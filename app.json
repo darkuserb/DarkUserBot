@@ -1,28 +1,28 @@
 {
-  "name": "BossUserBot",
-  "description": "Boss UserBot",
-  "logo": "https://telegra.ph/file/b18298963aaeddb4c825a.jpg",
+  "name": "DarkUserBots",
+  "description": "Dark UserBot",
+  "logo": "",
   "keywords": [
     "telegram",
     "userbot",
-	"BossUserBot",
+	"DarkUserBots",
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/bossuserb/BossUserBot",
-  "website":   "t.me/bossuserbot",
-  "success_url": "https://t.me/bosssupportaz",
+  "repository": "https://github.com/darkuserb/DarkUserBot",
+  "website":   "t.me/darkuserbots",
+  "success_url": "https://t.me/darkuserbots",
   "stack": "container",
   "env": {
     "API_KEY": {
       "description": "Bu dəyəri my.telegram.org adresindən alın.",
-      "value": "False",
+      "value": "",
       "required": true
     },
     "API_HASH": {
       "description": "Bu dəyəri my.telegram.org adresindən alın.",
-      "value": "False",
+      "value": "",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
@@ -96,7 +96,7 @@
       "required": false
     },
     "BOTLOG": {
-      "description": "Qrup açıb roseni əlavə et. Qrupa /id yaz və əldə etdiyin id'ni bura yaz",
+      "description": "Botlogun olmasını istəyirsənsə True edib, digər botlog dəyərində qrup id əlavə edin.",
       "value": "True"
     },
     "BOT_USERNAME": {
@@ -136,10 +136,6 @@
       "description": ".yt əmri üçün YouTube məlumat API keyidir. https://console.cloud.google.com adresindən alın.",
       "required": false
     },
-    "OCR_SİRİ_API_KEY": {
-      "description": ".ocr əmri üçün OCR API Key. https://ocr.siri/ocrapi adresindən alın.",
-      "required": false
-    },
     "REM_BG_API_KEY": {
       "description": ".rbg əmri üçün API Key. https://www.remove.bg/api adresindən alın.",
       "required": false
@@ -163,26 +159,6 @@
     "G_DRIVE_CLIENT_ID": {
       "description": "Google Drive üçün client id girin.",
       "required": false
-    },
-    "LASTFM_API": {
-      "description": "Last.FM modulu üçün API Key. [Buradan bir dənə alın - https://www.last.fm/api/account/create]",
-      "required": false
-    },
-    "LASTFM_SECRET": {
-      "description": "Last.FM modulu üçün SECRET Key. [Buradan bir dənə alın - https://www.last.fm/api/account/create]",
-      "required": false
-    },
-    "LASTFM_USERNAME": {
-      "description": "Last.FM istifadəçi adı",
-      "required": false
-    },
-    "LASTFM_PASSWORD": {
-      "description": "Last.FM Şifrə",
-      "required": false
-    },
-    "BIO_PREFIX": {
-      "description": "Last.FM Modulu Biyoqrafiya üçün nümunə.",
-      "required": false
     }, 
     "DEFAULT_NAME": {
       "description": "Klon pluginindən sonra hesabınızın köhnə halına dönməsi üçün Telegram adınız",
@@ -190,7 +166,7 @@
     }, 
     "DEFAULT_BIO": {
       "description": "Varsayılan profil biosu.",
-      "value": "@MiaUserBot",
+      "value": "@DarkUserBots",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
@@ -216,7 +192,7 @@
     },
     "WARN_MODE": {
       "description": "3 xəbərdarlıqdan sonra ediləcək əmr. Yalnız .gmute yada .gban yaza bilərsiniz. Əksi təqdirdə bot işləməz.",
-      "value": "gban",
+      "value": "qban",
       "required": false
     },
     "GALERI_SURE": {
@@ -226,13 +202,8 @@
     },
     "PAKET_ISMI": {
       "description": "toxunmayın ",
-      "value": "@BossUserBot",
+      "value": "@DarkUserBots",
       "required": false
-    },
-    "OTOMATIK_KATILMA": {
-      "description": "Bu repoya avtomatik girişdir. Dəyişdirsən botun dayanacaq..",
-      "value": "True",
-      "required": true
     },
     "LANGUAGE": {
       "description": "Botun dili. AZ/TR yaza bilərsiniz.",
