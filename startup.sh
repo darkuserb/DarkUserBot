@@ -9,7 +9,7 @@
 nowtime=$(date)
 echo "
 BossUserBot
-(C) @BossUserBot
+(C) @Darkuserbots
 Thx @DevsExpo.
 Time : $nowtime
 "
@@ -38,7 +38,7 @@ ech_final () {
 =+---------------------------------------------------------+=
 Deployment Sucessfull.
 Docker Images Are Being Pushed, Please Wait.
-Thank You For Installing Boss.
+Thank You For Installing Dark.
 =+---------------------------------------------------------+=
     "
 }
