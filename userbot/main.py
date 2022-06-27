@@ -29,8 +29,8 @@ ALIVE_MSG = [
     "`⛈️ Əlimdən gələnin ən yaxşısını etməyə çalışıram`, {mention}",
     "✨ `Darkuserbot sahibinin əmrlərinə hazır...`",
     "`Hal-hazırda ən yaxşı userbotun hazırladığı mesajı oxuyur olmalısan` **{mention}**.",
-    "`Dark'ı axtarırdın ❓  Mən burdayam, kef elə`"
-    "`Userbotunuz işləyəli bu qədər olur:` **{worktime}** ❤️",
+    "`Dark'ı axtarırdın❓ Mən burdayam, kef elə`"
+    "` Userbotunuz işləyəli bu qədər olur:` **{worktime}** ❤️",
     "🎆 `Narahat olma! Səninləyəm.` **{mention}**, `userbot işləyir.`",
     "`⛈️ Yeni kimi görünür!`, **{mention}<3**",
     "✨ `Userbot sahibinin əmrinə hazır...`",
