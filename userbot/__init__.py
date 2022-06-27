@@ -62,7 +62,7 @@ if LANGUAGE not in ["AZ", "DEFAULT"]:
     LANGUAGE = "DEFAULT"
     
 # BOSS versiyon
-DARK_VERSION = "v1.0"
+BOSS_VERSION = "v1.0"
 
 # Telegram API KEY ve HASH
 API_KEY = os.environ.get("API_KEY", None)
