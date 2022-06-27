@@ -8,7 +8,7 @@
 
 nowtime=$(date)
 echo "
-BossUserBot
+DarkUserBot
 (C) @Darkuserbots
 Thx @DevsExpo.
 Time : $nowtime
