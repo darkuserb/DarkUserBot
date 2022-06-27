@@ -25,18 +25,17 @@ import userbot.cmdhelp
 
 ALIVE_MSG = [
     "`Userbotunuz işləyir. Sənə bir şey demək istəyirəm. Səni sevirəm` **{mention}** ❤️",
-    "🎆 `Narahat olma! Səni tək buraxmaram.` **{mention}**, `BossUserbot işləyir.`",
+    "🎆 `Narahat olma! Səni tək buraxmaram.` **{mention}**, `DarkUserbot işləyir.`",
     "`⛈️ Əlimdən gələnin ən yaxşısını etməyə çalışıram`, {mention}",
-    "✨ `bossuserbot sahibinin əmrlərinə hazır...`",
-    "`Hal-hazırda ən yaxşı userbotun hazırlandığı mesajı oxuyur olmalısan` **{mention}**.",
-    "`Boss'u axtarırdın ❓  Mən burdayam, kef elə`"
+    "✨ `Darkuserbot sahibinin əmrlərinə hazır...`",
+    "`Hal-hazırda ən yaxşı userbotun hazırladığı mesajı oxuyur olmalısan` **{mention}**.",
+    "`Dark'ı axtarırdın ❓  Mən burdayam, kef elə`"
     "`Userbotunuz işləyəli bu qədər olur:` **{worktime}** ❤️",
     "🎆 `Narahat olma! Səninləyəm.` **{mention}**, `userbot işləyir.`",
     "`⛈️ Yeni kimi görünür!`, **{mention}<3**",
     "✨ `Userbot sahibinin əmrinə hazır...`",
     "`Huh!` **{mention}** `məni çağırır 🍰 < bu sənin üçündü 🥺..`",
-    "{mention} **Boss  sənin üçün işləyir✨**",
-    "{username}, `bossuserbot {worktime} zamandır işləyir...`\n——————————————\n**Telethon sürümü :** `{telethon}`\n**Userbot sürümü  :** `{boss}`\n**Python sürümü    :** `{python}`\n**Plugin sayı :** `{plugin}`\n——————————————\n**Əmrinə tabeyəm dostum... 😇**"
+    "{mention} **Dark  sənin üçün işləyir✨**"
 ]
 
 DIZCILIK_STR = [
