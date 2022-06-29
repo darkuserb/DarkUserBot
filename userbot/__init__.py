@@ -115,8 +115,8 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 # Güncelleyici için özel (fork) repo linki.
 
 
-UPSTREAM_REPO_URL = "https://github.com/darkuserb/Darkinstaller" 
-EMERGENCY = "https://github.com/darkuserb/Darkinstaller.git"
+UPSTREAM_REPO_URL = "https://github.com/darkuserb/darkuserbot" 
+EMERGENCY = "https://github.com/darkuserb/darkuserbot.git"
 
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
