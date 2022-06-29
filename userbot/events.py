@@ -130,38 +130,38 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     eventtext = str(check.text)
-                    text = "**≛『 USERBOT Xəta RAPORU 』≛**\n"
-                    link = "[Boss kömək qrupuna](https://t.me/bosssupportaz)"
+                    text = "**≛『 USERBOT HATA RAPORU 』≛**\n"
+                    link = "[Siri Destek Grubuna](https://t.me/SiriSupport)"
                     if len(eventtext)<20:
-                        text += f"\n**🗒️ Səbəb:** {eventtext}\n"
-                    text += "\n✆ İstəsəniz, bunu bildirə bilərsiniz."
-                    text += f"- sadəcə bu mesajı {link} göndərin."
-                    text += "**Xəta və tarix xaricində heç bir şey qeyd edilmez**.\n"
+                        text += f"\n**🗒️ Şu yüzden:** {eventtext}\n"
+                    text += "\n✆ İsterseniz, bunu bildirebilirsiniz."
+                    text += f"- sadece bu mesajı {link} gönderin."
+                    text += "**Hata ve tarih haricinde hiçbir şey** kayıt edilmez.\n"
 
                     ftext = ""
-                    ftext += "========== Xəbərdarlıq =========="
-                    ftext += "\nBu fayl sadəcə burada yükləndi,"
-                    ftext += "\nSadəcə xəta ve tarix hissəsini qeyd etdik,"
-                    ftext += "\nGizliliyinizə hörmət edirik,"
-                    ftext += "\nBurada hansısa bir gizli məlumat varsa"
-                    ftext += "\nBu xəta raporu olmaya bilər, kimsə verilərinizə ulaşamaz.\n"
-                    ftext += "--------USERBOT Xəta günlüyü--------\n"
-                    ftext += "\n➢ Tarix: " + date
+                    ftext += "========== UYARI =========="
+                    ftext += "\nBu dosya sadece burada yüklendi,"
+                    ftext += "\nSadece hata ve tarih kısmını kaydettik,"
+                    ftext += "\nGizliliğinize saygı duyuyoruz,"
+                    ftext += "\nBurada herhangi bir gizli veri varsa"
+                    ftext += "\nBu hata raporu olmayabilir, kimse verilerinize ulaşamaz.\n"
+                    ftext += "--------USERBOT HATA GUNLUGU--------\n"
+                    ftext += "\n➢ Tarih: " + date
                     ftext += "\n➢ Grup ID: " + str(check.chat_id)
-                    ftext += "\n➢ Göndərən kişinin ID: " + str(check.sender_id)
-                    ftext += "\n\n➢ xəta tetikləyici:\n"
+                    ftext += "\n➢ Gönderen kişinin ID: " + str(check.sender_id)
+                    ftext += "\n\n➢ Olay Tetikleyici:\n"
                     ftext += str(check.text)
-                    ftext += "\n\n➢ Xəta mətni:\n"
+                    ftext += "\n\n➢ Hata metni:\n"
                     ftext += str(sys.exc_info()[1])
                     ftext += "\n\n➢ Bot versiyonu:\n"
-                    ftext += "{}".format(str(BOSS_VERSION))
-                    ftext += "\n\n\n➢ Geri izləmə bilgisi: \n"
+                    ftext += "{}".format(str(SIRI_VERSION))
+                    ftext += "\n\n\n➢ Geri izleme bilgisi: \n"
                     ftext += str(format_exc())
-                    ftext += "\n\n--------USERBOT xəta GÜNLÜYÜ BITIŞ--------"
+                    ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
 
                     command = "git log --pretty=format:\"%an: %s\" -7"
 
-                    ftext += "\n\n\nSon 7 Güncəlləmə:\n"
+                    ftext += "\n\n\nSon 7 Güncelleme:\n"
 
                     process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
