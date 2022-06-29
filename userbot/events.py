@@ -154,7 +154,7 @@ def register(**args):
                     ftext += "\n\n➢ Hata metni:\n"
                     ftext += str(sys.exc_info()[1])
                     ftext += "\n\n➢ Bot versiyonu:\n"
-                    ftext += "{}".format(str(SIRI_VERSION))
+                    ftext += "{}".format(str(BOSS_VERSION))
                     ftext += "\n\n\n➢ Geri izleme bilgisi: \n"
                     ftext += str(format_exc())
                     ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
